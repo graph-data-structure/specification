@@ -189,3 +189,11 @@ Get an iterator over edges incident to `w` in graph `G`.
 ```js
 for ( let [ u , v , e ] of G.incident( w ) ) ... ;
 ```
+
+#### `endpoints`
+
+Get endpoints `u` and `v` of an edge `e` in graph `g`.
+
+```js
+let [ u , v ] = g.endpoints( e ) ;
+```
