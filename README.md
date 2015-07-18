@@ -2,7 +2,7 @@
 ==
 
 Graph specification code bricks for JavaScript. Parent is
-[aureooms/js-gn](https://github.com/aureooms/js-gn).
+[js-gn](https://github.com/aureooms/js-gn).
 
 ```js
 graphspec.test( "My graph implementation" , MyGraphConstructor ) ;
