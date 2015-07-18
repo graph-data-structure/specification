@@ -1,17 +1,18 @@
 {
-	"out": "js/dist/",
-	"debug": false,
-	"name": "graph-spec",
-	"src": "js/src/",
-	"code": {
-		"main": [
-			"js",
-			"dist",
-			"graph-spec.js"
-		],
-		"test": [
-			"test",
-			"js"
-		]
-	}
+  "out": "js/dist/",
+  "debug": false,
+  "name": "graph-spec",
+  "src": "js/src/",
+  "code": {
+    "main": [
+      "js",
+      "dist",
+      "graph-spec.js"
+    ],
+    "test": [
+      "test",
+      "js"
+    ]
+  },
+  "babel": true
 }
