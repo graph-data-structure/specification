@@ -1,0 +1,21 @@
+{
+	"main": "js/dist/graph-spec.js",
+	"ignore": [
+		"js/index.js",
+		"js/src",
+		"test",
+		"pkg.json",
+		"package.json",
+		"inch.json",
+		".groc.json",
+		".travis.yml",
+		".codeclimate.yml",
+		".gitignore",
+		"README.md"
+	],
+	"license": "AGPL-3.0",
+	"description": "Graph specification code bricks for JavaScript",
+	"name": "aureooms-js-graph-spec",
+	"homepage": "http://aureooms.github.io/js-graph-spec/",
+	"version": "0.0.0"
+}
