@@ -97,3 +97,95 @@ Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/
 ```js
 require( [ "aureooms-js-graph-spec" ] , function ( graphspec ) { ... } ) ;
 ```
+
+## Signatures
+
+### Undirected
+
+#### `Graph`
+
+Create a new graph.
+
+```js
+let G = new Graph( ) ;
+```
+
+#### `vadd`
+
+Add a vertex to graph `G`.
+
+```js
+let u = G.vadd( ) ;
+```
+
+#### `vdel`
+
+Delete vertex `u` from graph `G`.
+
+```js
+G.vdel( u ) ;
+```
+
+#### `eadd`
+
+Add edge `(u,v)` to graph `G`.
+
+```js
+let e = G.eadd( u , v ) ;
+```
+
+#### `edel`
+
+Delete edge `e` from graph `G`.
+
+```js
+G.edel( e ) ;
+```
+
+#### `vitr`
+
+Get an iterator over vertex references in graph `G`.
+
+```js
+for ( let u of G.vitr( ) ) ... ;
+```
+
+#### `eitr`
+
+Get an iterator over edge references in graph `G`.
+
+```js
+for ( let e of g.eitr( ) ) ... ;
+```
+
+#### `iitr`
+
+Get an iterator over edge references of edges incident to `u` in graph `G`.
+
+```js
+for ( let e of G.iitr( u ) ) ... ;
+```
+
+#### `nitr`
+
+Get an iterator over vertex references of neighbors of `u` in graph `G`.
+
+```js
+for ( let v of G.nitr( u ) ) ... ;
+```
+
+#### `edges`
+
+Get an iterator over edges in graph `G`.
+
+```js
+for ( let [ u , v , e ] of g.edges( ) ) ... ;
+```
+
+#### `incident`
+
+Get an iterator over edges incident to `w` in graph `G`.
+
+```js
+for ( let [ u , v , e ] of G.incident( w ) ) ... ;
+```
