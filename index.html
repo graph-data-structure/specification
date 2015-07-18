@@ -1,5 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><title>index</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="index"><meta name="groc-project-path" content="README.md"><meta name="groc-github-url" content="https://github.com/aureooms/js-graph-spec"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-graph-spec/blob/master/README.md">README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="-js-graph-spec-http-aureooms-github-io-js-graph-spec-"><a href="http://aureooms.github.io/js-graph-spec">js-graph-spec</a></h1>
-<p>Graph specification code bricks for JavaScript</p>
+<p>Graph specification code bricks for JavaScript.</p>
+<pre><code class="lang-js">graphspec.test( <span class="hljs-string">"My graph implementation"</span> , MyGraphConstructor ) ;</code></pre>
 <p><a href="https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE"><img src="http://img.shields.io/npm/l/aureooms-js-graph-spec.svg?style=flat" alt="NPM license"></a>
 <a href="https://www.npmjs.org/package/aureooms-js-graph-spec"><img src="http://img.shields.io/npm/v/aureooms-js-graph-spec.svg?style=flat" alt="NPM version"></a>
 <a href="http://bower.io/search/?q=aureooms-js-graph-spec"><img src="http://img.shields.io/bower/v/aureooms-js-graph-spec.svg?style=flat" alt="Bower version"></a>
@@ -52,4 +53,42 @@ jspm install npm:aureooms-js-graph-spec</code></pre>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/aureooms-js-graph-spec/js/dist/graph-spec.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
 <p>Alternatively, you can use any tool mentioned <a href="http://bower.io/docs/tools/">here</a>.</p>
 <h3 id="jam">jam</h3>
-<pre><code class="lang-js"><span class="hljs-built_in">require</span>( [ <span class="hljs-string">"aureooms-js-graph-spec"</span> ] , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> graphspec </span>) </span>{ ... } ) ;</code></pre></div></div></div></div></body></html>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>( [ <span class="hljs-string">"aureooms-js-graph-spec"</span> ] , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> graphspec </span>) </span>{ ... } ) ;</code></pre>
+<h2 id="signatures">Signatures</h2>
+<h3 id="undirected">Undirected</h3>
+<h4 id="-graph-"><code>Graph</code></h4>
+<p>Create a new graph.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> Graph( ) ;</code></pre>
+<h4 id="-vadd-"><code>vadd</code></h4>
+<p>Add a vertex to graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> u = G.vadd( ) ;</code></pre>
+<h4 id="-vdel-"><code>vdel</code></h4>
+<p>Delete vertex <code>u</code> from graph <code>G</code>.</p>
+<pre><code class="lang-js">G.vdel( u ) ;</code></pre>
+<h4 id="-eadd-"><code>eadd</code></h4>
+<p>Add edge <code>(u,v)</code> to graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> e = G.eadd( u , v ) ;</code></pre>
+<h4 id="-edel-"><code>edel</code></h4>
+<p>Delete edge <code>e</code> from graph <code>G</code>.</p>
+<pre><code class="lang-js">G.edel( e ) ;</code></pre>
+<h4 id="-vitr-"><code>vitr</code></h4>
+<p>Get an iterator over vertex references in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> u <span class="hljs-keyword">of</span> G.vitr( ) ) ... ;</code></pre>
+<h4 id="-eitr-"><code>eitr</code></h4>
+<p>Get an iterator over edge references in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> g.eitr( ) ) ... ;</code></pre>
+<h4 id="-iitr-"><code>iitr</code></h4>
+<p>Get an iterator over edge references of edges incident to <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> G.iitr( u ) ) ... ;</code></pre>
+<h4 id="-nitr-"><code>nitr</code></h4>
+<p>Get an iterator over vertex references of neighbors of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.nitr( u ) ) ... ;</code></pre>
+<h4 id="-edges-"><code>edges</code></h4>
+<p>Get an iterator over edges in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> g.edges( ) ) ... ;</code></pre>
+<h4 id="-incident-"><code>incident</code></h4>
+<p>Get an iterator over edges incident to <code>w</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.incident( w ) ) ... ;</code></pre>
+<h4 id="-endpoints-"><code>endpoints</code></h4>
+<p>Get endpoints <code>u</code> and <code>v</code> of an edge <code>e</code> in graph <code>g</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> [ u , v ] = g.endpoints( e ) ;</code></pre></div></div></div></div></body></html>
