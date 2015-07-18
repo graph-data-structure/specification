@@ -1,7 +1,11 @@
 [js-graph-spec](http://aureooms.github.io/js-graph-spec)
 ==
 
-Graph specification code bricks for JavaScript
+Graph specification code bricks for JavaScript.
+
+```js
+graphspec.test( "My graph implementation" , MyGraphConstructor ) ;
+```
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/aureooms-js-graph-spec)
