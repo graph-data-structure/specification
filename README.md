@@ -1,7 +1,8 @@
 [js-graph-spec](http://aureooms.github.io/js-graph-spec)
 ==
 
-Graph specification code bricks for JavaScript.
+Graph specification code bricks for JavaScript. Parent is
+[js-gn](https://github.com/aureooms/js-gn).
 
 ```js
 graphspec.test( "My graph implementation" , MyGraphConstructor ) ;
