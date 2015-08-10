@@ -29,7 +29,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var n = 11;
 
-				for (var i = 0; i < n; ++i) v[i] = g.vadd();
+				for (var i = 0; i < n; ++i) v[i] = g.vadd(i);
 
 				e[1] = [];
 				e[1][0] = g.eadd(v[1], v[9]);
@@ -191,7 +191,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var n = 11;
 
-				for (var i = 0; i < n; ++i) v[i] = g.vadd();
+				for (var i = 0; i < n; ++i) v[i] = g.vadd(i);
 
 				e[1] = [];
 				e[1][0] = g.eadd(v[1], v[9]);
