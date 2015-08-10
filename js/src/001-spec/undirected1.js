@@ -31,7 +31,7 @@ let undirected1 = function ( title , Graph ) {
 		var k , set , alledges ;
 
 		k = 0 ;
-		set = new WeakSet( v ) ;
+		set = new Set( v ) ;
 
 		ex( map( function ( j ) {
 			ok( set.has( j ) , 'vitr ' + k ) ;
@@ -41,7 +41,7 @@ let undirected1 = function ( title , Graph ) {
 
 		k = 0 ;
 		alledges = e[0].concat( [ e[1][0] ] ).concat( e[4] ) ;
-		set = new WeakSet( alledges ) ;
+		set = new Set( alledges ) ;
 
 		ex( map( function ( j ) {
 			ok( set.has( j ) , 'eitr ' + k ) ;
@@ -57,7 +57,7 @@ let undirected1 = function ( title , Graph ) {
 
 			var k = e[m].length ;
 
-			var set = new WeakSet( e[m] ) ;
+			var set = new Set( e[m] ) ;
 
 			ex( map( function ( x ) {
 				--k ;
@@ -77,7 +77,7 @@ let undirected1 = function ( title , Graph ) {
 
 		k = 0 ;
 		alledges = e[0].concat( e[4] ) ;
-		set = new WeakSet( alledges ) ;
+		set = new Set( alledges ) ;
 
 		ex( map( function ( j ) {
 			ok( set.has( j ) , 'eitr ' + k ) ;
@@ -88,7 +88,7 @@ let undirected1 = function ( title , Graph ) {
 		deepEqual( k , alledges.length , 'check edges count after del' ) ;
 
 		k = 0 ;
-		set = new WeakSet( map ( function ( e ) {
+		set = new Set( map ( function ( e ) {
 			let [ u , w ] = g.endpoints( e ) ;
 			return u === v[0] ? w : u ;
 		} , e[0] ) ) ;
@@ -105,7 +105,7 @@ let undirected1 = function ( title , Graph ) {
 
 			var k = e[m].length ;
 
-			var set = new WeakSet( e[m] ) ;
+			var set = new Set( e[m] ) ;
 
 			ex( map( function ( x ) {
 				--k ;
@@ -120,7 +120,7 @@ let undirected1 = function ( title , Graph ) {
 		g.vdel(v.splice(3, 1)[0]);
 
 		k = 0 ;
-		set = new WeakSet( v ) ;
+		set = new Set( v ) ;
 
 		ex( map( function ( j ) {
 			ok( set.has( j ) , 'vitr ' + k ) ;

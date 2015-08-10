@@ -50,7 +50,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				var k, set, alledges;
 
 				k = 0;
-				set = new WeakSet(v);
+				set = new Set(v);
 
 				ex(map(function (j) {
 					ok(set.has(j), "vitr " + k);
@@ -60,7 +60,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				alledges = e[0].concat([e[1][0]]).concat(e[4]);
-				set = new WeakSet(alledges);
+				set = new Set(alledges);
 
 				ex(map(function (j) {
 					ok(set.has(j), "eitr " + k);
@@ -74,7 +74,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new WeakSet(e[m]);
+					var set = new Set(e[m]);
 
 					ex(map(function (x) {
 						--k;
@@ -92,7 +92,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				alledges = e[0].concat(e[4]);
-				set = new WeakSet(alledges);
+				set = new Set(alledges);
 
 				ex(map(function (j) {
 					ok(set.has(j), "eitr " + k);
@@ -103,7 +103,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				deepEqual(k, alledges.length, "check edges count after del");
 
 				k = 0;
-				set = new WeakSet(map(function (e) {
+				set = new Set(map(function (e) {
 					var _g$endpoints = g.endpoints(e);
 
 					var _g$endpoints2 = _slicedToArray(_g$endpoints, 2);
@@ -126,7 +126,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new WeakSet(e[m]);
+					var set = new Set(e[m]);
 
 					ex(map(function (x) {
 						--k;
@@ -140,7 +140,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				g.vdel(v.splice(3, 1)[0]);
 
 				k = 0;
-				set = new WeakSet(v);
+				set = new Set(v);
 
 				ex(map(function (j) {
 					ok(set.has(j), "vitr " + k);
@@ -212,7 +212,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				var k, set, alledges;
 
 				k = 0;
-				set = new WeakSet(v);
+				set = new Set(v);
 
 				ex(map(function (j) {
 					ok(set.has(j), "vitr " + k);
@@ -222,7 +222,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				alledges = e[0].concat([e[1][0]]).concat(e[4]);
-				set = new WeakSet(alledges);
+				set = new Set(alledges);
 
 				ex(map(function (j) {
 					ok(set.has(j), "eitr " + k);
@@ -236,7 +236,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new WeakSet(e[m]);
+					var set = new Set(e[m]);
 
 					ex(map(function (x) {
 						--k;
@@ -254,7 +254,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				alledges = e[0].concat(e[4]);
-				set = new WeakSet(alledges);
+				set = new Set(alledges);
 
 				ex(map(function (j) {
 					ok(set.has(j), "eitr " + k);
@@ -265,7 +265,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				deepEqual(k, alledges.length, "check edges count after del");
 
 				k = 0;
-				set = new WeakSet(map(function (e) {
+				set = new Set(map(function (e) {
 					var _g$endpoints3 = g.endpoints(e);
 
 					var _g$endpoints32 = _slicedToArray(_g$endpoints3, 2);
@@ -288,7 +288,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new WeakSet(e[m]);
+					var set = new Set(e[m]);
 
 					ex(map(function (x) {
 						--k;
@@ -303,7 +303,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				e[0].splice(0, 1);
 
 				k = 0;
-				set = new WeakSet(v);
+				set = new Set(v);
 
 				ex(map(function (j) {
 					ok(set.has(j), "vitr " + k);
