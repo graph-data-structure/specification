@@ -19,7 +19,7 @@
 	},
 	"name": "aureooms-js-graph-spec",
 	"homepage": "http://aureooms.github.io/js-graph-spec/",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Graph specification code bricks for JavaScript",
 	"dependencies": {
 		"aureooms-js-itertools": "^1.2.0",
