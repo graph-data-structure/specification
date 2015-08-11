@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head><title>001-spec/03-MultiDiGraph</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="001-spec/03-MultiDiGraph"><meta name="groc-project-path" content="js/src/001-spec/03-MultiDiGraph.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-graph-spec"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-graph-spec/blob/master/js/src/001-spec/03-MultiDiGraph.js">js/src/001-spec/03-MultiDiGraph.js</a></div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> MultiDiGraph = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> title , Constructor </span>) </span>{
+
+test( <span class="hljs-string">"graph-spec : MultiDiGraph &gt; "</span> + title , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> </span>) </span>{
+
+	<span class="hljs-keyword">const</span> G = <span class="hljs-keyword">new</span> Constructor( ) ;
+
+	<span class="hljs-keyword">const</span> n = <span class="hljs-number">10</span> ;
+
+	<span class="hljs-keyword">let</span> V , E ;
+
+	<span class="hljs-keyword">const</span> init = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> </span>) </span>{
+
+		<span class="hljs-keyword">const</span> V = [ <span class="hljs-keyword">for</span> ( i <span class="hljs-keyword">of</span> range( n ) ) G.vadd( i ) ] ;
+
+		<span class="hljs-keyword">const</span> E = [
+
+			G.eadd( V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">1</span>] ) ,
+			G.eadd( V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">2</span>] ) ,
+			G.eadd( V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">3</span>] ) ,
+
+			G.eadd( V[<span class="hljs-number">4</span>] , V[<span class="hljs-number">1</span>] ) ,
+			G.eadd( V[<span class="hljs-number">4</span>] , V[<span class="hljs-number">2</span>] ) ,
+			G.eadd( V[<span class="hljs-number">4</span>] , V[<span class="hljs-number">3</span>] ) ,
+
+			G.eadd( V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">6</span>] ) ,
+			G.eadd( V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">7</span>] ) ,
+			G.eadd( V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">8</span>] ) ,
+
+			G.eadd( V[<span class="hljs-number">9</span>] , V[<span class="hljs-number">6</span>] ) ,
+			G.eadd( V[<span class="hljs-number">9</span>] , V[<span class="hljs-number">7</span>] ) ,
+			G.eadd( V[<span class="hljs-number">9</span>] , V[<span class="hljs-number">8</span>] ) ,
+
+			G.eadd( V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">1</span>] ) ,
+			G.eadd( V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">2</span>] ) ,
+			G.eadd( V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">3</span>] ) ,
+
+		] ;
+
+		<span class="hljs-keyword">return</span> [ V , E ] ;
+
+	} ;
+
+	<span class="hljs-keyword">const</span> delete_all_edges = ( ) =&gt; ex( map( G.edel.bind( G ) , E ) ) ;
+	<span class="hljs-keyword">const</span> delete_all_vertices = ( ) =&gt; ex( map( G.vdel.bind( G ) , V ) ) ;
+
+	[ V , E ] = init( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">10</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">15</span> ) ;
+
+	delete_all_edges( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">10</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">0</span> ) ;
+
+	delete_all_vertices( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">0</span> ) ;
+
+	[ V , E ] = init( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">10</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">15</span> ) ;
+
+	delete_all_vertices( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">0</span> ) ;
+
+	[ V , E ] = init( ) ;
+
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
+
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">0</span> ) ;
+
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
+
+	G.reverse( ) ;
+
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
+
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">0</span> ) ;
+
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
+
+	ok( set( G.nitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">1</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">2</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">3</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">4</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">5</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">6</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">7</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.nitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
+
+	ok( set( G.dsitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">1</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">2</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">3</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">4</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">5</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">6</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">7</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ ] ) ) ;
+
+	ok( set( G.dpitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">1</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">2</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">3</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">4</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">5</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">6</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">7</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
+
+	deepEqual( cardinality.len( G.edges( ) ) , <span class="hljs-number">15</span> , <span class="hljs-string">"G.edges( ) length"</span> ) ;
+
+	<span class="hljs-keyword">const</span> edges = set( E ) ;
+
+	<span class="hljs-keyword">const</span> seen = set( ) ;
+
+	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.edges( ) ) {
+
+		<span class="hljs-keyword">if</span> ( seen.has( e ) ) <span class="hljs-keyword">continue</span> ;
+
+		ok( edges.has( e ) ) ;
+
+		deepEqual( [ u , v ] , G.endpoints( e ) ) ;
+
+		edges.remove( e ) ;
+
+		seen.add( e ) ;
+
+	}
+
+
+	<span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> i <span class="hljs-keyword">of</span> range( n ) ) {
+
+		<span class="hljs-keyword">const</span> X = [ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) u ] ;
+
+		ok( X.length === <span class="hljs-number">0</span> || set( [ V[i] ] ).isequal( X ) ) ;
+
+		ok( set( [ <span class="hljs-keyword">for</span> ( [ u , v , e ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) e ] ).isequal(
+			chain( [
+				[ <span class="hljs-keyword">for</span> ( [ u , v , e ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) e ] ,
+				[ <span class="hljs-keyword">for</span> ( [ u , v , e ] <span class="hljs-keyword">of</span> G.outgoing( V[i] ) ) e ]
+			] )
+		) ) ;
+
+		ok( set( [ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) v ] ).isequal(
+			chain( [
+				[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) v ] ,
+				[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.outgoing( V[i] ) ) v ]
+			] )
+		) ) ;
+
+		ok( set( [ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) u ] ).isequal(
+			chain( [
+				[ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) u ] ,
+				[ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.outgoing( V[i] ) ) u ]
+			] )
+		) ) ;
+
+		ok( set( G.nitr( V[i] ) ).isequal( [ <span class="hljs-keyword">for</span> ( [ _ , v ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) v ] ) ) ;
+
+	}
+
+	delete_all_edges( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">10</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">0</span> ) ;
+
+	delete_all_vertices( ) ;
+
+	deepEqual( cardinality.len( G.vitr( ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">0</span> ) ;
+
+} ) ;
+
+} ;
+
+exports.MultiDiGraph = MultiDiGraph ;</div></div></div></div></body></html>

@@ -208,11 +208,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "JavaScript"
             },
-            "sourcePath": "/home/aureooms/dev/js/js-graph-spec/js/src/001-spec/undirected1.js",
-            "projectPath": "js/src/001-spec/undirected1.js",
-            "targetPath": "001-spec/undirected1",
-            "pageTitle": "001-spec/undirected1",
-            "title": "undirected1"
+            "sourcePath": "/home/aureooms/dev/js/js-graph-spec/js/src/001-spec/01-Graph.js",
+            "projectPath": "js/src/001-spec/01-Graph.js",
+            "targetPath": "001-spec/01-Graph",
+            "pageTitle": "001-spec/01-Graph",
+            "title": "01-Graph"
           },
           "depth": 2,
           "outline": []
@@ -228,11 +228,31 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "foldPrefix": "^",
               "name": "JavaScript"
             },
-            "sourcePath": "/home/aureooms/dev/js/js-graph-spec/js/src/001-spec/undirected2.js",
-            "projectPath": "js/src/001-spec/undirected2.js",
-            "targetPath": "001-spec/undirected2",
-            "pageTitle": "001-spec/undirected2",
-            "title": "undirected2"
+            "sourcePath": "/home/aureooms/dev/js/js-graph-spec/js/src/001-spec/02-MultiGraph.js",
+            "projectPath": "js/src/001-spec/02-MultiGraph.js",
+            "targetPath": "001-spec/02-MultiGraph",
+            "pageTitle": "001-spec/02-MultiGraph",
+            "title": "02-MultiGraph"
+          },
+          "depth": 2,
+          "outline": []
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".js"],
+              "pygmentsLexer": "javascript",
+              "multiLineComment": ["/*", "*", "*/"],
+              "singleLineComment": ["//"],
+              "ignorePrefix": "}",
+              "foldPrefix": "^",
+              "name": "JavaScript"
+            },
+            "sourcePath": "/home/aureooms/dev/js/js-graph-spec/js/src/001-spec/03-MultiDiGraph.js",
+            "projectPath": "js/src/001-spec/03-MultiDiGraph.js",
+            "targetPath": "001-spec/03-MultiDiGraph",
+            "pageTitle": "001-spec/03-MultiDiGraph",
+            "title": "03-MultiDiGraph"
           },
           "depth": 2,
           "outline": []
