@@ -14,5 +14,5 @@
       "js"
     ]
   },
-  "babel": true
+  "babel": { "stage": 0 }
 }
