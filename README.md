@@ -5,7 +5,7 @@ Graph specification code bricks for JavaScript. Parent is
 [js-gn](https://github.com/aureooms/js-gn).
 
 ```js
-graphspec.test( "My graph implementation" , MyGraphConstructor ) ;
+graphspec.Graph( "My graph implementation" , MyGraphConstructor ) ;
 ```
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE)
