@@ -22,7 +22,9 @@
 	"version": "2.0.0",
 	"description": "Graph specification code bricks for JavaScript",
 	"dependencies": {
-		"aureooms-js-itertools": "^1.2.0"
+		"aureooms-js-itertools": "^1.2.0",
+		"aureooms-js-cardinality": "^1.1.0",
+		"aureooms-js-collections": "^1.0.0"
 	},
 	"license": "AGPL-3.0",
 	"spm": {
@@ -31,8 +33,6 @@
 	"devDependencies": {
 		"aureooms-js-adjacency-list": "^3.0.3",
 		"aureooms-js-adjacency-matrix": "^3.0.0",
-		"aureooms-js-cardinality": "^1.1.0",
-		"aureooms-js-collections": "^1.0.0",
 		"aureooms-js-dll": "^6.0.9",
 		"aureooms-node-package": "^5.0.2"
 	},
