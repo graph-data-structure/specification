@@ -31,8 +31,8 @@
 		"main": "js/dist/graph-spec.js"
 	},
 	"devDependencies": {
-		"aureooms-js-adjacency-list": "^4.0.1",
-		"aureooms-js-adjacency-matrix": "^3.1.2",
+		"aureooms-js-adjacency-list": "^4.0.3",
+		"aureooms-js-adjacency-matrix": "^3.1.3",
 		"aureooms-js-dll": "^6.0.9",
 		"aureooms-node-package": "^5.0.2"
 	},

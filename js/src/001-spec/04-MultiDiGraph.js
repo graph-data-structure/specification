@@ -242,6 +242,8 @@ test( "graph-spec : MultiDiGraph extensive test > " + title , function ( ) {
 		) ) ;
 
 		ok( set( G.nitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] ? v : u ] ) ) ;
+		ok( set( G.dpitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.ingoing( V[i] ) ) u ] ) ) ;
+		ok( set( G.dsitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.outgoing( V[i] ) ) v ] ) ) ;
 
 	}
 
