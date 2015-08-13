@@ -17,5 +17,5 @@
 	"description": "Graph specification code bricks for JavaScript",
 	"name": "aureooms-js-graph-spec",
 	"homepage": "http://aureooms.github.io/js-graph-spec/",
-	"version": "2.0.1"
+	"version": "3.0.0"
 }
