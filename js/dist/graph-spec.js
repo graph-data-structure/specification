@@ -35,8 +35,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var G = new Constructor();
 
-				var u = G.vadd();
-				var v = G.vadd();
+				var u = G.vadd("A");
+				var v = G.vadd("B");
 
 				var uv = G.eadd(u, v);
 
@@ -1050,8 +1050,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var G = new Constructor();
 
-				var u = G.vadd();
-				var v = G.vadd();
+				var u = G.vadd("A");
+				var v = G.vadd("B");
 
 				var uv = G.eadd(u, v);
 
@@ -1731,8 +1731,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var G = new Constructor();
 
-				var u = G.vadd();
-				var v = G.vadd();
+				var u = G.vadd("A");
+				var v = G.vadd("B");
 
 				var uv = G.eadd(u, v);
 
@@ -2464,8 +2464,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var G = new Constructor();
 
-				var u = G.vadd();
-				var v = G.vadd();
+				var u = G.vadd("A");
+				var v = G.vadd("B");
 
 				var uv = G.eadd(u, v);
 

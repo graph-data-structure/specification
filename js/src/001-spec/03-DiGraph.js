@@ -6,8 +6,8 @@ test( "graph-spec : DiGraph simple test > " + title , function ( assert ) {
 
 	const G = new Constructor( ) ;
 
-	const u = G.vadd( ) ;
-	const v = G.vadd( ) ;
+	const u = G.vadd( "A" ) ;
+	const v = G.vadd( "B" ) ;
 
 	const uv = G.eadd( u , v ) ;
 
