@@ -160,8 +160,16 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 3,
-                "title": "Undirected",
-                "slug": "undirected"
+                "title": "Graphs, DiGraphs, MultiGraphs, and MultiDiGraphs",
+                "slug": "graphs-digraphs-multigraphs-and-multidigraphs"
+              },
+              "depth": 3
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 3,
+                "title": "DiGraphs and MultiDiGraphs",
+                "slug": "digraphs-and-multidigraphs"
               },
               "depth": 3
             }

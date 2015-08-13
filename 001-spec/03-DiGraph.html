@@ -9,6 +9,8 @@ test( <span class="hljs-string">"graph-spec : DiGraph simple test &gt; "</span> 
 
 	<span class="hljs-keyword">const</span> uv = G.eadd( u , v ) ;
 
+	assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
+
 	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
 	<span class="hljs-keyword">let</span> [ a , b ] = G.edges( ).next( ).value ;
 	assert.deepEqual( [ a , b ] , [ u , v ] ) ;
@@ -39,6 +41,7 @@ test( <span class="hljs-string">"graph-spec : DiGraph extensive test &gt; "</spa
 	<span class="hljs-keyword">const</span> init = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> </span>) </span>{
 
 		<span class="hljs-keyword">const</span> V = [ <span class="hljs-keyword">for</span> ( i <span class="hljs-keyword">of</span> range( n ) ) G.vadd( i ) ] ;
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		<span class="hljs-keyword">const</span> E = [
 

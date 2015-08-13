@@ -56,10 +56,17 @@ jspm install npm:aureooms-js-graph-spec</code></pre>
 <h3 id="jam">jam</h3>
 <pre><code class="lang-js"><span class="hljs-built_in">require</span>( [ <span class="hljs-string">"aureooms-js-graph-spec"</span> ] , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> graphspec </span>) </span>{ ... } ) ;</code></pre>
 <h2 id="signatures">Signatures</h2>
-<h3 id="undirected">Undirected</h3>
-<h4 id="-graph-"><code>Graph</code></h4>
+<h3 id="graphs-digraphs-multigraphs-and-multidigraphs">Graphs, DiGraphs, MultiGraphs, and MultiDiGraphs</h3>
+<h4 id="-graph-digraph-multigraph-or-multidigraph-"><code>Graph</code>, <code>DiGraph</code>, <code>MultiGraph</code>, or <code>MultiDiGraph</code></h4>
 <p>Create a new graph.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> Graph( ) ;</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> Graph( ) ;
+<span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> DiGraph( ) ;
+<span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> MultiGraph( ) ;
+<span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> MultiDiGraph( ) ;
+<span class="hljs-comment">// ...</span></code></pre>
 <h4 id="-vadd-"><code>vadd</code></h4>
 <p>Add a vertex to graph <code>G</code>.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> u = G.vadd( ) ;</code></pre>
@@ -84,12 +91,41 @@ jspm install npm:aureooms-js-graph-spec</code></pre>
 <h4 id="-nitr-"><code>nitr</code></h4>
 <p>Get an iterator over vertex references of neighbors of <code>u</code> in graph <code>G</code>.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.nitr( u ) ) ... ;</code></pre>
+<h4 id="-vertices-"><code>vertices</code></h4>
+<p>Get an iterator over vertices in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> u <span class="hljs-keyword">of</span> G.vertices( ) ) ... ;</code></pre>
 <h4 id="-edges-"><code>edges</code></h4>
 <p>Get an iterator over edges in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> g.edges( ) ) ... ;</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.edges( ) ) ... ;</code></pre>
 <h4 id="-incident-"><code>incident</code></h4>
 <p>Get an iterator over edges incident to <code>w</code> in graph <code>G</code>.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.incident( w ) ) ... ;</code></pre>
 <h4 id="-endpoints-"><code>endpoints</code></h4>
-<p>Get endpoints <code>u</code> and <code>v</code> of an edge <code>e</code> in graph <code>g</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> [ u , v ] = g.endpoints( e ) ;</code></pre></div></div></div></div></body></html>
+<p>Get endpoints <code>u</code> and <code>v</code> of an edge reference <code>e</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> [ u , v ] = G.endpoints( e ) ;</code></pre>
+<h3 id="digraphs-and-multidigraphs">DiGraphs and MultiDiGraphs</h3>
+<p>These methods must also be implemented (with the same invariants)
+in Graphs and MultiGraphs for convenience.</p>
+<h4 id="-initr-"><code>initr</code></h4>
+<p>Get an iterator over edge references of ingoing edges of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> G.initr( u ) ) ... ;</code></pre>
+<h4 id="-outitr-"><code>outitr</code></h4>
+<p>Get an iterator over edge references of outgoing edges of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> G.outitr( u ) ) ... ;</code></pre>
+<h4 id="-dpitr-"><code>dpitr</code></h4>
+<p>Get an iterator over direct predecessors of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.dpitr( u ) ) ... ;</code></pre>
+<h4 id="-dsitr-"><code>dsitr</code></h4>
+<p>Get an iterator over direct successors of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.dsitr( u ) ) ... ;</code></pre>
+<h4 id="-ingoing-"><code>ingoing</code></h4>
+<p>Get an iterator over ingoing edges of <code>w</code> in graph <code>G</code>.
+The invariant <code>v === w</code> must hold.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.ingoing( w ) ) ... ;</code></pre>
+<h4 id="-outgoing-"><code>outgoing</code></h4>
+<p>Get an iterator over outgoing edges of <code>w</code> in graph <code>G</code>.
+The invariant <code>u === w</code> must hold.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.outgoing( w ) ) ... ;</code></pre>
+<h4 id="-reverse-"><code>reverse</code></h4>
+<p>Reverse the directions of edges in  <code>G</code>.</p>
+<pre><code class="lang-js">G.reverse( ) ;</code></pre></div></div></div></div></body></html>

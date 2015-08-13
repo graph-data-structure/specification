@@ -9,6 +9,8 @@
 
 		<span class="hljs-keyword">const</span> uv = G.eadd( u , v ) ;
 
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
+
 		assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
 		<span class="hljs-keyword">let</span> [ a , b ] = G.edges( ).next( ).value ;
 		assert.ok( set( [ a , b ] ).isequal( [ u , v ] ) ) ;
@@ -45,6 +47,7 @@
 		<span class="hljs-keyword">var</span> n = <span class="hljs-number">11</span> ;
 
 		<span class="hljs-keyword">for</span>( <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span> ; i &lt; n ; ++i ) v[i] = g.vadd( i ) ;
+		assert.ok( set( g.vitr( ) ).isequal( g.vertices( ) ) ) ;
 
 		e[<span class="hljs-number">1</span>] = [ ] ;
 		e[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] = g.eadd(v[<span class="hljs-number">1</span>], v[<span class="hljs-number">9</span>]);
@@ -58,24 +61,24 @@
 		e[<span class="hljs-number">4</span>] = [ ] ;
 		e[<span class="hljs-number">4</span>][<span class="hljs-number">0</span>] = g.eadd(v[<span class="hljs-number">4</span>], v[<span class="hljs-number">7</span>]);
 
-		<span class="hljs-keyword">var</span> r = [ <span class="hljs-number">0</span> , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ] ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>tests</p></div></div><div class="code"><div class="wrapper">		<span class="hljs-keyword">var</span> k , set , alledges ;
+		<span class="hljs-keyword">var</span> r = [ <span class="hljs-number">0</span> , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ] ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>tests</p></div></div><div class="code"><div class="wrapper">		<span class="hljs-keyword">var</span> k , notseen , alledges ;
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
 		k = <span class="hljs-number">0</span> ;
 		alledges = e[<span class="hljs-number">0</span>].concat( [ e[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] ] ).concat( e[<span class="hljs-number">4</span>] ) ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
@@ -87,12 +90,12 @@
 
 			<span class="hljs-keyword">var</span> k = e[m].length ;
 
-			<span class="hljs-keyword">var</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( e[m] ) ;
+			<span class="hljs-keyword">var</span> notseen = set( e[m] ) ;
 
 			ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> x </span>) </span>{
 				--k ;
-				ok( set.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>delete edges 1 0 , 0 2 , 4 0</p></div></div><div class="code"><div class="wrapper">		g.edel(e[<span class="hljs-number">1</span>].splice(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>]);
@@ -103,22 +106,22 @@
 
 		k = <span class="hljs-number">0</span> ;
 		alledges = e[<span class="hljs-number">0</span>].concat( e[<span class="hljs-number">4</span>] ) ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
 		deepEqual( k , alledges.length , <span class="hljs-string">'check edges count after del'</span> ) ;
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( map( ( e ) =&gt; g.endpoints( e )[<span class="hljs-number">1</span>] , e[<span class="hljs-number">0</span>] ) ) ;
+		notseen = set( map( ( e ) =&gt; g.endpoints( e )[<span class="hljs-number">1</span>] , e[<span class="hljs-number">0</span>] ) ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'nitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'nitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.nitr( v[<span class="hljs-number">0</span>] ) ) ) ;
 
@@ -128,22 +131,22 @@
 
 			<span class="hljs-keyword">var</span> k = e[m].length ;
 
-			<span class="hljs-keyword">var</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( e[m] ) ;
+			<span class="hljs-keyword">var</span> notseen = set( e[m] ) ;
 
 			ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> x </span>) </span>{
 				--k ;
-				ok( set.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>delete vertex 3</p></div></div><div class="code"><div class="wrapper">		g.vdel(v.splice(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>]);
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
@@ -184,24 +187,24 @@
 		e[<span class="hljs-number">4</span>] = [ ] ;
 		e[<span class="hljs-number">4</span>][<span class="hljs-number">0</span>] = g.eadd(v[<span class="hljs-number">4</span>], v[<span class="hljs-number">7</span>]);
 
-		<span class="hljs-keyword">var</span> r = [ <span class="hljs-number">0</span> , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ] ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>tests</p></div></div><div class="code"><div class="wrapper">		<span class="hljs-keyword">var</span> k , set , alledges ;
+		<span class="hljs-keyword">var</span> r = [ <span class="hljs-number">0</span> , <span class="hljs-number">1</span> , <span class="hljs-number">4</span> ] ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>tests</p></div></div><div class="code"><div class="wrapper">		<span class="hljs-keyword">var</span> k , notseen , alledges ;
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
 		k = <span class="hljs-number">0</span> ;
 		alledges = e[<span class="hljs-number">0</span>].concat( [ e[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] ] ).concat( e[<span class="hljs-number">4</span>] ) ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
@@ -213,12 +216,12 @@
 
 			<span class="hljs-keyword">var</span> k = e[m].length ;
 
-			<span class="hljs-keyword">var</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( e[m] ) ;
+			<span class="hljs-keyword">var</span> notseen = set( e[m] ) ;
 
 			ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> x </span>) </span>{
 				--k ;
-				ok( set.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>delete edges 1 0 , 0 2 , 4 0</p></div></div><div class="code"><div class="wrapper">		g.edel(e[<span class="hljs-number">1</span>].splice(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>]);
@@ -229,22 +232,22 @@
 
 		k = <span class="hljs-number">0</span> ;
 		alledges = e[<span class="hljs-number">0</span>].concat( e[<span class="hljs-number">4</span>] ) ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'eitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
 		deepEqual( k , alledges.length , <span class="hljs-string">'check edges count after del'</span> ) ;
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( map( ( e ) =&gt; g.endpoints( e )[<span class="hljs-number">1</span>] , e[<span class="hljs-number">0</span>] ) ) ;
+		notseen = set( map( ( e ) =&gt; g.endpoints( e )[<span class="hljs-number">1</span>] , e[<span class="hljs-number">0</span>] ) ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'nitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'nitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.nitr( v[<span class="hljs-number">0</span>] ) ) ) ;
 
@@ -254,23 +257,23 @@
 
 			<span class="hljs-keyword">var</span> k = e[m].length ;
 
-			<span class="hljs-keyword">var</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( e[m] ) ;
+			<span class="hljs-keyword">var</span> notseen = set( e[m] ) ;
 
 			ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> x </span>) </span>{
 				--k ;
-				ok( set.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , <span class="hljs-string">'iitr '</span> + m + <span class="hljs-string">' '</span> + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>delete vertex 10</p></div></div><div class="code"><div class="wrapper">		g.vdel(v.splice(<span class="hljs-number">10</span>, <span class="hljs-number">1</span>)[<span class="hljs-number">0</span>]);
 		e[<span class="hljs-number">0</span>].splice(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
-			ok( set.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , <span class="hljs-string">'vitr '</span> + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
@@ -300,6 +303,7 @@ test( <span class="hljs-string">"graph-spec : Graph extensive test &gt; "</span>
 	<span class="hljs-keyword">const</span> init = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> </span>) </span>{
 
 		<span class="hljs-keyword">const</span> V = [ <span class="hljs-keyword">for</span> ( i <span class="hljs-keyword">of</span> range( n ) ) G.vadd( i ) ] ;
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		<span class="hljs-keyword">const</span> E = [
 
