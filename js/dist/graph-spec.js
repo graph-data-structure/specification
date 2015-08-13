@@ -395,7 +395,44 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 		var MultiDiGraph = function MultiDiGraph(title, Constructor) {
 
-			test("graph-spec : MultiDiGraph > " + title, function () {
+			test("graph-spec : MultiDiGraph simple test > " + title, function (assert) {
+
+				var G = new Constructor();
+
+				var u = G.vadd();
+				var v = G.vadd();
+
+				var uv = G.eadd(u, v);
+
+				assert.ok(set([u, v]).isequal(G.vitr()));
+
+				var _G$edges$next$value = _slicedToArray(G.edges().next().value, 2);
+
+				var a = _G$edges$next$value[0];
+				var b = _G$edges$next$value[1];
+
+				assert.deepEqual([a, b], [u, v]);
+
+				G.reverse();
+
+				assert.ok(set([u, v]).isequal(G.vitr()));
+
+				var _G$edges$next$value2 = _slicedToArray(G.edges().next().value, 2);
+
+				a = _G$edges$next$value2[0];
+				b = _G$edges$next$value2[1];
+
+				assert.deepEqual([a, b], [v, u]);
+
+				G.edel(uv);
+				assert.deepEqual(cardinality.len(G.eitr()), 0);
+
+				G.vdel(u);
+				G.vdel(v);
+				assert.deepEqual(cardinality.len(G.vitr()), 0);
+			});
+
+			test("graph-spec : MultiDiGraph extensive test > " + title, function () {
 
 				var G = new Constructor();
 
@@ -642,19 +679,20 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 					var _loop = function () {
 						var i = _step5.value;
 
-						var X = (function () {
-							var _X = [];
+						ok(all((function () {
+							var _all3 = [];
 							var _iteratorNormalCompletion6 = true;
 							var _didIteratorError6 = false;
 							var _iteratorError6 = undefined;
 
 							try {
 								for (var _iterator6 = G.incident(V[i])[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-									var _step6$value = _slicedToArray(_step6.value, 1);
+									var _step6$value = _slicedToArray(_step6.value, 2);
 
 									var u = _step6$value[0];
+									var v = _step6$value[1];
 
-									_X.push(u);
+									_all3.push(u === V[i] || v === V[i]);
 								}
 							} catch (err) {
 								_didIteratorError6 = true;
@@ -671,10 +709,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 								}
 							}
 
-							return _X;
-						})();
-
-						ok(X.length === 0 || set([V[i]]).isequal(X));
+							return _all3;
+						})()));
 
 						ok(set((function () {
 							var _set = [];
@@ -971,10 +1007,10 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 								for (var _iterator16 = G.incident(V[i])[Symbol.iterator](), _step16; !(_iteratorNormalCompletion16 = (_step16 = _iterator16.next()).done); _iteratorNormalCompletion16 = true) {
 									var _step16$value = _slicedToArray(_step16.value, 2);
 
-									var _ = _step16$value[0];
+									var u = _step16$value[0];
 									var v = _step16$value[1];
 
-									_set$isequal.push(v);
+									_set$isequal.push(u === V[i] ? v : u);
 								}
 							} catch (err) {
 								_didIteratorError16 = true;

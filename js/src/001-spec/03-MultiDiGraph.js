@@ -2,7 +2,35 @@
 
 const MultiDiGraph = function ( title , Constructor ) {
 
-test( "graph-spec : MultiDiGraph > " + title , function ( ) {
+test( "graph-spec : MultiDiGraph simple test > " + title , function ( assert ) {
+
+	const G = new Constructor( ) ;
+
+	const u = G.vadd( ) ;
+	const v = G.vadd( ) ;
+
+	const uv = G.eadd( u , v ) ;
+
+	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
+	let [ a , b ] = G.edges( ).next( ).value ;
+	assert.deepEqual( [ a , b ] , [ u , v ] ) ;
+
+	G.reverse( ) ;
+
+	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
+	[ a , b ] = G.edges( ).next( ).value ;
+	assert.deepEqual( [ a , b ] , [ v , u ] ) ;
+
+	G.edel( uv ) ;
+	assert.deepEqual( cardinality.len( G.eitr( ) ) , 0 ) ;
+
+	G.vdel( u ) ;
+	G.vdel( v ) ;
+	assert.deepEqual( cardinality.len( G.vitr( ) ) , 0 ) ;
+
+} ) ;
+
+test( "graph-spec : MultiDiGraph extensive test > " + title , function ( ) {
 
 	const G = new Constructor( ) ;
 
@@ -196,9 +224,7 @@ test( "graph-spec : MultiDiGraph > " + title , function ( ) {
 
 	for ( let i of range( n ) ) {
 
-		const X = [ for ( [ u ] of G.incident( V[i] ) ) u ] ;
-
-		ok( X.length === 0 || set( [ V[i] ] ).isequal( X ) ) ;
+		ok( all( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] || v === V[i] ] ) ) ;
 
 		ok( set( [ for ( [ u , v , e ] of G.incident( V[i] ) ) e ] ).isequal(
 			chain( [
@@ -221,7 +247,7 @@ test( "graph-spec : MultiDiGraph > " + title , function ( ) {
 			] )
 		) ) ;
 
-		ok( set( G.nitr( V[i] ) ).isequal( [ for ( [ _ , v ] of G.incident( V[i] ) ) v ] ) ) ;
+		ok( set( G.nitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] ? v : u ] ) ) ;
 
 	}
 
