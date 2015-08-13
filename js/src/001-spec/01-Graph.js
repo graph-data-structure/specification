@@ -88,10 +88,7 @@ const Graph = function ( title , Constructor ) {
 		deepEqual( k , alledges.length , 'check edges count after del' ) ;
 
 		k = 0 ;
-		set = new Set( map ( function ( e ) {
-			let [ u , w ] = g.endpoints( e ) ;
-			return u === v[0] ? w : u ;
-		} , e[0] ) ) ;
+		set = new Set( map( ( e ) => g.endpoints( e )[1] , e[0] ) ) ;
 
 		ex( map( function ( j ) {
 			ok( set.has( j ) , 'nitr ' + k ) ;
@@ -235,10 +232,7 @@ const Graph = function ( title , Constructor ) {
 		deepEqual( k , alledges.length , 'check edges count after del' ) ;
 
 		k = 0 ;
-		set = new Set( map ( function ( e ) {
-			let [ u , w ] = g.endpoints( e ) ;
-			return u === v[0] ? w : u ;
-		} , e[0] ) ) ;
+		set = new Set( map( ( e ) => g.endpoints( e )[1] , e[0] ) ) ;
 
 		ex( map( function ( j ) {
 			ok( set.has( j ) , 'nitr ' + k ) ;

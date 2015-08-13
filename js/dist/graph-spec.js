@@ -115,14 +115,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				set = new Set(map(function (e) {
-					var _g$endpoints = g.endpoints(e);
-
-					var _g$endpoints2 = _slicedToArray(_g$endpoints, 2);
-
-					var u = _g$endpoints2[0];
-					var w = _g$endpoints2[1];
-
-					return u === v[0] ? w : u;
+					return g.endpoints(e)[1];
 				}, e[0]));
 
 				ex(map(function (j) {
@@ -290,14 +283,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				set = new Set(map(function (e) {
-					var _g$endpoints3 = g.endpoints(e);
-
-					var _g$endpoints32 = _slicedToArray(_g$endpoints3, 2);
-
-					var u = _g$endpoints32[0];
-					var w = _g$endpoints32[1];
-
-					return u === v[0] ? w : u;
+					return g.endpoints(e)[1];
 				}, e[0]));
 
 				ex(map(function (j) {
@@ -632,8 +618,6 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var edges = set(E);
 
-				var seen = set();
-
 				var _iteratorNormalCompletion4 = true;
 				var _didIteratorError4 = false;
 				var _iteratorError4 = undefined;
@@ -646,15 +630,11 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 						var v = _step4$value[1];
 						var e = _step4$value[2];
 
-						if (seen.has(e)) continue;
-
 						ok(edges.has(e));
 
 						deepEqual([u, v], G.endpoints(e));
 
 						edges.remove(e);
-
-						seen.add(e);
 					}
 				} catch (err) {
 					_didIteratorError4 = true;
@@ -1304,8 +1284,6 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var edges = set(E);
 
-				var seen = set();
-
 				var _iteratorNormalCompletion18 = true;
 				var _didIteratorError18 = false;
 				var _iteratorError18 = undefined;
@@ -1318,15 +1296,11 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 						var v = _step18$value[1];
 						var e = _step18$value[2];
 
-						if (seen.has(e)) continue;
-
 						ok(edges.has(e));
 
 						deepEqual([u, v], G.endpoints(e));
 
 						edges.remove(e);
-
-						seen.add(e);
 					}
 				} catch (err) {
 					_didIteratorError18 = true;

@@ -205,19 +205,13 @@ test( "graph-spec : DiGraph extensive test > " + title , function ( ) {
 
 	const edges = set( E ) ;
 
-	const seen = set( ) ;
-
 	for ( let [ u , v , e ] of G.edges( ) ) {
-
-		if ( seen.has( e ) ) continue ;
 
 		ok( edges.has( e ) ) ;
 
 		deepEqual( [ u , v ] , G.endpoints( e ) ) ;
 
 		edges.remove( e ) ;
-
-		seen.add( e ) ;
 
 	}
 
