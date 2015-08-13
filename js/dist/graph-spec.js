@@ -391,11 +391,11 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 		exports.MultiGraph = MultiGraph;
 
-		/* js/src/001-spec/03-MultiDiGraph.js */
+		/* js/src/001-spec/03-DiGraph.js */
 
-		var MultiDiGraph = function MultiDiGraph(title, Constructor) {
+		var DiGraph = function DiGraph(title, Constructor) {
 
-			test("graph-spec : MultiDiGraph simple test > " + title, function (assert) {
+			test("graph-spec : DiGraph simple test > " + title, function (assert) {
 
 				var G = new Constructor();
 
@@ -432,7 +432,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				assert.deepEqual(cardinality.len(G.vitr()), 0);
 			});
 
-			test("graph-spec : MultiDiGraph extensive test > " + title, function () {
+			test("graph-spec : DiGraph extensive test > " + title, function () {
 
 				var G = new Constructor();
 
@@ -493,7 +493,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				E = _init2[1];
 
 				deepEqual(cardinality.len(G.vitr()), 10);
-				deepEqual(cardinality.len(G.eitr()), 15);
+				deepEqual(cardinality.len(G.eitr()), 12);
 
 				delete_all_edges();
 
@@ -513,7 +513,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				E = _init32[1];
 
 				deepEqual(cardinality.len(G.vitr()), 10);
-				deepEqual(cardinality.len(G.eitr()), 15);
+				deepEqual(cardinality.len(G.eitr()), 12);
 
 				delete_all_vertices();
 
@@ -527,10 +527,10 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				V = _init42[0];
 				E = _init42[1];
 
-				deepEqual(cardinality.len(G.iitr(V[0])), 6);
-				deepEqual(cardinality.len(G.iitr(V[1])), 3);
-				deepEqual(cardinality.len(G.iitr(V[2])), 3);
-				deepEqual(cardinality.len(G.iitr(V[3])), 3);
+				deepEqual(cardinality.len(G.iitr(V[0])), 3);
+				deepEqual(cardinality.len(G.iitr(V[1])), 2);
+				deepEqual(cardinality.len(G.iitr(V[2])), 2);
+				deepEqual(cardinality.len(G.iitr(V[3])), 2);
 				deepEqual(cardinality.len(G.iitr(V[4])), 3);
 				deepEqual(cardinality.len(G.iitr(V[5])), 3);
 				deepEqual(cardinality.len(G.iitr(V[6])), 2);
@@ -539,9 +539,9 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				deepEqual(cardinality.len(G.iitr(V[9])), 3);
 
 				deepEqual(cardinality.len(G.initr(V[0])), 0);
-				deepEqual(cardinality.len(G.initr(V[1])), 3);
-				deepEqual(cardinality.len(G.initr(V[2])), 3);
-				deepEqual(cardinality.len(G.initr(V[3])), 3);
+				deepEqual(cardinality.len(G.initr(V[1])), 2);
+				deepEqual(cardinality.len(G.initr(V[2])), 2);
+				deepEqual(cardinality.len(G.initr(V[3])), 2);
 				deepEqual(cardinality.len(G.initr(V[4])), 0);
 				deepEqual(cardinality.len(G.initr(V[5])), 0);
 				deepEqual(cardinality.len(G.initr(V[6])), 2);
@@ -549,7 +549,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				deepEqual(cardinality.len(G.initr(V[8])), 2);
 				deepEqual(cardinality.len(G.initr(V[9])), 0);
 
-				deepEqual(cardinality.len(G.outitr(V[0])), 6);
+				deepEqual(cardinality.len(G.outitr(V[0])), 3);
 				deepEqual(cardinality.len(G.outitr(V[1])), 0);
 				deepEqual(cardinality.len(G.outitr(V[2])), 0);
 				deepEqual(cardinality.len(G.outitr(V[3])), 0);
@@ -562,10 +562,10 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				G.reverse();
 
-				deepEqual(cardinality.len(G.iitr(V[0])), 6);
-				deepEqual(cardinality.len(G.iitr(V[1])), 3);
-				deepEqual(cardinality.len(G.iitr(V[2])), 3);
-				deepEqual(cardinality.len(G.iitr(V[3])), 3);
+				deepEqual(cardinality.len(G.iitr(V[0])), 3);
+				deepEqual(cardinality.len(G.iitr(V[1])), 2);
+				deepEqual(cardinality.len(G.iitr(V[2])), 2);
+				deepEqual(cardinality.len(G.iitr(V[3])), 2);
 				deepEqual(cardinality.len(G.iitr(V[4])), 3);
 				deepEqual(cardinality.len(G.iitr(V[5])), 3);
 				deepEqual(cardinality.len(G.iitr(V[6])), 2);
@@ -574,9 +574,9 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				deepEqual(cardinality.len(G.iitr(V[9])), 3);
 
 				deepEqual(cardinality.len(G.outitr(V[0])), 0);
-				deepEqual(cardinality.len(G.outitr(V[1])), 3);
-				deepEqual(cardinality.len(G.outitr(V[2])), 3);
-				deepEqual(cardinality.len(G.outitr(V[3])), 3);
+				deepEqual(cardinality.len(G.outitr(V[1])), 2);
+				deepEqual(cardinality.len(G.outitr(V[2])), 2);
+				deepEqual(cardinality.len(G.outitr(V[3])), 2);
 				deepEqual(cardinality.len(G.outitr(V[4])), 0);
 				deepEqual(cardinality.len(G.outitr(V[5])), 0);
 				deepEqual(cardinality.len(G.outitr(V[6])), 2);
@@ -584,7 +584,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				deepEqual(cardinality.len(G.outitr(V[8])), 2);
 				deepEqual(cardinality.len(G.outitr(V[9])), 0);
 
-				deepEqual(cardinality.len(G.initr(V[0])), 6);
+				deepEqual(cardinality.len(G.initr(V[0])), 3);
 				deepEqual(cardinality.len(G.initr(V[1])), 0);
 				deepEqual(cardinality.len(G.initr(V[2])), 0);
 				deepEqual(cardinality.len(G.initr(V[3])), 0);
@@ -628,7 +628,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				ok(set(G.dpitr(V[8])).isequal([]));
 				ok(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));
 
-				deepEqual(cardinality.len(G.edges()), 15, "G.edges( ) length");
+				deepEqual(cardinality.len(G.edges()), 12, "G.edges( ) length");
 
 				var edges = set(E);
 
@@ -1045,6 +1045,678 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 					} finally {
 						if (_didIteratorError5) {
 							throw _iteratorError5;
+						}
+					}
+				}
+
+				delete_all_edges();
+
+				deepEqual(cardinality.len(G.vitr()), 10);
+				deepEqual(cardinality.len(G.eitr()), 0);
+
+				delete_all_vertices();
+
+				deepEqual(cardinality.len(G.vitr()), 0);
+				deepEqual(cardinality.len(G.eitr()), 0);
+			});
+		};
+
+		exports.DiGraph = DiGraph;
+
+		/* js/src/001-spec/04-MultiDiGraph.js */
+
+		var MultiDiGraph = function MultiDiGraph(title, Constructor) {
+
+			test("graph-spec : MultiDiGraph simple test > " + title, function (assert) {
+
+				var G = new Constructor();
+
+				var u = G.vadd();
+				var v = G.vadd();
+
+				var uv = G.eadd(u, v);
+
+				assert.ok(set([u, v]).isequal(G.vitr()));
+
+				var _G$edges$next$value3 = _slicedToArray(G.edges().next().value, 2);
+
+				var a = _G$edges$next$value3[0];
+				var b = _G$edges$next$value3[1];
+
+				assert.deepEqual([a, b], [u, v]);
+
+				G.reverse();
+
+				assert.ok(set([u, v]).isequal(G.vitr()));
+
+				var _G$edges$next$value4 = _slicedToArray(G.edges().next().value, 2);
+
+				a = _G$edges$next$value4[0];
+				b = _G$edges$next$value4[1];
+
+				assert.deepEqual([a, b], [v, u]);
+
+				G.edel(uv);
+				assert.deepEqual(cardinality.len(G.eitr()), 0);
+
+				G.vdel(u);
+				G.vdel(v);
+				assert.deepEqual(cardinality.len(G.vitr()), 0);
+			});
+
+			test("graph-spec : MultiDiGraph extensive test > " + title, function () {
+
+				var G = new Constructor();
+
+				var n = 10;
+
+				var V = undefined,
+				    E = undefined;
+
+				var init = function init() {
+
+					var V = (function () {
+						var _V2 = [];
+						var _iteratorNormalCompletion17 = true;
+						var _didIteratorError17 = false;
+						var _iteratorError17 = undefined;
+
+						try {
+							for (var _iterator17 = range(n)[Symbol.iterator](), _step17; !(_iteratorNormalCompletion17 = (_step17 = _iterator17.next()).done); _iteratorNormalCompletion17 = true) {
+								var i = _step17.value;
+
+								_V2.push(G.vadd(i));
+							}
+						} catch (err) {
+							_didIteratorError17 = true;
+							_iteratorError17 = err;
+						} finally {
+							try {
+								if (!_iteratorNormalCompletion17 && _iterator17["return"]) {
+									_iterator17["return"]();
+								}
+							} finally {
+								if (_didIteratorError17) {
+									throw _iteratorError17;
+								}
+							}
+						}
+
+						return _V2;
+					})();
+
+					var E = [G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3]), G.eadd(V[4], V[1]), G.eadd(V[4], V[2]), G.eadd(V[4], V[3]), G.eadd(V[5], V[6]), G.eadd(V[5], V[7]), G.eadd(V[5], V[8]), G.eadd(V[9], V[6]), G.eadd(V[9], V[7]), G.eadd(V[9], V[8]), G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3])];
+
+					return [V, E];
+				};
+
+				var delete_all_edges = function delete_all_edges() {
+					return ex(map(G.edel.bind(G), E));
+				};
+				var delete_all_vertices = function delete_all_vertices() {
+					return ex(map(G.vdel.bind(G), V));
+				};
+
+				var _init5 = init();
+
+				var _init52 = _slicedToArray(_init5, 2);
+
+				V = _init52[0];
+				E = _init52[1];
+
+				deepEqual(cardinality.len(G.vitr()), 10);
+				deepEqual(cardinality.len(G.eitr()), 15);
+
+				delete_all_edges();
+
+				deepEqual(cardinality.len(G.vitr()), 10);
+				deepEqual(cardinality.len(G.eitr()), 0);
+
+				delete_all_vertices();
+
+				deepEqual(cardinality.len(G.vitr()), 0);
+				deepEqual(cardinality.len(G.eitr()), 0);
+
+				var _init6 = init();
+
+				var _init62 = _slicedToArray(_init6, 2);
+
+				V = _init62[0];
+				E = _init62[1];
+
+				deepEqual(cardinality.len(G.vitr()), 10);
+				deepEqual(cardinality.len(G.eitr()), 15);
+
+				delete_all_vertices();
+
+				deepEqual(cardinality.len(G.vitr()), 0);
+				deepEqual(cardinality.len(G.eitr()), 0);
+
+				var _init7 = init();
+
+				var _init72 = _slicedToArray(_init7, 2);
+
+				V = _init72[0];
+				E = _init72[1];
+
+				deepEqual(cardinality.len(G.iitr(V[0])), 6);
+				deepEqual(cardinality.len(G.iitr(V[1])), 3);
+				deepEqual(cardinality.len(G.iitr(V[2])), 3);
+				deepEqual(cardinality.len(G.iitr(V[3])), 3);
+				deepEqual(cardinality.len(G.iitr(V[4])), 3);
+				deepEqual(cardinality.len(G.iitr(V[5])), 3);
+				deepEqual(cardinality.len(G.iitr(V[6])), 2);
+				deepEqual(cardinality.len(G.iitr(V[7])), 2);
+				deepEqual(cardinality.len(G.iitr(V[8])), 2);
+				deepEqual(cardinality.len(G.iitr(V[9])), 3);
+
+				deepEqual(cardinality.len(G.initr(V[0])), 0);
+				deepEqual(cardinality.len(G.initr(V[1])), 3);
+				deepEqual(cardinality.len(G.initr(V[2])), 3);
+				deepEqual(cardinality.len(G.initr(V[3])), 3);
+				deepEqual(cardinality.len(G.initr(V[4])), 0);
+				deepEqual(cardinality.len(G.initr(V[5])), 0);
+				deepEqual(cardinality.len(G.initr(V[6])), 2);
+				deepEqual(cardinality.len(G.initr(V[7])), 2);
+				deepEqual(cardinality.len(G.initr(V[8])), 2);
+				deepEqual(cardinality.len(G.initr(V[9])), 0);
+
+				deepEqual(cardinality.len(G.outitr(V[0])), 6);
+				deepEqual(cardinality.len(G.outitr(V[1])), 0);
+				deepEqual(cardinality.len(G.outitr(V[2])), 0);
+				deepEqual(cardinality.len(G.outitr(V[3])), 0);
+				deepEqual(cardinality.len(G.outitr(V[4])), 3);
+				deepEqual(cardinality.len(G.outitr(V[5])), 3);
+				deepEqual(cardinality.len(G.outitr(V[6])), 0);
+				deepEqual(cardinality.len(G.outitr(V[7])), 0);
+				deepEqual(cardinality.len(G.outitr(V[8])), 0);
+				deepEqual(cardinality.len(G.outitr(V[9])), 3);
+
+				G.reverse();
+
+				deepEqual(cardinality.len(G.iitr(V[0])), 6);
+				deepEqual(cardinality.len(G.iitr(V[1])), 3);
+				deepEqual(cardinality.len(G.iitr(V[2])), 3);
+				deepEqual(cardinality.len(G.iitr(V[3])), 3);
+				deepEqual(cardinality.len(G.iitr(V[4])), 3);
+				deepEqual(cardinality.len(G.iitr(V[5])), 3);
+				deepEqual(cardinality.len(G.iitr(V[6])), 2);
+				deepEqual(cardinality.len(G.iitr(V[7])), 2);
+				deepEqual(cardinality.len(G.iitr(V[8])), 2);
+				deepEqual(cardinality.len(G.iitr(V[9])), 3);
+
+				deepEqual(cardinality.len(G.outitr(V[0])), 0);
+				deepEqual(cardinality.len(G.outitr(V[1])), 3);
+				deepEqual(cardinality.len(G.outitr(V[2])), 3);
+				deepEqual(cardinality.len(G.outitr(V[3])), 3);
+				deepEqual(cardinality.len(G.outitr(V[4])), 0);
+				deepEqual(cardinality.len(G.outitr(V[5])), 0);
+				deepEqual(cardinality.len(G.outitr(V[6])), 2);
+				deepEqual(cardinality.len(G.outitr(V[7])), 2);
+				deepEqual(cardinality.len(G.outitr(V[8])), 2);
+				deepEqual(cardinality.len(G.outitr(V[9])), 0);
+
+				deepEqual(cardinality.len(G.initr(V[0])), 6);
+				deepEqual(cardinality.len(G.initr(V[1])), 0);
+				deepEqual(cardinality.len(G.initr(V[2])), 0);
+				deepEqual(cardinality.len(G.initr(V[3])), 0);
+				deepEqual(cardinality.len(G.initr(V[4])), 3);
+				deepEqual(cardinality.len(G.initr(V[5])), 3);
+				deepEqual(cardinality.len(G.initr(V[6])), 0);
+				deepEqual(cardinality.len(G.initr(V[7])), 0);
+				deepEqual(cardinality.len(G.initr(V[8])), 0);
+				deepEqual(cardinality.len(G.initr(V[9])), 3);
+
+				ok(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));
+				ok(set(G.nitr(V[1])).isequal([V[0], V[4]]));
+				ok(set(G.nitr(V[2])).isequal([V[0], V[4]]));
+				ok(set(G.nitr(V[3])).isequal([V[0], V[4]]));
+				ok(set(G.nitr(V[4])).isequal([V[1], V[2], V[3]]));
+				ok(set(G.nitr(V[5])).isequal([V[6], V[7], V[8]]));
+				ok(set(G.nitr(V[6])).isequal([V[5], V[9]]));
+				ok(set(G.nitr(V[7])).isequal([V[5], V[9]]));
+				ok(set(G.nitr(V[8])).isequal([V[5], V[9]]));
+				ok(set(G.nitr(V[9])).isequal([V[6], V[7], V[8]]));
+
+				ok(set(G.dsitr(V[0])).isequal([]));
+				ok(set(G.dsitr(V[1])).isequal([V[0], V[4]]));
+				ok(set(G.dsitr(V[2])).isequal([V[0], V[4]]));
+				ok(set(G.dsitr(V[3])).isequal([V[0], V[4]]));
+				ok(set(G.dsitr(V[4])).isequal([]));
+				ok(set(G.dsitr(V[5])).isequal([]));
+				ok(set(G.dsitr(V[6])).isequal([V[5], V[9]]));
+				ok(set(G.dsitr(V[7])).isequal([V[5], V[9]]));
+				ok(set(G.dsitr(V[8])).isequal([V[5], V[9]]));
+				ok(set(G.dsitr(V[9])).isequal([]));
+
+				ok(set(G.dpitr(V[0])).isequal([V[1], V[2], V[3]]));
+				ok(set(G.dpitr(V[1])).isequal([]));
+				ok(set(G.dpitr(V[2])).isequal([]));
+				ok(set(G.dpitr(V[3])).isequal([]));
+				ok(set(G.dpitr(V[4])).isequal([V[1], V[2], V[3]]));
+				ok(set(G.dpitr(V[5])).isequal([V[6], V[7], V[8]]));
+				ok(set(G.dpitr(V[6])).isequal([]));
+				ok(set(G.dpitr(V[7])).isequal([]));
+				ok(set(G.dpitr(V[8])).isequal([]));
+				ok(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));
+
+				deepEqual(cardinality.len(G.edges()), 15, "G.edges( ) length");
+
+				var edges = set(E);
+
+				var seen = set();
+
+				var _iteratorNormalCompletion18 = true;
+				var _didIteratorError18 = false;
+				var _iteratorError18 = undefined;
+
+				try {
+					for (var _iterator18 = G.edges()[Symbol.iterator](), _step18; !(_iteratorNormalCompletion18 = (_step18 = _iterator18.next()).done); _iteratorNormalCompletion18 = true) {
+						var _step18$value = _slicedToArray(_step18.value, 3);
+
+						var u = _step18$value[0];
+						var v = _step18$value[1];
+						var e = _step18$value[2];
+
+						if (seen.has(e)) continue;
+
+						ok(edges.has(e));
+
+						deepEqual([u, v], G.endpoints(e));
+
+						edges.remove(e);
+
+						seen.add(e);
+					}
+				} catch (err) {
+					_didIteratorError18 = true;
+					_iteratorError18 = err;
+				} finally {
+					try {
+						if (!_iteratorNormalCompletion18 && _iterator18["return"]) {
+							_iterator18["return"]();
+						}
+					} finally {
+						if (_didIteratorError18) {
+							throw _iteratorError18;
+						}
+					}
+				}
+
+				var _iteratorNormalCompletion19 = true;
+				var _didIteratorError19 = false;
+				var _iteratorError19 = undefined;
+
+				try {
+					var _loop2 = function () {
+						var i = _step19.value;
+
+						ok(all((function () {
+							var _all4 = [];
+							var _iteratorNormalCompletion20 = true;
+							var _didIteratorError20 = false;
+							var _iteratorError20 = undefined;
+
+							try {
+								for (var _iterator20 = G.incident(V[i])[Symbol.iterator](), _step20; !(_iteratorNormalCompletion20 = (_step20 = _iterator20.next()).done); _iteratorNormalCompletion20 = true) {
+									var _step20$value = _slicedToArray(_step20.value, 2);
+
+									var u = _step20$value[0];
+									var v = _step20$value[1];
+
+									_all4.push(u === V[i] || v === V[i]);
+								}
+							} catch (err) {
+								_didIteratorError20 = true;
+								_iteratorError20 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion20 && _iterator20["return"]) {
+										_iterator20["return"]();
+									}
+								} finally {
+									if (_didIteratorError20) {
+										throw _iteratorError20;
+									}
+								}
+							}
+
+							return _all4;
+						})()));
+
+						ok(set((function () {
+							var _set4 = [];
+							var _iteratorNormalCompletion21 = true;
+							var _didIteratorError21 = false;
+							var _iteratorError21 = undefined;
+
+							try {
+								for (var _iterator21 = G.incident(V[i])[Symbol.iterator](), _step21; !(_iteratorNormalCompletion21 = (_step21 = _iterator21.next()).done); _iteratorNormalCompletion21 = true) {
+									var _step21$value = _slicedToArray(_step21.value, 3);
+
+									var u = _step21$value[0];
+									var v = _step21$value[1];
+									var e = _step21$value[2];
+
+									_set4.push(e);
+								}
+							} catch (err) {
+								_didIteratorError21 = true;
+								_iteratorError21 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion21 && _iterator21["return"]) {
+										_iterator21["return"]();
+									}
+								} finally {
+									if (_didIteratorError21) {
+										throw _iteratorError21;
+									}
+								}
+							}
+
+							return _set4;
+						})()).isequal(chain([(function () {
+							var _ref7 = [];
+							var _iteratorNormalCompletion22 = true;
+							var _didIteratorError22 = false;
+							var _iteratorError22 = undefined;
+
+							try {
+								for (var _iterator22 = G.ingoing(V[i])[Symbol.iterator](), _step22; !(_iteratorNormalCompletion22 = (_step22 = _iterator22.next()).done); _iteratorNormalCompletion22 = true) {
+									var _step22$value = _slicedToArray(_step22.value, 3);
+
+									var u = _step22$value[0];
+									var v = _step22$value[1];
+									var e = _step22$value[2];
+
+									_ref7.push(e);
+								}
+							} catch (err) {
+								_didIteratorError22 = true;
+								_iteratorError22 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion22 && _iterator22["return"]) {
+										_iterator22["return"]();
+									}
+								} finally {
+									if (_didIteratorError22) {
+										throw _iteratorError22;
+									}
+								}
+							}
+
+							return _ref7;
+						})(), (function () {
+							var _ref8 = [];
+							var _iteratorNormalCompletion23 = true;
+							var _didIteratorError23 = false;
+							var _iteratorError23 = undefined;
+
+							try {
+								for (var _iterator23 = G.outgoing(V[i])[Symbol.iterator](), _step23; !(_iteratorNormalCompletion23 = (_step23 = _iterator23.next()).done); _iteratorNormalCompletion23 = true) {
+									var _step23$value = _slicedToArray(_step23.value, 3);
+
+									var u = _step23$value[0];
+									var v = _step23$value[1];
+									var e = _step23$value[2];
+
+									_ref8.push(e);
+								}
+							} catch (err) {
+								_didIteratorError23 = true;
+								_iteratorError23 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion23 && _iterator23["return"]) {
+										_iterator23["return"]();
+									}
+								} finally {
+									if (_didIteratorError23) {
+										throw _iteratorError23;
+									}
+								}
+							}
+
+							return _ref8;
+						})()])));
+
+						ok(set((function () {
+							var _set5 = [];
+							var _iteratorNormalCompletion24 = true;
+							var _didIteratorError24 = false;
+							var _iteratorError24 = undefined;
+
+							try {
+								for (var _iterator24 = G.incident(V[i])[Symbol.iterator](), _step24; !(_iteratorNormalCompletion24 = (_step24 = _iterator24.next()).done); _iteratorNormalCompletion24 = true) {
+									var _step24$value = _slicedToArray(_step24.value, 2);
+
+									var u = _step24$value[0];
+									var v = _step24$value[1];
+
+									_set5.push(v);
+								}
+							} catch (err) {
+								_didIteratorError24 = true;
+								_iteratorError24 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion24 && _iterator24["return"]) {
+										_iterator24["return"]();
+									}
+								} finally {
+									if (_didIteratorError24) {
+										throw _iteratorError24;
+									}
+								}
+							}
+
+							return _set5;
+						})()).isequal(chain([(function () {
+							var _ref9 = [];
+							var _iteratorNormalCompletion25 = true;
+							var _didIteratorError25 = false;
+							var _iteratorError25 = undefined;
+
+							try {
+								for (var _iterator25 = G.ingoing(V[i])[Symbol.iterator](), _step25; !(_iteratorNormalCompletion25 = (_step25 = _iterator25.next()).done); _iteratorNormalCompletion25 = true) {
+									var _step25$value = _slicedToArray(_step25.value, 2);
+
+									var u = _step25$value[0];
+									var v = _step25$value[1];
+
+									_ref9.push(v);
+								}
+							} catch (err) {
+								_didIteratorError25 = true;
+								_iteratorError25 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion25 && _iterator25["return"]) {
+										_iterator25["return"]();
+									}
+								} finally {
+									if (_didIteratorError25) {
+										throw _iteratorError25;
+									}
+								}
+							}
+
+							return _ref9;
+						})(), (function () {
+							var _ref10 = [];
+							var _iteratorNormalCompletion26 = true;
+							var _didIteratorError26 = false;
+							var _iteratorError26 = undefined;
+
+							try {
+								for (var _iterator26 = G.outgoing(V[i])[Symbol.iterator](), _step26; !(_iteratorNormalCompletion26 = (_step26 = _iterator26.next()).done); _iteratorNormalCompletion26 = true) {
+									var _step26$value = _slicedToArray(_step26.value, 2);
+
+									var u = _step26$value[0];
+									var v = _step26$value[1];
+
+									_ref10.push(v);
+								}
+							} catch (err) {
+								_didIteratorError26 = true;
+								_iteratorError26 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion26 && _iterator26["return"]) {
+										_iterator26["return"]();
+									}
+								} finally {
+									if (_didIteratorError26) {
+										throw _iteratorError26;
+									}
+								}
+							}
+
+							return _ref10;
+						})()])));
+
+						ok(set((function () {
+							var _set6 = [];
+							var _iteratorNormalCompletion27 = true;
+							var _didIteratorError27 = false;
+							var _iteratorError27 = undefined;
+
+							try {
+								for (var _iterator27 = G.incident(V[i])[Symbol.iterator](), _step27; !(_iteratorNormalCompletion27 = (_step27 = _iterator27.next()).done); _iteratorNormalCompletion27 = true) {
+									var _step27$value = _slicedToArray(_step27.value, 1);
+
+									var u = _step27$value[0];
+
+									_set6.push(u);
+								}
+							} catch (err) {
+								_didIteratorError27 = true;
+								_iteratorError27 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion27 && _iterator27["return"]) {
+										_iterator27["return"]();
+									}
+								} finally {
+									if (_didIteratorError27) {
+										throw _iteratorError27;
+									}
+								}
+							}
+
+							return _set6;
+						})()).isequal(chain([(function () {
+							var _ref11 = [];
+							var _iteratorNormalCompletion28 = true;
+							var _didIteratorError28 = false;
+							var _iteratorError28 = undefined;
+
+							try {
+								for (var _iterator28 = G.ingoing(V[i])[Symbol.iterator](), _step28; !(_iteratorNormalCompletion28 = (_step28 = _iterator28.next()).done); _iteratorNormalCompletion28 = true) {
+									var _step28$value = _slicedToArray(_step28.value, 1);
+
+									var u = _step28$value[0];
+
+									_ref11.push(u);
+								}
+							} catch (err) {
+								_didIteratorError28 = true;
+								_iteratorError28 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion28 && _iterator28["return"]) {
+										_iterator28["return"]();
+									}
+								} finally {
+									if (_didIteratorError28) {
+										throw _iteratorError28;
+									}
+								}
+							}
+
+							return _ref11;
+						})(), (function () {
+							var _ref12 = [];
+							var _iteratorNormalCompletion29 = true;
+							var _didIteratorError29 = false;
+							var _iteratorError29 = undefined;
+
+							try {
+								for (var _iterator29 = G.outgoing(V[i])[Symbol.iterator](), _step29; !(_iteratorNormalCompletion29 = (_step29 = _iterator29.next()).done); _iteratorNormalCompletion29 = true) {
+									var _step29$value = _slicedToArray(_step29.value, 1);
+
+									var u = _step29$value[0];
+
+									_ref12.push(u);
+								}
+							} catch (err) {
+								_didIteratorError29 = true;
+								_iteratorError29 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion29 && _iterator29["return"]) {
+										_iterator29["return"]();
+									}
+								} finally {
+									if (_didIteratorError29) {
+										throw _iteratorError29;
+									}
+								}
+							}
+
+							return _ref12;
+						})()])));
+
+						ok(set(G.nitr(V[i])).isequal((function () {
+							var _set$isequal2 = [];
+							var _iteratorNormalCompletion30 = true;
+							var _didIteratorError30 = false;
+							var _iteratorError30 = undefined;
+
+							try {
+								for (var _iterator30 = G.incident(V[i])[Symbol.iterator](), _step30; !(_iteratorNormalCompletion30 = (_step30 = _iterator30.next()).done); _iteratorNormalCompletion30 = true) {
+									var _step30$value = _slicedToArray(_step30.value, 2);
+
+									var u = _step30$value[0];
+									var v = _step30$value[1];
+
+									_set$isequal2.push(u === V[i] ? v : u);
+								}
+							} catch (err) {
+								_didIteratorError30 = true;
+								_iteratorError30 = err;
+							} finally {
+								try {
+									if (!_iteratorNormalCompletion30 && _iterator30["return"]) {
+										_iterator30["return"]();
+									}
+								} finally {
+									if (_didIteratorError30) {
+										throw _iteratorError30;
+									}
+								}
+							}
+
+							return _set$isequal2;
+						})()));
+					};
+
+					for (var _iterator19 = range(n)[Symbol.iterator](), _step19; !(_iteratorNormalCompletion19 = (_step19 = _iterator19.next()).done); _iteratorNormalCompletion19 = true) {
+						_loop2();
+					}
+				} catch (err) {
+					_didIteratorError19 = true;
+					_iteratorError19 = err;
+				} finally {
+					try {
+						if (!_iteratorNormalCompletion19 && _iterator19["return"]) {
+							_iterator19["return"]();
+						}
+					} finally {
+						if (_didIteratorError19) {
+							throw _iteratorError19;
 						}
 					}
 				}
