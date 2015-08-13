@@ -79,10 +79,7 @@
 		deepEqual( k , alledges.length , <span class="hljs-string">'check edges count after del'</span> ) ;
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( map ( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> e </span>) </span>{
-			<span class="hljs-keyword">let</span> [ u , w ] = g.endpoints( e ) ;
-			<span class="hljs-keyword">return</span> u === v[<span class="hljs-number">0</span>] ? w : u ;
-		} , e[<span class="hljs-number">0</span>] ) ) ;
+		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( map( ( e ) =&gt; g.endpoints( e )[<span class="hljs-number">1</span>] , e[<span class="hljs-number">0</span>] ) ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
 			ok( set.has( j ) , <span class="hljs-string">'nitr '</span> + k ) ;
@@ -208,10 +205,7 @@
 		deepEqual( k , alledges.length , <span class="hljs-string">'check edges count after del'</span> ) ;
 
 		k = <span class="hljs-number">0</span> ;
-		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( map ( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> e </span>) </span>{
-			<span class="hljs-keyword">let</span> [ u , w ] = g.endpoints( e ) ;
-			<span class="hljs-keyword">return</span> u === v[<span class="hljs-number">0</span>] ? w : u ;
-		} , e[<span class="hljs-number">0</span>] ) ) ;
+		set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>( map( ( e ) =&gt; g.endpoints( e )[<span class="hljs-number">1</span>] , e[<span class="hljs-number">0</span>] ) ) ;
 
 		ex( map( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> j </span>) </span>{
 			ok( set.has( j ) , <span class="hljs-string">'nitr '</span> + k ) ;

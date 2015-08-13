@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><title>001-spec/02-MultiGraph</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="001-spec/02-MultiGraph"><meta name="groc-project-path" content="js/src/001-spec/02-MultiGraph.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-graph-spec"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-graph-spec/blob/master/js/src/001-spec/02-MultiGraph.js">js/src/001-spec/02-MultiGraph.js</a></div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> MultiGraph = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> title , Constructor </span>) </span>{
+<!DOCTYPE html><html lang="en"><head><title>001-spec/04-MultiDiGraph</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="001-spec/04-MultiDiGraph"><meta name="groc-project-path" content="js/src/001-spec/04-MultiDiGraph.js"><meta name="groc-github-url" content="https://github.com/aureooms/js-graph-spec"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-graph-spec/blob/master/js/src/001-spec/04-MultiDiGraph.js">js/src/001-spec/04-MultiDiGraph.js</a></div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">const</span> MultiDiGraph = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> title , Constructor </span>) </span>{
 
-test( <span class="hljs-string">"graph-spec : MultiGraph simple test &gt; "</span> + title , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> assert </span>) </span>{
+test( <span class="hljs-string">"graph-spec : MultiDiGraph simple test &gt; "</span> + title , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> assert </span>) </span>{
 
 	<span class="hljs-keyword">const</span> G = <span class="hljs-keyword">new</span> Constructor( ) ;
 
@@ -11,24 +11,15 @@ test( <span class="hljs-string">"graph-spec : MultiGraph simple test &gt; "</spa
 
 	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
 	<span class="hljs-keyword">let</span> [ a , b ] = G.edges( ).next( ).value ;
-	assert.ok( set( [ a , b ] ).isequal( [ u , v ] ) ) ;
+	assert.deepEqual( [ a , b ] , [ u , v ] ) ;
 
 	G.reverse( ) ;
 
 	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
-	assert.equal( G.eitr( ).next( ).value , uv ) ;
 	[ a , b ] = G.edges( ).next( ).value ;
-	assert.ok( set( [ a , b ] ).isequal( [ u , v ] ) ) ;
-
-	<span class="hljs-keyword">const</span> vu = G.eadd( v , u ) ;
-	assert.deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">2</span> ) ;
+	assert.deepEqual( [ a , b ] , [ v , u ] ) ;
 
 	G.edel( uv ) ;
-	assert.deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">1</span> ) ;
-
-	assert.equal( G.eitr( ).next( ).value , vu ) ;
-
-	G.edel( vu ) ;
 	assert.deepEqual( cardinality.len( G.eitr( ) ) , <span class="hljs-number">0</span> ) ;
 
 	G.vdel( u ) ;
@@ -37,7 +28,7 @@ test( <span class="hljs-string">"graph-spec : MultiGraph simple test &gt; "</spa
 
 } ) ;
 
-test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</span> + title , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> </span>) </span>{
+test( <span class="hljs-string">"graph-spec : MultiDiGraph extensive test &gt; "</span> + title , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> </span>) </span>{
 
 	<span class="hljs-keyword">const</span> G = <span class="hljs-keyword">new</span> Constructor( ) ;
 
@@ -118,26 +109,26 @@ test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</
 	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
 	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
 
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">0</span> ) ;
 
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
 
 	G.reverse( ) ;
@@ -153,26 +144,26 @@ test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</
 	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
 	deepEqual( cardinality.len( G.iitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
 
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
 	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
-	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.outitr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">0</span> ) ;
 
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">0</span>] ) ) , <span class="hljs-number">6</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">3</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">1</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">2</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">3</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">4</span>] ) ) , <span class="hljs-number">3</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">5</span>] ) ) , <span class="hljs-number">3</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">2</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">2</span> ) ;
-	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">2</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">6</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">7</span>] ) ) , <span class="hljs-number">0</span> ) ;
+	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">8</span>] ) ) , <span class="hljs-number">0</span> ) ;
 	deepEqual( cardinality.len( G.initr( V[<span class="hljs-number">9</span>] ) ) , <span class="hljs-number">3</span> ) ;
 
 	ok( set( G.nitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
@@ -186,26 +177,26 @@ test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</
 	ok( set( G.nitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
 	ok( set( G.nitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
 
-	ok( set( G.dsitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ ] ) ) ;
 	ok( set( G.dsitr( V[<span class="hljs-number">1</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
 	ok( set( G.dsitr( V[<span class="hljs-number">2</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
 	ok( set( G.dsitr( V[<span class="hljs-number">3</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
-	ok( set( G.dsitr( V[<span class="hljs-number">4</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
-	ok( set( G.dsitr( V[<span class="hljs-number">5</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">4</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">5</span>] ) ).isequal( [ ] ) ) ;
 	ok( set( G.dsitr( V[<span class="hljs-number">6</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
 	ok( set( G.dsitr( V[<span class="hljs-number">7</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
 	ok( set( G.dsitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
-	ok( set( G.dsitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
+	ok( set( G.dsitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ ] ) ) ;
 
 	ok( set( G.dpitr( V[<span class="hljs-number">0</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
-	ok( set( G.dpitr( V[<span class="hljs-number">1</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
-	ok( set( G.dpitr( V[<span class="hljs-number">2</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
-	ok( set( G.dpitr( V[<span class="hljs-number">3</span>] ) ).isequal( [ V[<span class="hljs-number">0</span>] , V[<span class="hljs-number">4</span>] ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">1</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">2</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">3</span>] ) ).isequal( [ ] ) ) ;
 	ok( set( G.dpitr( V[<span class="hljs-number">4</span>] ) ).isequal( [ V[<span class="hljs-number">1</span>] , V[<span class="hljs-number">2</span>] , V[<span class="hljs-number">3</span>] ] ) ) ;
 	ok( set( G.dpitr( V[<span class="hljs-number">5</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
-	ok( set( G.dpitr( V[<span class="hljs-number">6</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
-	ok( set( G.dpitr( V[<span class="hljs-number">7</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
-	ok( set( G.dpitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ V[<span class="hljs-number">5</span>] , V[<span class="hljs-number">9</span>] ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">6</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">7</span>] ) ).isequal( [ ] ) ) ;
+	ok( set( G.dpitr( V[<span class="hljs-number">8</span>] ) ).isequal( [ ] ) ) ;
 	ok( set( G.dpitr( V[<span class="hljs-number">9</span>] ) ).isequal( [ V[<span class="hljs-number">6</span>] , V[<span class="hljs-number">7</span>] , V[<span class="hljs-number">8</span>] ] ) ) ;
 
 	deepEqual( cardinality.len( G.edges( ) ) , <span class="hljs-number">15</span> , <span class="hljs-string">"G.edges( ) length"</span> ) ;
@@ -216,7 +207,7 @@ test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</
 
 		ok( edges.has( e ) ) ;
 
-		ok( set( [ u , v ] ).isequal( G.endpoints( e ) ) ) ;
+		deepEqual( [ u , v ] , G.endpoints( e ) ) ;
 
 		edges.remove( e ) ;
 
@@ -234,17 +225,19 @@ test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</
 			] )
 		) ) ;
 
-		ok( set( chain( [
-			[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) v ] ,
-			[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) u ]
-		] ) ).isequal(
+		ok( set( [ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) v ] ).isequal(
 			chain( [
-				[ V[i] ] ,
-				[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) u ] ,
+				[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) v ] ,
 				[ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.outgoing( V[i] ) ) v ]
 			] )
 		) ) ;
 
+		ok( set( [ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) u ] ).isequal(
+			chain( [
+				[ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) u ] ,
+				[ <span class="hljs-keyword">for</span> ( [ u ] <span class="hljs-keyword">of</span> G.outgoing( V[i] ) ) u ]
+			] )
+		) ) ;
 
 		ok( set( G.nitr( V[i] ) ).isequal( [ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.incident( V[i] ) ) u === V[i] ? v : u ] ) ) ;
 		ok( set( G.dpitr( V[i] ) ).isequal( [ <span class="hljs-keyword">for</span> ( [ u , v ] <span class="hljs-keyword">of</span> G.ingoing( V[i] ) ) u ] ) ) ;
@@ -266,4 +259,4 @@ test( <span class="hljs-string">"graph-spec : MultiGraph extensive test &gt; "</
 
 } ;
 
-exports.MultiGraph = MultiGraph ;</div></div></div></div></body></html>
+exports.MultiDiGraph = MultiDiGraph ;</div></div></div></div></body></html>
