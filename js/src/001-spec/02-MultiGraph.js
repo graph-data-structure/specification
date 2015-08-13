@@ -11,6 +11,8 @@ test( "graph-spec : MultiGraph simple test > " + title , function ( assert ) {
 
 	const uv = G.eadd( u , v ) ;
 
+	assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
+
 	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
 	let [ a , b ] = G.edges( ).next( ).value ;
 	assert.ok( set( [ a , b ] ).isequal( [ u , v ] ) ) ;
@@ -50,6 +52,7 @@ test( "graph-spec : MultiGraph extensive test > " + title , function ( ) {
 	const init = function ( ) {
 
 		const V = [ for ( i of range( n ) ) G.vadd( i ) ] ;
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		const E = [
 

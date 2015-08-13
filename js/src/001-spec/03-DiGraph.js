@@ -11,6 +11,8 @@ test( "graph-spec : DiGraph simple test > " + title , function ( assert ) {
 
 	const uv = G.eadd( u , v ) ;
 
+	assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
+
 	assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
 	let [ a , b ] = G.edges( ).next( ).value ;
 	assert.deepEqual( [ a , b ] , [ u , v ] ) ;
@@ -41,6 +43,7 @@ test( "graph-spec : DiGraph extensive test > " + title , function ( ) {
 	const init = function ( ) {
 
 		const V = [ for ( i of range( n ) ) G.vadd( i ) ] ;
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		const E = [
 

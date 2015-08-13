@@ -10,6 +10,8 @@ const Graph = function ( title , Constructor ) {
 
 		const uv = G.eadd( u , v ) ;
 
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
+
 		assert.ok( set( [ u , v ] ).isequal( G.vitr( ) ) ) ;
 		let [ a , b ] = G.edges( ).next( ).value ;
 		assert.ok( set( [ a , b ] ).isequal( [ u , v ] ) ) ;
@@ -46,6 +48,7 @@ const Graph = function ( title , Constructor ) {
 		var n = 11 ;
 
 		for( var i = 0 ; i < n ; ++i ) v[i] = g.vadd( i ) ;
+		assert.ok( set( g.vitr( ) ).isequal( g.vertices( ) ) ) ;
 
 		e[1] = [ ] ;
 		e[1][0] = g.eadd(v[1], v[9]);
@@ -63,24 +66,24 @@ const Graph = function ( title , Constructor ) {
 
 		// tests
 
-		var k , set , alledges ;
+		var k , notseen , alledges ;
 
 		k = 0 ;
-		set = new Set( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'vitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'vitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
 		k = 0 ;
 		alledges = e[0].concat( [ e[1][0] ] ).concat( e[4] ) ;
-		set = new Set( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'eitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'eitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
@@ -92,12 +95,12 @@ const Graph = function ( title , Constructor ) {
 
 			var k = e[m].length ;
 
-			var set = new Set( e[m] ) ;
+			var notseen = set( e[m] ) ;
 
 			ex( map( function ( x ) {
 				--k ;
-				ok( set.has( x ) , 'iitr ' + m + ' ' + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , 'iitr ' + m + ' ' + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;
@@ -112,22 +115,22 @@ const Graph = function ( title , Constructor ) {
 
 		k = 0 ;
 		alledges = e[0].concat( e[4] ) ;
-		set = new Set( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'eitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'eitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
 		deepEqual( k , alledges.length , 'check edges count after del' ) ;
 
 		k = 0 ;
-		set = new Set( map( ( e ) => g.endpoints( e )[1] , e[0] ) ) ;
+		notseen = set( map( ( e ) => g.endpoints( e )[1] , e[0] ) ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'nitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'nitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.nitr( v[0] ) ) ) ;
 
@@ -137,12 +140,12 @@ const Graph = function ( title , Constructor ) {
 
 			var k = e[m].length ;
 
-			var set = new Set( e[m] ) ;
+			var notseen = set( e[m] ) ;
 
 			ex( map( function ( x ) {
 				--k ;
-				ok( set.has( x ) , 'iitr ' + m + ' ' + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , 'iitr ' + m + ' ' + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;
@@ -152,11 +155,11 @@ const Graph = function ( title , Constructor ) {
 		g.vdel(v.splice(3, 1)[0]);
 
 		k = 0 ;
-		set = new Set( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'vitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'vitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
@@ -207,24 +210,24 @@ const Graph = function ( title , Constructor ) {
 
 		// tests
 
-		var k , set , alledges ;
+		var k , notseen , alledges ;
 
 		k = 0 ;
-		set = new Set( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'vitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'vitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
 		k = 0 ;
 		alledges = e[0].concat( [ e[1][0] ] ).concat( e[4] ) ;
-		set = new Set( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'eitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'eitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
@@ -236,12 +239,12 @@ const Graph = function ( title , Constructor ) {
 
 			var k = e[m].length ;
 
-			var set = new Set( e[m] ) ;
+			var notseen = set( e[m] ) ;
 
 			ex( map( function ( x ) {
 				--k ;
-				ok( set.has( x ) , 'iitr ' + m + ' ' + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , 'iitr ' + m + ' ' + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;
@@ -256,22 +259,22 @@ const Graph = function ( title , Constructor ) {
 
 		k = 0 ;
 		alledges = e[0].concat( e[4] ) ;
-		set = new Set( alledges ) ;
+		notseen = set( alledges ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'eitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'eitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.eitr( ) ) ) ;
 
 		deepEqual( k , alledges.length , 'check edges count after del' ) ;
 
 		k = 0 ;
-		set = new Set( map( ( e ) => g.endpoints( e )[1] , e[0] ) ) ;
+		notseen = set( map( ( e ) => g.endpoints( e )[1] , e[0] ) ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'nitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'nitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.nitr( v[0] ) ) ) ;
 
@@ -281,12 +284,12 @@ const Graph = function ( title , Constructor ) {
 
 			var k = e[m].length ;
 
-			var set = new Set( e[m] ) ;
+			var notseen = set( e[m] ) ;
 
 			ex( map( function ( x ) {
 				--k ;
-				ok( set.has( x ) , 'iitr ' + m + ' ' + k ) ;
-				set.delete( x ) ;
+				ok( notseen.has( x ) , 'iitr ' + m + ' ' + k ) ;
+				notseen.remove( x ) ;
 			} , g.iitr( v[m] ) ) ) ;
 
 		} ) ;
@@ -297,11 +300,11 @@ const Graph = function ( title , Constructor ) {
 		e[0].splice(0, 1);
 
 		k = 0 ;
-		set = new Set( v ) ;
+		notseen = set( v ) ;
 
 		ex( map( function ( j ) {
-			ok( set.has( j ) , 'vitr ' + k ) ;
-			set.delete( j ) ;
+			ok( notseen.has( j ) , 'vitr ' + k ) ;
+			notseen.remove( j ) ;
 			++k ;
 		} , g.vitr( ) ) ) ;
 
@@ -337,6 +340,7 @@ test( "graph-spec : Graph extensive test > " + title , function ( ) {
 	const init = function ( ) {
 
 		const V = [ for ( i of range( n ) ) G.vadd( i ) ] ;
+		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		const E = [
 

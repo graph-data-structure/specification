@@ -40,6 +40,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var uv = G.eadd(u, v);
 
+				assert.ok(set(G.vitr()).isequal(G.vertices()));
+
 				assert.ok(set([u, v]).isequal(G.vitr()));
 
 				var _G$edges$next$value = _slicedToArray(G.edges().next().value, 2);
@@ -83,6 +85,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				var n = 11;
 
 				for (var i = 0; i < n; ++i) v[i] = g.vadd(i);
+				assert.ok(set(g.vitr()).isequal(g.vertices()));
 
 				e[1] = [];
 				e[1][0] = g.eadd(v[1], v[9]);
@@ -100,24 +103,24 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				// tests
 
-				var k, set, alledges;
+				var k, notseen, alledges;
 
 				k = 0;
-				set = new Set(v);
+				notseen = set(v);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'vitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'vitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.vitr()));
 
 				k = 0;
 				alledges = e[0].concat([e[1][0]]).concat(e[4]);
-				set = new Set(alledges);
+				notseen = set(alledges);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'eitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'eitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.eitr()));
 
@@ -127,12 +130,12 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new Set(e[m]);
+					var notseen = set(e[m]);
 
 					ex(map(function (x) {
 						--k;
-						ok(set.has(x), 'iitr ' + m + ' ' + k);
-						set["delete"](x);
+						ok(notseen.has(x), 'iitr ' + m + ' ' + k);
+						notseen.remove(x);
 					}, g.iitr(v[m])));
 				});
 
@@ -145,24 +148,24 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				alledges = e[0].concat(e[4]);
-				set = new Set(alledges);
+				notseen = set(alledges);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'eitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'eitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.eitr()));
 
 				deepEqual(k, alledges.length, 'check edges count after del');
 
 				k = 0;
-				set = new Set(map(function (e) {
+				notseen = set(map(function (e) {
 					return g.endpoints(e)[1];
 				}, e[0]));
 
 				ex(map(function (j) {
-					ok(set.has(j), 'nitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'nitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.nitr(v[0])));
 
@@ -172,12 +175,12 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new Set(e[m]);
+					var notseen = set(e[m]);
 
 					ex(map(function (x) {
 						--k;
-						ok(set.has(x), 'iitr ' + m + ' ' + k);
-						set["delete"](x);
+						ok(notseen.has(x), 'iitr ' + m + ' ' + k);
+						notseen.remove(x);
 					}, g.iitr(v[m])));
 				});
 
@@ -186,11 +189,11 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				g.vdel(v.splice(3, 1)[0]);
 
 				k = 0;
-				set = new Set(v);
+				notseen = set(v);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'vitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'vitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.vitr()));
 
@@ -268,24 +271,24 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				// tests
 
-				var k, set, alledges;
+				var k, notseen, alledges;
 
 				k = 0;
-				set = new Set(v);
+				notseen = set(v);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'vitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'vitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.vitr()));
 
 				k = 0;
 				alledges = e[0].concat([e[1][0]]).concat(e[4]);
-				set = new Set(alledges);
+				notseen = set(alledges);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'eitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'eitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.eitr()));
 
@@ -295,12 +298,12 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new Set(e[m]);
+					var notseen = set(e[m]);
 
 					ex(map(function (x) {
 						--k;
-						ok(set.has(x), 'iitr ' + m + ' ' + k);
-						set["delete"](x);
+						ok(notseen.has(x), 'iitr ' + m + ' ' + k);
+						notseen.remove(x);
 					}, g.iitr(v[m])));
 				});
 
@@ -313,24 +316,24 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				k = 0;
 				alledges = e[0].concat(e[4]);
-				set = new Set(alledges);
+				notseen = set(alledges);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'eitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'eitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.eitr()));
 
 				deepEqual(k, alledges.length, 'check edges count after del');
 
 				k = 0;
-				set = new Set(map(function (e) {
+				notseen = set(map(function (e) {
 					return g.endpoints(e)[1];
 				}, e[0]));
 
 				ex(map(function (j) {
-					ok(set.has(j), 'nitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'nitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.nitr(v[0])));
 
@@ -340,12 +343,12 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 					var k = e[m].length;
 
-					var set = new Set(e[m]);
+					var notseen = set(e[m]);
 
 					ex(map(function (x) {
 						--k;
-						ok(set.has(x), 'iitr ' + m + ' ' + k);
-						set["delete"](x);
+						ok(notseen.has(x), 'iitr ' + m + ' ' + k);
+						notseen.remove(x);
 					}, g.iitr(v[m])));
 				});
 
@@ -355,11 +358,11 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 				e[0].splice(0, 1);
 
 				k = 0;
-				set = new Set(v);
+				notseen = set(v);
 
 				ex(map(function (j) {
-					ok(set.has(j), 'vitr ' + k);
-					set["delete"](j);
+					ok(notseen.has(j), 'vitr ' + k);
+					notseen.remove(j);
 					++k;
 				}, g.vitr()));
 
@@ -450,6 +453,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 						return _V;
 					})();
+					assert.ok(set(G.vitr()).isequal(G.vertices()));
 
 					var E = [G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3]), G.eadd(V[4], V[1]), G.eadd(V[4], V[2]), G.eadd(V[4], V[3]), G.eadd(V[5], V[6]), G.eadd(V[5], V[7]), G.eadd(V[5], V[8]), G.eadd(V[9], V[6]), G.eadd(V[9], V[7]), G.eadd(V[9], V[8]), G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3])];
 
@@ -1051,6 +1055,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var uv = G.eadd(u, v);
 
+				assert.ok(set(G.vitr()).isequal(G.vertices()));
+
 				assert.ok(set([u, v]).isequal(G.vitr()));
 
 				var _G$edges$next$value3 = _slicedToArray(G.edges().next().value, 2);
@@ -1128,6 +1134,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 						return _V2;
 					})();
+					assert.ok(set(G.vitr()).isequal(G.vertices()));
 
 					var E = [G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3]), G.eadd(V[4], V[1]), G.eadd(V[4], V[2]), G.eadd(V[4], V[3]), G.eadd(V[5], V[6]), G.eadd(V[5], V[7]), G.eadd(V[5], V[8]), G.eadd(V[9], V[6]), G.eadd(V[9], V[7]), G.eadd(V[9], V[8]), G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3])];
 
@@ -1729,6 +1736,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var uv = G.eadd(u, v);
 
+				assert.ok(set(G.vitr()).isequal(G.vertices()));
+
 				assert.ok(set([u, v]).isequal(G.vitr()));
 
 				var _G$edges$next$value5 = _slicedToArray(G.edges().next().value, 2);
@@ -1797,6 +1806,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 						return _V3;
 					})();
+					assert.ok(set(G.vitr()).isequal(G.vertices()));
 
 					var E = [G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3]), G.eadd(V[4], V[1]), G.eadd(V[4], V[2]), G.eadd(V[4], V[3]), G.eadd(V[5], V[6]), G.eadd(V[5], V[7]), G.eadd(V[5], V[8]), G.eadd(V[9], V[6]), G.eadd(V[9], V[7]), G.eadd(V[9], V[8]), G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3])];
 
@@ -2459,6 +2469,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 				var uv = G.eadd(u, v);
 
+				assert.ok(set(G.vitr()).isequal(G.vertices()));
+
 				assert.ok(set([u, v]).isequal(G.vitr()));
 
 				var _G$edges$next$value7 = _slicedToArray(G.edges().next().value, 2);
@@ -2527,6 +2539,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 						return _V4;
 					})();
+					assert.ok(set(G.vitr()).isequal(G.vertices()));
 
 					var E = [G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3]), G.eadd(V[4], V[1]), G.eadd(V[4], V[2]), G.eadd(V[4], V[3]), G.eadd(V[5], V[6]), G.eadd(V[5], V[7]), G.eadd(V[5], V[8]), G.eadd(V[9], V[6]), G.eadd(V[9], V[7]), G.eadd(V[9], V[8]), G.eadd(V[0], V[1]), G.eadd(V[0], V[2]), G.eadd(V[0], V[3])];
 
