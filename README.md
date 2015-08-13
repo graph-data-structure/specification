@@ -101,14 +101,21 @@ require( [ "aureooms-js-graph-spec" ] , function ( graphspec ) { ... } ) ;
 
 ## Signatures
 
-### Undirected
+### Graphs, DiGraphs, MultiGraphs, and MultiDiGraphs
 
-#### `Graph`
+#### `Graph`, `DiGraph`, `MultiGraph`, or `MultiDiGraph`
 
 Create a new graph.
 
 ```js
 let G = new Graph( ) ;
+// ...
+let G = new DiGraph( ) ;
+// ...
+let G = new MultiGraph( ) ;
+// ...
+let G = new MultiDiGraph( ) ;
+// ...
 ```
 
 #### `vadd`
@@ -167,6 +174,7 @@ Get an iterator over edge references of edges incident to `u` in graph `G`.
 for ( let e of G.iitr( u ) ) ... ;
 ```
 
+
 #### `nitr`
 
 Get an iterator over vertex references of neighbors of `u` in graph `G`.
@@ -175,12 +183,20 @@ Get an iterator over vertex references of neighbors of `u` in graph `G`.
 for ( let v of G.nitr( u ) ) ... ;
 ```
 
+#### `vertices`
+
+Get an iterator over vertices in graph `G`.
+
+```js
+for ( let u of G.vertices( ) ) ... ;
+```
+
 #### `edges`
 
 Get an iterator over edges in graph `G`.
 
 ```js
-for ( let [ u , v , e ] of g.edges( ) ) ... ;
+for ( let [ u , v , e ] of G.edges( ) ) ... ;
 ```
 
 #### `incident`
@@ -193,8 +209,71 @@ for ( let [ u , v , e ] of G.incident( w ) ) ... ;
 
 #### `endpoints`
 
-Get endpoints `u` and `v` of an edge `e` in graph `g`.
+Get endpoints `u` and `v` of an edge reference `e` in graph `G`.
 
 ```js
-let [ u , v ] = g.endpoints( e ) ;
+let [ u , v ] = G.endpoints( e ) ;
+```
+
+### DiGraphs and MultiDiGraphs
+
+These methods must also be implemented (with the same invariants)
+in Graphs and MultiGraphs for convenience.
+
+#### `initr`
+
+Get an iterator over edge references of ingoing edges of `u` in graph `G`.
+
+```js
+for ( let e of G.initr( u ) ) ... ;
+```
+
+#### `outitr`
+
+Get an iterator over edge references of outgoing edges of `u` in graph `G`.
+
+```js
+for ( let e of G.outitr( u ) ) ... ;
+```
+
+#### `dpitr`
+
+Get an iterator over direct predecessors of `u` in graph `G`.
+
+```js
+for ( let v of G.dpitr( u ) ) ... ;
+```
+
+#### `dsitr`
+
+Get an iterator over direct successors of `u` in graph `G`.
+
+```js
+for ( let v of G.dsitr( u ) ) ... ;
+```
+
+#### `ingoing`
+
+Get an iterator over ingoing edges of `w` in graph `G`.
+The invariant `v === w` must hold.
+
+```js
+for ( let [ u , v , e ] of G.ingoing( w ) ) ... ;
+```
+
+#### `outgoing`
+
+Get an iterator over outgoing edges of `w` in graph `G`.
+The invariant `u === w` must hold.
+
+```js
+for ( let [ u , v , e ] of G.outgoing( w ) ) ... ;
+```
+
+#### `reverse`
+
+Reverse the directions of edges in  `G`.
+
+```js
+G.reverse( ) ;
 ```
