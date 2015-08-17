@@ -26,10 +26,48 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 		var set = _require2.set;
 
+		var type = require("aureooms-js-type");
+
 		/* js/src/001-spec */
+		/* js/src/001-spec/00-methods.js */
+
+		var methods = function methods(title, Constructor) {
+
+			test("graph-spec : check existence of methods > " + title, function (assert) {
+
+				assert.ok(type.isfunction(Constructor), "constructor");
+
+				var G = new Constructor();
+
+				assert.ok(type.isfunction(G.vadd), "vadd");
+				assert.ok(type.isfunction(G.vdel), "vdel");
+				assert.ok(type.isfunction(G.eadd), "eadd");
+				assert.ok(type.isfunction(G.edel), "edel");
+				assert.ok(G.vitr != null, "vitr");
+				assert.ok(G.eitr != null, "eitr");
+				assert.ok(G.iitr != null, "iitr");
+				assert.ok(G.initr != null, "initr");
+				assert.ok(G.outitr != null, "outitr");
+				assert.ok(G.nitr != null, "nitr");
+				assert.ok(G.dsitr != null, "dsitr");
+				assert.ok(G.dpitr != null, "dpitr");
+				assert.ok(G.vertices != null, "vertices");
+				assert.ok(G.edges != null, "edges");
+				assert.ok(G.incident != null, "incident");
+				assert.ok(G.ingoing != null, "ingoing");
+				assert.ok(G.outgoing != null, "outgoing");
+				assert.ok(G.endpoints != null, "endpoints");
+				assert.ok(G.reverse != null, "reverse");
+			});
+		};
+
+		exports.methods = methods;
+
 		/* js/src/001-spec/01-Graph.js */
 
 		var Graph = function Graph(title, Constructor) {
+
+			methods(title, Constructor);
 
 			test("graph-spec : Graph simple test > " + title, function (assert) {
 
@@ -1046,6 +1084,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 		var MultiGraph = function MultiGraph(title, Constructor) {
 
+			methods(title, Constructor);
+
 			test("graph-spec : MultiGraph simple test > " + title, function (assert) {
 
 				var G = new Constructor();
@@ -1726,6 +1766,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 		/* js/src/001-spec/03-DiGraph.js */
 
 		var DiGraph = function DiGraph(title, Constructor) {
+
+			methods(title, Constructor);
 
 			test("graph-spec : DiGraph simple test > " + title, function (assert) {
 
@@ -2459,6 +2501,8 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 		/* js/src/001-spec/04-MultiDiGraph.js */
 
 		var MultiDiGraph = function MultiDiGraph(title, Constructor) {
+
+			methods(title, Constructor);
 
 			test("graph-spec : MultiDiGraph simple test > " + title, function (assert) {
 

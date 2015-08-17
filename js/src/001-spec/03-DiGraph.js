@@ -2,6 +2,8 @@
 
 const DiGraph = function ( title , Constructor ) {
 
+methods( title , Constructor ) ;
+
 test( "graph-spec : DiGraph simple test > " + title , function ( assert ) {
 
 	const G = new Constructor( ) ;

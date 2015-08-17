@@ -2,6 +2,8 @@
 
 const MultiDiGraph = function ( title , Constructor ) {
 
+methods( title , Constructor ) ;
+
 test( "graph-spec : MultiDiGraph simple test > " + title , function ( assert ) {
 
 	const G = new Constructor( ) ;
