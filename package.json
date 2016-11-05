@@ -24,7 +24,7 @@
 	"dependencies": {
 		"aureooms-js-cardinality": "^1.1.0",
 		"aureooms-js-collections": "^1.0.0",
-		"aureooms-js-itertools": "^1.2.0",
+		"aureooms-js-itertools": "^3.0.0",
 		"aureooms-js-type": "^1.0.4"
 	},
 	"license": "AGPL-3.0",
