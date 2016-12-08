@@ -35,7 +35,7 @@
 		"aureooms-js-adjacency-list": "^4.0.7",
 		"aureooms-js-adjacency-matrix": "^3.1.6",
 		"aureooms-js-dll": "^6.0.10",
-		"aureooms-node-package": "^6.0.1"
+		"aureooms-node-package": "^7.0.0"
 	},
 	"bugs": {
 		"url": "https://github.com/aureooms/js-graph-spec/issues"
