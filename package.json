@@ -23,7 +23,7 @@
 	"description": "Graph specification code bricks for JavaScript",
 	"dependencies": {
 		"aureooms-js-cardinality": "^2.0.0",
-		"aureooms-js-collections": "^2.0.0",
+		"aureooms-js-collections": "^3.0.0",
 		"aureooms-js-itertools": "^3.0.0",
 		"aureooms-js-type": "^1.0.4"
 	},
