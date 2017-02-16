@@ -8,16 +8,16 @@ Graph specification code bricks for JavaScript. Parent is
 graphspec.Graph( "My graph implementation" , MyGraphConstructor ) ;
 ```
 
-[![NPM license](http://img.shields.io/npm/l/@aureooms/js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE)
-[![NPM version](http://img.shields.io/npm/v/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
-[![Bower version](http://img.shields.io/bower/v/@aureooms/js-graph-spec.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-graph-spec)
-[![Build Status](http://img.shields.io/travis/aureooms/js-graph-spec.svg?style=flat)](https://travis-ci.org/aureooms/js-graph-spec)
-[![Coverage Status](http://img.shields.io/coveralls/aureooms/js-graph-spec.svg?style=flat)](https://coveralls.io/r/aureooms/js-graph-spec)
-[![Dependencies Status](http://img.shields.io/david/aureooms/js-graph-spec.svg?style=flat)](https://david-dm.org/aureooms/js-graph-spec#info=dependencies)
-[![devDependencies Status](http://img.shields.io/david/dev/aureooms/js-graph-spec.svg?style=flat)](https://david-dm.org/aureooms/js-graph-spec#info=devDependencies)
-[![Code Climate](http://img.shields.io/codeclimate/github/aureooms/js-graph-spec.svg?style=flat)](https://codeclimate.com/github/aureooms/js-graph-spec)
-[![NPM downloads per month](http://img.shields.io/npm/dm/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
-[![GitHub issues](http://img.shields.io/github/issues/aureooms/js-graph-spec.svg?style=flat)](https://github.com/aureooms/js-graph-spec/issues)
+[![NPM license](https://img.shields.io/npm/l/@aureooms/js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE)
+[![NPM version](https://img.shields.io/npm/v/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
+[![Bower version](https://img.shields.io/bower/v/@aureooms/js-graph-spec.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-graph-spec)
+[![Build Status](https://img.shields.io/travis/aureooms/js-graph-spec.svg?style=flat)](https://travis-ci.org/aureooms/js-graph-spec)
+[![Coverage Status](https://img.shields.io/coveralls/aureooms/js-graph-spec.svg?style=flat)](https://coveralls.io/r/aureooms/js-graph-spec)
+[![Dependencies Status](https://img.shields.io/david/aureooms/js-graph-spec.svg?style=flat)](https://david-dm.org/aureooms/js-graph-spec#info=dependencies)
+[![devDependencies Status](https://img.shields.io/david/dev/aureooms/js-graph-spec.svg?style=flat)](https://david-dm.org/aureooms/js-graph-spec#info=devDependencies)
+[![Code Climate](https://img.shields.io/codeclimate/github/aureooms/js-graph-spec.svg?style=flat)](https://codeclimate.com/github/aureooms/js-graph-spec)
+[![NPM downloads per month](https://img.shields.io/npm/dm/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
+[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-graph-spec.svg?style=flat)](https://github.com/aureooms/js-graph-spec/issues)
 [![Inline docs](http://inch-ci.org/github/aureooms/js-graph-spec.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-graph-spec)
 
 Can be managed through [jspm](https://github.com/jspm/jspm-cli),
