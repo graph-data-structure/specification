@@ -17,24 +17,24 @@
 		"doc": "./node_modules/.bin/groc",
 		"test": "./node_modules/.bin/aureooms-node-package-test"
 	},
-	"name": "aureooms-js-graph-spec",
+	"name": "@aureooms/js-graph-spec",
 	"homepage": "http://aureooms.github.io/js-graph-spec/",
 	"version": "5.0.2",
 	"description": "Graph specification code bricks for JavaScript",
 	"dependencies": {
-		"aureooms-js-cardinality": "^2.0.0",
-		"aureooms-js-collections": "^3.0.0",
-		"aureooms-js-itertools": "^3.0.0",
-		"aureooms-js-type": "^1.0.4"
+		"@aureooms/js-cardinality": "^2.0.0",
+		"@aureooms/js-collections": "^3.0.0",
+		"@aureooms/js-itertools": "^3.0.0",
+		"@aureooms/js-type": "^1.0.4"
 	},
 	"license": "AGPL-3.0",
 	"spm": {
 		"main": "js/dist/graph-spec.js"
 	},
 	"devDependencies": {
-		"aureooms-js-adjacency-list": "^4.0.7",
-		"aureooms-js-adjacency-matrix": "^3.1.6",
-		"aureooms-js-dll": "^6.0.10",
+		"@aureooms/js-adjacency-list": "^4.0.7",
+		"@aureooms/js-adjacency-matrix": "^3.1.6",
+		"@aureooms/js-dll": "^6.0.10",
 		"aureooms-node-package": "^6.0.1"
 	},
 	"bugs": {
