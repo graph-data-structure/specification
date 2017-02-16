@@ -10,7 +10,7 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 
 		/* js/src/000-dependencies.js */
 
-		var _require = require("aureooms-js-itertools");
+		var _require = require("@aureooms/js-itertools");
 
 		var ex = _require.exhaust;
 		var chain = _require.chain;
@@ -20,13 +20,13 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 		var list = _require.list;
 		var zip = _require.zip;
 
-		var cardinality = require("aureooms-js-cardinality");
+		var cardinality = require("@aureooms/js-cardinality");
 
-		var _require2 = require("aureooms-js-collections");
+		var _require2 = require("@aureooms/js-collections");
 
 		var set = _require2.set;
 
-		var type = require("aureooms-js-type");
+		var type = require("@aureooms/js-type");
 
 		/* js/src/001-spec */
 		/* js/src/001-spec/00-methods.js */
@@ -3238,10 +3238,10 @@ var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = 
 	if (typeof exports === "object") {
 		definition(exports);
 	} else if (typeof define === "function" && define.amd) {
-		define("aureooms-js-graph-spec", [], function () {
+		define("@aureooms/js-graph-spec", [], function () {
 			return definition({});
 		});
 	} else if (typeof window === "object" && typeof window.document === "object") {
 		definition(window["graphspec"] = {});
-	} else console.error("unable to detect type of module to define for aureooms-js-graph-spec");
+	} else console.error("unable to detect type of module to define for @aureooms/js-graph-spec");
 })();

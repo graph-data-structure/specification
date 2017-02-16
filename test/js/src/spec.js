@@ -1,10 +1,10 @@
 
 var spec = graphspec ;
 
-var dll = require( "aureooms-js-dll" ) ;
+var dll = require( "@aureooms/js-dll" ) ;
 
-var adjacencylist = require( "aureooms-js-adjacency-list" ) ;
-var adjacencymatrix = require( "aureooms-js-adjacency-matrix" ) ;
+var adjacencylist = require( "@aureooms/js-adjacency-list" ) ;
+var adjacencymatrix = require( "@aureooms/js-adjacency-matrix" ) ;
 
 var List = dll.DoublyLinkedList ;
 
