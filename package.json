@@ -18,7 +18,7 @@
 		"test": "./node_modules/.bin/aureooms-node-package-test"
 	},
 	"name": "@aureooms/js-graph-spec",
-	"homepage": "http://aureooms.github.io/js-graph-spec/",
+	"homepage": "http://make-github-pseudonymous-again.github.io/js-graph-spec/",
 	"version": "5.0.2",
 	"description": "Graph specification code bricks for JavaScript",
 	"dependencies": {

@@ -1,4 +1,4 @@
-[js-graph-spec](http://aureooms.github.io/js-graph-spec)
+[js-graph-spec](http://make-github-pseudonymous-again.github.io/js-graph-spec)
 ==
 
 Graph specification code bricks for JavaScript. Parent is
