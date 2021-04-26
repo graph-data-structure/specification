@@ -2,23 +2,23 @@
 ==
 
 Graph specification code bricks for JavaScript. Parent is
-[js-gn](https://github.com/aureooms/js-gn).
+[js-gn](https://github.com/make-github-pseudonymous-again/js-gn).
 
 ```js
 graphspec.Graph( "My graph implementation" , MyGraphConstructor ) ;
 ```
 
-[![License](https://img.shields.io/github/license/aureooms/js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE)
+[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-graph-spec/master/LICENSE)
 [![NPM version](https://img.shields.io/npm/v/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
 [![Bower version](https://img.shields.io/bower/v/@aureooms/js-graph-spec.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-graph-spec)
-[![Build Status](https://img.shields.io/travis/aureooms/js-graph-spec.svg?style=flat)](https://travis-ci.org/aureooms/js-graph-spec)
-[![Coverage Status](https://img.shields.io/coveralls/aureooms/js-graph-spec.svg?style=flat)](https://coveralls.io/r/aureooms/js-graph-spec)
-[![Dependencies Status](https://img.shields.io/david/aureooms/js-graph-spec.svg?style=flat)](https://david-dm.org/aureooms/js-graph-spec#info=dependencies)
-[![devDependencies Status](https://img.shields.io/david/dev/aureooms/js-graph-spec.svg?style=flat)](https://david-dm.org/aureooms/js-graph-spec#info=devDependencies)
-[![Code Climate](https://img.shields.io/codeclimate/github/aureooms/js-graph-spec.svg?style=flat)](https://codeclimate.com/github/aureooms/js-graph-spec)
+[![Build Status](https://img.shields.io/travis/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://travis-ci.org/make-github-pseudonymous-again/js-graph-spec)
+[![Coverage Status](https://img.shields.io/coveralls/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://coveralls.io/r/make-github-pseudonymous-again/js-graph-spec)
+[![Dependencies Status](https://img.shields.io/david/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://david-dm.org/make-github-pseudonymous-again/js-graph-spec#info=dependencies)
+[![devDependencies Status](https://img.shields.io/david/dev/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://david-dm.org/make-github-pseudonymous-again/js-graph-spec#info=devDependencies)
+[![Code Climate](https://img.shields.io/codeclimate/github/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec)
 [![NPM downloads per month](https://img.shields.io/npm/dm/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
-[![GitHub issues](https://img.shields.io/github/issues/aureooms/js-graph-spec.svg?style=flat)](https://github.com/aureooms/js-graph-spec/issues)
-[![Inline docs](http://inch-ci.org/github/aureooms/js-graph-spec.svg?branch=master&style=shields)](http://inch-ci.org/github/aureooms/js-graph-spec)
+[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://github.com/make-github-pseudonymous-again/js-graph-spec/issues)
+[![Inline docs](http://inch-ci.org/github/make-github-pseudonymous-again/js-graph-spec.svg?branch=master&style=shields)](http://inch-ci.org/github/make-github-pseudonymous-again/js-graph-spec)
 
 Can be managed through [jspm](https://github.com/jspm/jspm-cli),
 [duo](https://github.com/duojs/duo),
