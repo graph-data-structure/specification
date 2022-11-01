@@ -173,7 +173,8 @@
     "prepare": "npm run build",
     "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
     "test": "ava",
-    "lint-config-and-fix": "fixpack || fixpack"
+    "lint-config-and-fix": "fixpack || fixpack",
+    "lint-config": "fixpack --dryRun"
   },
   "sideEffects": false,
   "source": "src/index.js",
