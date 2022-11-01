@@ -1,5 +1,5 @@
 import test from 'ava';
-import * as graphspec from '../../src';
+import * as graphspec from '../../src/index.js';
 
 var spec = graphspec ;
 
