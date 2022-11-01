@@ -161,7 +161,7 @@
   "main": "dist/index.js",
   "module": "dist/index.module.mjs",
   "repository": {
-    "url": "https://github.com/graph-data-structure/specification.git",
+    "url": "https://github.com/graph-data-structure/specification",
     "type": "git"
   },
   "scripts": {
