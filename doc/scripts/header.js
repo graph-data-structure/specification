@@ -17,7 +17,8 @@ domReady(() => {
 	header.insertBefore(projectname, header.firstChild);
 
 	const testlink = document.querySelector('header > a[data-ice="testLink"]');
-	testlink.href = 'https://app.codecov.io/gh/graph-data-structure/specification';
+	testlink.href =
+		'https://app.codecov.io/gh/graph-data-structure/specification';
 	testlink.target = '_BLANK';
 
 	const searchBox = document.querySelector('.search-box');
