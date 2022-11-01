@@ -46,6 +46,7 @@
     "build-docs": "esdoc",
     "build-gh-pages": "npm run build-docs",
     "cover": "NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test",
+    "debug": "NODE_ENV=debug npm run test -- -st --fail-fast",
     "dev": "npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast",
     "lint": "true",
     "lint-config": "fixpack --dryRun",
