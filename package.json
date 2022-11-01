@@ -49,6 +49,7 @@
     "debug": "NODE_ENV=debug npm run test -- -st --fail-fast",
     "dev": "npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast",
     "lint": "xo",
+    "lint-and-fix": "npm run lint -- --fix",
     "lint-config": "fixpack --dryRun",
     "lint-config-and-fix": "fixpack || fixpack",
     "prepare": "npm run build",
