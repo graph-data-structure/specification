@@ -2,7 +2,88 @@
   "name": "@graph-data-structure/specification",
   "description": "Graph specification code bricks for JavaScript",
   "version": "5.0.2",
+  "license": "AGPL-3.0",
   "author": "make-github-pseudonymous-again",
+  "homepage": "https://graph-data-structure.github.io/specification",
+  "repository": {
+    "url": "https://github.com/graph-data-structure/specification",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/graph-data-structure/specification/issues"
+  },
+  "keywords": [
+    "bricks",
+    "directed",
+    "ender",
+    "graph",
+    "javascript",
+    "js",
+    "spec",
+    "specification",
+    "undirected"
+  ],
+  "sideEffects": false,
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.mjs",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "browser": "./dist/index.module.mjs",
+      "umd": "./dist/index.umd.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.modern.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production microbundle",
+    "build-docs": "esdoc",
+    "cover": "NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test",
+    "dev": "npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast",
+    "lint": "true",
+    "lint-config": "fixpack --dryRun",
+    "lint-config-and-fix": "fixpack || fixpack",
+    "prepare": "npm run build",
+    "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
+    "test": "ava"
+  },
+  "dependencies": {
+    "@aureooms/js-cardinality": "^2.0.0",
+    "@aureooms/js-collections": "^3.0.0",
+    "@aureooms/js-itertools": "^3.0.0",
+    "@aureooms/js-type": "^1.0.4"
+  },
+  "devDependencies": {
+    "@aureooms/js-adjacency-list": "^4.0.7",
+    "@aureooms/js-adjacency-matrix": "^3.1.6",
+    "@aureooms/js-dll": "^6.0.10",
+    "@babel/core": "7.19.6",
+    "@babel/preset-env": "7.19.4",
+    "@babel/register": "7.18.9",
+    "@commitlint/cli": "16.3.0",
+    "@js-library/commitlint-config": "0.0.4",
+    "ava": "3.15.0",
+    "babel-plugin-transform-remove-console": "6.9.4",
+    "babel-plugin-unassert": "3.2.0",
+    "babel-preset-power-assert": "3.0.0",
+    "c8": "7.12.0",
+    "esdoc": "1.1.0",
+    "esdoc-inject-script-plugin": "1.0.0",
+    "esdoc-inject-style-plugin": "1.0.0",
+    "esdoc-standard-plugin": "1.0.0",
+    "fixpack": "4.0.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.5.0",
+    "microbundle": "0.15.1",
+    "np": "7.6.2",
+    "pinst": "2.1.6",
+    "power-assert": "1.6.1"
+  },
   "ava": {
     "files": [
       "test/src/**/*"
@@ -98,86 +179,5 @@
         ]
       }
     }
-  },
-  "bugs": {
-    "url": "https://github.com/graph-data-structure/specification/issues"
-  },
-  "dependencies": {
-    "@aureooms/js-cardinality": "^2.0.0",
-    "@aureooms/js-collections": "^3.0.0",
-    "@aureooms/js-itertools": "^3.0.0",
-    "@aureooms/js-type": "^1.0.4"
-  },
-  "devDependencies": {
-    "@aureooms/js-adjacency-list": "^4.0.7",
-    "@aureooms/js-adjacency-matrix": "^3.1.6",
-    "@aureooms/js-dll": "^6.0.10",
-    "@babel/core": "7.19.6",
-    "@babel/preset-env": "7.19.4",
-    "@babel/register": "7.18.9",
-    "@commitlint/cli": "16.3.0",
-    "@js-library/commitlint-config": "0.0.4",
-    "ava": "3.15.0",
-    "babel-plugin-transform-remove-console": "6.9.4",
-    "babel-plugin-unassert": "3.2.0",
-    "babel-preset-power-assert": "3.0.0",
-    "c8": "7.12.0",
-    "esdoc": "1.1.0",
-    "esdoc-inject-script-plugin": "1.0.0",
-    "esdoc-inject-style-plugin": "1.0.0",
-    "esdoc-standard-plugin": "1.0.0",
-    "fixpack": "4.0.0",
-    "husky": "7.0.4",
-    "lint-staged": "12.5.0",
-    "microbundle": "0.15.1",
-    "np": "7.6.2",
-    "pinst": "2.1.6",
-    "power-assert": "1.6.1"
-  },
-  "exports": {
-    ".": {
-      "browser": "./dist/index.module.mjs",
-      "umd": "./dist/index.umd.js",
-      "require": "./dist/index.js",
-      "default": "./dist/index.modern.mjs"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "homepage": "https://graph-data-structure.github.io/specification",
-  "keywords": [
-    "bricks",
-    "directed",
-    "ender",
-    "graph",
-    "javascript",
-    "js",
-    "spec",
-    "specification",
-    "undirected"
-  ],
-  "license": "AGPL-3.0",
-  "main": "dist/index.js",
-  "module": "dist/index.module.mjs",
-  "repository": {
-    "url": "https://github.com/graph-data-structure/specification",
-    "type": "git"
-  },
-  "scripts": {
-    "build": "NODE_ENV=production microbundle",
-    "build-docs": "esdoc",
-    "cover": "NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test",
-    "dev": "npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast",
-    "lint": "true",
-    "prepare": "npm run build",
-    "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
-    "test": "ava",
-    "lint-config-and-fix": "fixpack || fixpack",
-    "lint-config": "fixpack --dryRun"
-  },
-  "sideEffects": false,
-  "source": "src/index.js",
-  "umd:main": "dist/index.umd.js",
-  "unpkg": "dist/index.umd.js"
+  }
 }
