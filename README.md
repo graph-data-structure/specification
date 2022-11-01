@@ -1,24 +1,26 @@
-[js-graph-spec](http://make-github-pseudonymous-again.github.io/js-graph-spec)
+[@aureooms/js-graph-spec](https://make-github-pseudonymous-again.github.io/js-graph-spec)
 ==
 
 Graph specification code bricks for JavaScript. Parent is
-[js-gn](https://github.com/make-github-pseudonymous-again/js-gn).
+[@aureooms/js-gn](https://github.com/make-github-pseudonymous-again/js-gn).
 
 ```js
 graphspec.Graph( "My graph implementation" , MyGraphConstructor ) ;
 ```
 
-[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-graph-spec/main/LICENSE)
-[![NPM version](https://img.shields.io/npm/v/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
-[![Bower version](https://img.shields.io/bower/v/@aureooms/js-graph-spec.svg?style=flat)](http://bower.io/search/?q=@aureooms/js-graph-spec)
-[![Build Status](https://img.shields.io/travis/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://travis-ci.org/make-github-pseudonymous-again/js-graph-spec)
-[![Coverage Status](https://img.shields.io/coveralls/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://coveralls.io/r/make-github-pseudonymous-again/js-graph-spec)
-[![Dependencies Status](https://img.shields.io/david/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://david-dm.org/make-github-pseudonymous-again/js-graph-spec#info=dependencies)
-[![devDependencies Status](https://img.shields.io/david/dev/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://david-dm.org/make-github-pseudonymous-again/js-graph-spec#info=devDependencies)
-[![Code Climate](https://img.shields.io/codeclimate/github/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec)
-[![NPM downloads per month](https://img.shields.io/npm/dm/@aureooms/js-graph-spec.svg?style=flat)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
-[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-graph-spec.svg?style=flat)](https://github.com/make-github-pseudonymous-again/js-graph-spec/issues)
-[![Inline docs](http://inch-ci.org/github/make-github-pseudonymous-again/js-graph-spec.svg?branch=master&style=shields)](http://inch-ci.org/github/make-github-pseudonymous-again/js-graph-spec)
+[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-graph-spec.svg)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-graph-spec/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/@aureooms/js-graph-spec.svg)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
+[![Tests](https://img.shields.io/github/workflow/status/make-github-pseudonymous-again/js-graph-spec/ci:cover?event=push&label=tests)](https://github.com/make-github-pseudonymous-again/js-graph-spec/actions/workflows/ci:cover.yml?query=branch:main)
+[![Dependencies](https://img.shields.io/librariesio/github/make-github-pseudonymous-again/js-graph-spec.svg)](https://github.com/make-github-pseudonymous-again/js-graph-spec/network/dependencies)
+[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-graph-spec.svg)](https://github.com/make-github-pseudonymous-again/js-graph-spec/issues)
+[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-graph-spec.svg)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
+
+[![Code issues](https://img.shields.io/codeclimate/issues/make-github-pseudonymous-again/js-graph-spec.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec/issues)
+[![Code maintainability](https://img.shields.io/codeclimate/maintainability/make-github-pseudonymous-again/js-graph-spec.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec/trends/churn)
+[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/make-github-pseudonymous-again/js-graph-spec/main.svg)](https://codecov.io/gh/make-github-pseudonymous-again/js-graph-spec)
+[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/make-github-pseudonymous-again/js-graph-spec.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec/trends/technical_debt)
+[![Documentation](https://make-github-pseudonymous-again.github.io/js-graph-spec//badge.svg)](https://make-github-pseudonymous-again.github.io/js-graph-spec//source.html)
+[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-graph-spec)](https://bundlephobia.com/result?p=@aureooms/js-graph-spec)
 
 Can be managed through [jspm](https://github.com/jspm/jspm-cli),
 [duo](https://github.com/duojs/duo),
