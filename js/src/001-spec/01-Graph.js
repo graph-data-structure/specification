@@ -176,7 +176,7 @@ const Graph = function ( title , Constructor ) {
 
 		ok( cardinality.empty( g.eitr( ) ) , "no more edges" ) ;
 
-		ok( all( [ for ( i of g.vitr( ) ) cardinality.empty( g.iitr( i ) ) ] ) , "no more incident edges" ) ;
+		ok( all( map((i) => cardinality.empty( g.iitr( i ), g.vitr() ))) , "no more incident edges" ) ;
 
 		// delete remaining vertices
 		while ( v.length ) g.vdel(v.splice(0, 1)[0]) ;
@@ -322,7 +322,7 @@ const Graph = function ( title , Constructor ) {
 
 		ok( cardinality.empty( g.eitr( ) ) , "no more edges" ) ;
 
-		ok( all( [ for ( i of g.vitr( ) ) cardinality.empty( g.iitr( i ) ) ] ) , "no more incident edges" ) ;
+		ok( all( map((i) => cardinality.empty( g.iitr( i ), g.vitr() ))) , "no more incident edges" ) ;
 
 		// delete remaining vertices
 		while ( v.length ) g.vdel(v.splice(0, 1)[0]) ;
@@ -341,7 +341,7 @@ test( "graph-spec : Graph extensive test > " + title , function ( ) {
 
 	const init = function ( ) {
 
-		const V = [ for ( i of range( n ) ) G.vadd( i ) ] ;
+		const V = list(map((i) => G.vadd(i), range(n)));
 		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		const E = [
@@ -520,30 +520,30 @@ test( "graph-spec : Graph extensive test > " + title , function ( ) {
 
 	for ( let i of range( n ) ) {
 
-		ok( all( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] || v === V[i] ] ) ) ;
+		ok( all( map(([ u , v ]) =>  u === V[i] || v === V[i], G.incident( V[i] ) ) ) ) ;
 
-		ok( set( [ for ( [ u , v , e ] of G.incident( V[i] ) ) e ] ).isequal(
+		ok( set( map(([,,e]) => e, G.incident( V[i] ) )).isequal(
 			chain( [
-				[ for ( [ u , v , e ] of G.ingoing( V[i] ) ) e ] ,
-				[ for ( [ u , v , e ] of G.outgoing( V[i] ) ) e ]
+				map(([,,e]) => e, G.ingoing( V[i] ) ) ,
+				map(([,,e]) => e, G.outgoing( V[i] ) )
 			] )
 		) ) ;
 
 		ok( set( chain( [
-			[ for ( [ u , v ] of G.incident( V[i] ) ) v ] ,
-			[ for ( [ u , v ] of G.incident( V[i] ) ) u ]
+			map(([,v]) => v, G.incident( V[i] ) ),
+			map(([u]) => u, G.incident( V[i] ) ),
 		] ) ).isequal(
 			chain( [
 				[ V[i] ] ,
-				[ for ( [ u , v ] of G.ingoing( V[i] ) ) u ] ,
-				[ for ( [ u , v ] of G.outgoing( V[i] ) ) v ]
+				map(([u]) => u, G.ingoing( V[i] ) ) ,
+				map(([,v]) => v, G.outgoing( V[i] ) )
 			] )
 		) ) ;
 
 
-		ok( set( G.nitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] ? v : u ] ) ) ;
-		ok( set( G.dpitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.ingoing( V[i] ) ) u ] ) ) ;
-		ok( set( G.dsitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.outgoing( V[i] ) ) v ] ) ) ;
+		ok( set( G.nitr( V[i] ) ).isequal( map(( [ u , v ]) => u === V[i] ? v : u, G.incident( V[i] ) )  ) ) ;
+		ok( set( G.dpitr( V[i] ) ).isequal( map(( [u]) => u, G.ingoing( V[i] ) ) ) ) ;
+		ok( set( G.dsitr( V[i] ) ).isequal( map(( [ , v ]) => v, G.outgoing( V[i] ) ) ) ) ;
 
 	}
 

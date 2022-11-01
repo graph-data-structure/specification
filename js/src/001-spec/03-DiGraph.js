@@ -44,7 +44,7 @@ test( "graph-spec : DiGraph extensive test > " + title , function ( ) {
 
 	const init = function ( ) {
 
-		const V = [ for ( i of range( n ) ) G.vadd( i ) ] ;
+		const V = list(map((i) => G.vadd(i), range(n)));
 		assert.ok( set( G.vitr( ) ).isequal( G.vertices( ) ) ) ;
 
 		const E = [
@@ -223,32 +223,32 @@ test( "graph-spec : DiGraph extensive test > " + title , function ( ) {
 
 	for ( let i of range( n ) ) {
 
-		ok( all( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] || v === V[i] ] ) ) ;
+		ok( all( map(([ u , v ]) => u === V[i] || v === V[i], G.incident( V[i] ) ) ) ) ;
 
-		ok( set( [ for ( [ u , v , e ] of G.incident( V[i] ) ) e ] ).isequal(
+		ok( set( map(([,,e]) => e, G.incident( V[i] ) ) ).isequal(
 			chain( [
-				[ for ( [ u , v , e ] of G.ingoing( V[i] ) ) e ] ,
-				[ for ( [ u , v , e ] of G.outgoing( V[i] ) ) e ]
+				map(([,,e]) => e, G.ingoing( V[i] ) ) ,
+				map(([,,e]) => e, G.outgoing( V[i] ) )
 			] )
 		) ) ;
 
-		ok( set( [ for ( [ u , v ] of G.incident( V[i] ) ) v ] ).isequal(
+		ok( set( map(([, v]) => v, G.incident( V[i] ) ) ).isequal(
 			chain( [
-				[ for ( [ u , v ] of G.ingoing( V[i] ) ) v ] ,
-				[ for ( [ u , v ] of G.outgoing( V[i] ) ) v ]
+				map(([, v]) => v, G.ingoing( V[i] ) ) ,
+				map(([, v]) => v, G.outgoing( V[i] ) )
 			] )
 		) ) ;
 
-		ok( set( [ for ( [ u ] of G.incident( V[i] ) ) u ] ).isequal(
+		ok( set( map(([u]) => u, G.incident( V[i] ) ) ).isequal(
 			chain( [
-				[ for ( [ u ] of G.ingoing( V[i] ) ) u ] ,
-				[ for ( [ u ] of G.outgoing( V[i] ) ) u ]
+				map(([u]) => u, G.ingoing( V[i] ) ) ,
+				map(([u]) => u, G.outgoing( V[i] ) )
 			] )
 		) ) ;
 
-		ok( set( G.nitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.incident( V[i] ) ) u === V[i] ? v : u ] ) ) ;
-		ok( set( G.dpitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.ingoing( V[i] ) ) u ] ) ) ;
-		ok( set( G.dsitr( V[i] ) ).isequal( [ for ( [ u , v ] of G.outgoing( V[i] ) ) v ] ) ) ;
+		ok( set( G.nitr( V[i] ) ).isequal( map(([ u , v ]) => u === V[i] ? v : u, G.incident( V[i] ) ) ) ) ;
+		ok( set( G.dpitr( V[i] ) ).isequal( map(([u]) => u, G.ingoing( V[i] ) ) ) ) ;
+		ok( set( G.dsitr( V[i] ) ).isequal( map(([,v]) => v, G.outgoing( V[i] ) ) ) ) ;
 
 	}
 
