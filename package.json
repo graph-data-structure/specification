@@ -145,7 +145,7 @@
   "files": [
     "dist"
   ],
-  "homepage": "http://graph-data-structure.github.io/specification",
+  "homepage": "https://graph-data-structure.github.io/specification",
   "keywords": [
     "bricks",
     "directed",
