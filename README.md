@@ -1,26 +1,27 @@
-[@aureooms/js-graph-spec](https://make-github-pseudonymous-again.github.io/js-graph-spec)
+[@graph-data-structure/specification](https://make-github-pseudonymous-again.github.io/js-graph-spec)
 ==
 
-Graph specification code bricks for JavaScript. Parent is
-[@aureooms/js-gn](https://github.com/make-github-pseudonymous-again/js-gn).
+Graph data structure specification for JavaScript.
 
 ```js
-graphspec.Graph( "My graph implementation" , MyGraphConstructor ) ;
+import test from 'ava';
+import {Graph} from '@graph-data-structure/specification';
+Graph( test , "My graph implementation" , MyGraphConstructor ) ;
 ```
 
-[![License](https://img.shields.io/github/license/make-github-pseudonymous-again/js-graph-spec.svg)](https://raw.githubusercontent.com/make-github-pseudonymous-again/js-graph-spec/main/LICENSE)
-[![Version](https://img.shields.io/npm/v/@aureooms/js-graph-spec.svg)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
-[![Tests](https://img.shields.io/github/workflow/status/make-github-pseudonymous-again/js-graph-spec/ci:cover?event=push&label=tests)](https://github.com/make-github-pseudonymous-again/js-graph-spec/actions/workflows/ci:cover.yml?query=branch:main)
-[![Dependencies](https://img.shields.io/librariesio/github/make-github-pseudonymous-again/js-graph-spec.svg)](https://github.com/make-github-pseudonymous-again/js-graph-spec/network/dependencies)
-[![GitHub issues](https://img.shields.io/github/issues/make-github-pseudonymous-again/js-graph-spec.svg)](https://github.com/make-github-pseudonymous-again/js-graph-spec/issues)
-[![Downloads](https://img.shields.io/npm/dm/@aureooms/js-graph-spec.svg)](https://www.npmjs.org/package/@aureooms/js-graph-spec)
+[![License](https://img.shields.io/github/license/graph-data-structure/specification.svg)](https://raw.githubusercontent.com/graph-data-structure/specification/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/@graph-data-structure/specification.svg)](https://www.npmjs.org/package/@graph-data-structure/specification)
+[![Tests](https://img.shields.io/github/workflow/status/graph-data-structure/specification/ci:cover?event=push&label=tests)](https://github.com/graph-data-structure/specification/actions/workflows/ci:cover.yml?query=branch:main)
+[![Dependencies](https://img.shields.io/librariesio/github/graph-data-structure/specification.svg)](https://github.com/graph-data-structure/specification/network/dependencies)
+[![GitHub issues](https://img.shields.io/github/issues/graph-data-structure/specification.svg)](https://github.com/graph-data-structure/specification/issues)
+[![Downloads](https://img.shields.io/npm/dm/@graph-data-structure/specification.svg)](https://www.npmjs.org/package/@graph-data-structure/specification)
 
-[![Code issues](https://img.shields.io/codeclimate/issues/make-github-pseudonymous-again/js-graph-spec.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec/issues)
-[![Code maintainability](https://img.shields.io/codeclimate/maintainability/make-github-pseudonymous-again/js-graph-spec.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec/trends/churn)
-[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/make-github-pseudonymous-again/js-graph-spec/main.svg)](https://codecov.io/gh/make-github-pseudonymous-again/js-graph-spec)
-[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/make-github-pseudonymous-again/js-graph-spec.svg)](https://codeclimate.com/github/make-github-pseudonymous-again/js-graph-spec/trends/technical_debt)
-[![Documentation](https://make-github-pseudonymous-again.github.io/js-graph-spec//badge.svg)](https://make-github-pseudonymous-again.github.io/js-graph-spec//source.html)
-[![Package size](https://img.shields.io/bundlephobia/minzip/@aureooms/js-graph-spec)](https://bundlephobia.com/result?p=@aureooms/js-graph-spec)
+[![Code issues](https://img.shields.io/codeclimate/issues/graph-data-structure/specification.svg)](https://codeclimate.com/github/graph-data-structure/specification/issues)
+[![Code maintainability](https://img.shields.io/codeclimate/maintainability/graph-data-structure/specification.svg)](https://codeclimate.com/github/graph-data-structure/specification/trends/churn)
+[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/graph-data-structure/specification/main.svg)](https://codecov.io/gh/graph-data-structure/specification)
+[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/graph-data-structure/specification.svg)](https://codeclimate.com/github/graph-data-structure/specification/trends/technical_debt)
+[![Documentation](https://graph-data-structure.github.io/specification/badge.svg)](https://graph-data-structure.github.io/specification/source.html)
+[![Package size](https://img.shields.io/bundlephobia/minzip/@graph-data-structure/specification)](https://bundlephobia.com/result?p=@graph-data-structure/specification)
 
 Can be managed through [jspm](https://github.com/jspm/jspm-cli),
 [duo](https://github.com/duojs/duo),
@@ -35,70 +36,70 @@ and [npm](https://github.com/npm/npm).
 
 ### jspm
 ```terminal
-jspm install github:aureooms/js-graph-spec
+jspm install github:graph-data-structure/specification
 # or
-jspm install npm:@aureooms/js-graph-spec
+jspm install npm:@graph-data-structure/specification
 ```
 ### duo
 No install step needed for duo!
 
 ### component
 ```terminal
-component install aureooms/js-graph-spec
+component install graph-data-structure/specification
 ```
 
 ### bower
 ```terminal
-bower install @aureooms/js-graph-spec
+bower install @graph-data-structure/specification
 ```
 
 ### ender
 ```terminal
-ender add @aureooms/js-graph-spec
+ender add @graph-data-structure/specification
 ```
 
 ### jam
 ```terminal
-jam install @aureooms/js-graph-spec
+jam install @graph-data-structure/specification
 ```
 
 ### spm
 ```terminal
-spm install @aureooms/js-graph-spec --save
+spm install @graph-data-structure/specification --save
 ```
 
 ### npm
 ```terminal
-npm install @aureooms/js-graph-spec --save
+npm install @graph-data-structure/specification --save
 ```
 
 ## Require
 ### jspm
 ```js
-let graphspec = require( "github:aureooms/js-graph-spec" ) ;
+let graphspec = require( "github:graph-data-structure/specification" ) ;
 // or
-import graphspec from '@aureooms/js-graph-spec' ;
+import graphspec from '@graph-data-structure/specification' ;
 ```
 ### duo
 ```js
-let graphspec = require( "aureooms/js-graph-spec" ) ;
+let graphspec = require( "graph-data-structure/specification" ) ;
 ```
 
 ### component, ender, spm, npm
 ```js
-let graphspec = require( "@aureooms/js-graph-spec" ) ;
+let graphspec = require( "@graph-data-structure/specification" ) ;
 ```
 
 ### bower
 The script tag exposes the global variable `graphspec`.
 ```html
-<script src="bower_components/@aureooms/js-graph-spec/js/dist/graph-spec.min.js"></script>
+<script src="bower_components/@graph-data-structure/specification/js/dist/graph-spec.min.js"></script>
 ```
 Alternatively, you can use any tool mentioned [here](http://bower.io/docs/tools/).
 
 ### jam
 ```js
-require( [ "@aureooms/js-graph-spec" ] , function ( graphspec ) { ... } ) ;
+require( [ "@graph-data-structure/specification" ] , function ( graphspec ) { ... } ) ;
 ```
 
 ## Signatures

@@ -8,15 +8,15 @@ or [jspm](https://jspm.org/docs).
 
 ### yarn
 ```terminal
-yarn add @aureooms/js-graph-spec
+yarn add @graph-data-structure/specification
 ```
 
 ### npm
 ```terminal
-npm install @aureooms/js-graph-spec --save
+npm install @graph-data-structure/specification --save
 ```
 
 ### jspm
 ```terminal
-jspm install npm:@aureooms/js-graph-spec
+jspm install npm:@graph-data-structure/specification
 ```

@@ -13,7 +13,7 @@ import 'regenerator-runtime/runtime.js';
 
 Then, import the library where needed
 ```js
-const graph_spec = await import('@aureooms/js-graph-spec');
+const graph_spec = await import('@graph-data-structure/specification');
 // or
-import * as graph_spec from '@aureooms/js-graph-spec';
+import * as graph_spec from '@graph-data-structure/specification';
 ```

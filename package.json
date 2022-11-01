@@ -1,8 +1,8 @@
 {
-  "name": "@aureooms/js-graph-spec",
+  "name": "@graph-data-structure/specification",
   "description": "Graph specification code bricks for JavaScript",
   "version": "5.0.2",
-  "author": "aureooms",
+  "author": "make-github-pseudonymous-again",
   "ava": {
     "files": [
       "test/src/**/*"
@@ -100,7 +100,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/make-github-pseudonymous-again/js-graph-spec/issues"
+    "url": "https://github.com/graph-data-structure/specification/issues"
   },
   "dependencies": {
     "@aureooms/js-cardinality": "^2.0.0",
@@ -145,7 +145,7 @@
   "files": [
     "dist"
   ],
-  "homepage": "http://make-github-pseudonymous-again.github.io/js-graph-spec/",
+  "homepage": "http://graph-data-structure.github.io/specification",
   "keywords": [
     "bricks",
     "directed",
@@ -161,7 +161,7 @@
   "main": "dist/index.js",
   "module": "dist/index.module.mjs",
   "repository": {
-    "url": "https://github.com/make-github-pseudonymous-again/js-graph-spec.git",
+    "url": "https://github.com/graph-data-structure/specification.git",
     "type": "git"
   },
   "scripts": {

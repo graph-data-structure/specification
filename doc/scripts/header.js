@@ -10,14 +10,14 @@ const domReady = function (callback) {
 domReady(() => {
 	const projectname = document.createElement('a');
 	projectname.classList.add('project-name');
-	projectname.text = 'make-github-pseudonymous-again/js-graph-spec';
+	projectname.text = 'graph-data-structure/specification';
 	projectname.href = './index.html';
 
 	const header = document.querySelector('header');
 	header.insertBefore(projectname, header.firstChild);
 
 	const testlink = document.querySelector('header > a[data-ice="testLink"]');
-	testlink.href = 'https://app.codecov.io/gh/make-github-pseudonymous-again/js-graph-spec';
+	testlink.href = 'https://app.codecov.io/gh/graph-data-structure/specification';
 	testlink.target = '_BLANK';
 
 	const searchBox = document.querySelector('.search-box');

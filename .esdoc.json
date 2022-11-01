@@ -41,7 +41,7 @@
           "autoPrivate": true
         },
         "brand": {
-          "title": "@aureooms/js-graph-spec"
+          "title": "@graph-data-structure/specification"
         },
         "test": {
           "type": "ava",
