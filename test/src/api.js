@@ -4,7 +4,7 @@ import {DoublyLinkedList as List} from '@aureooms/js-dll';
 
 import adjacencylist from '@aureooms/js-adjacency-list';
 import adjacencymatrix from '@aureooms/js-adjacency-matrix';
-import * as spec from '../../src/index.js';
+import * as spec from '#module';
 
 spec.graph(test, 'Adjacency Matrix Graph', adjacencymatrix.Graph);
 spec.multiGraph(
