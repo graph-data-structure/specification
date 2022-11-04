@@ -57,8 +57,8 @@
     "lint-config-and-fix": "fixpack || fixpack",
     "prepare": "npm run build",
     "release": "np --message ':hatching_chick: release: Bumping to v%s.'",
-    "travis": "npm run lint-config && npm run lint && npm run cover",
-    "test": "ava"
+    "test": "ava",
+    "travis": "npm run lint-config && npm run lint && npm run cover"
   },
   "dependencies": {
     "@aureooms/js-cardinality": "^2.0.0",
