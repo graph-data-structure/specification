@@ -74,19 +74,19 @@
   },
   "dependencies": {
     "@collection-abstraction/set": "^5.0.0",
+    "@failure-abstraction/error": "^6.0.1",
     "@functional-abstraction/type": "^2.0.1",
     "@iterable-iterator/cardinality": "^4.0.0",
     "@iterable-iterator/chain": "^2.0.1",
     "@iterable-iterator/consume": "^1.0.1",
+    "@iterable-iterator/filter": "^1.0.1",
+    "@iterable-iterator/iter": "^1.0.1",
     "@iterable-iterator/list": "^1.0.1",
     "@iterable-iterator/map": "^1.0.1",
     "@iterable-iterator/range": "^2.1.0",
     "@iterable-iterator/reduce": "^1.0.1"
   },
   "devDependencies": {
-    "@aureooms/js-adjacency-list": "^4.0.7",
-    "@aureooms/js-adjacency-matrix": "^3.1.6",
-    "@aureooms/js-dll": "^7.0.0",
     "@babel/core": "7.20.2",
     "@babel/preset-env": "7.20.2",
     "@commitlint/cli": "17.2.0",

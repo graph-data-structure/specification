@@ -356,9 +356,6 @@ export default function graph(test, title, Constructor) {
 
 		const n = 10;
 
-		let V;
-		let E;
-
 		const init = () => {
 			const V = list(map((i) => G.vadd(i), range(n)));
 			t.true(set(G.vitr()).isequal(G.vertices()));
@@ -391,7 +388,7 @@ export default function graph(test, title, Constructor) {
 		const delete_all_edges = () => exhaust(map(G.edel.bind(G), E));
 		const delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));
 
-		[V, E] = init();
+		let [V, E] = init();
 
 		t.is(len(G.vitr()), 10);
 		t.is(len(G.eitr()), 12);
