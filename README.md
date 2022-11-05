@@ -1,4 +1,4 @@
-[@graph-data-structure/specification](https://make-github-pseudonymous-again.github.io/js-graph-spec)
+[@graph-data-structure/specification](https://graph-data-structure.github.io/specification)
 ==
 
 Graph data structure specification for JavaScript.

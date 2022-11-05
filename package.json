@@ -24,18 +24,19 @@
     "undirected"
   ],
   "sideEffects": false,
+  "type": "module",
   "source": "src/index.js",
   "main": "dist/index.cjs",
-  "module": "dist/index.module.mjs",
+  "module": "dist/index.module.js",
   "esmodule": "dist/index.modern.js",
   "umd:main": "dist/index.umd.js",
   "unpkg": "dist/index.umd.js",
   "exports": {
     ".": {
-      "browser": "./dist/index.module.mjs",
+      "browser": "./dist/index.module.js",
       "umd": "./dist/index.umd.js",
       "require": "./dist/index.cjs",
-      "default": "./dist/index.modern.mjs"
+      "default": "./dist/index.modern.js"
     }
   },
   "files": [
@@ -67,22 +68,22 @@
   },
   "dependencies": {
     "@aureooms/js-cardinality": "^2.0.0",
-    "@aureooms/js-collections": "^3.0.0",
+    "@aureooms/js-collections": "^4.0.0",
     "@aureooms/js-itertools": "^3.0.0",
     "@aureooms/js-type": "^1.0.4"
   },
   "devDependencies": {
     "@aureooms/js-adjacency-list": "^4.0.7",
     "@aureooms/js-adjacency-matrix": "^3.1.6",
-    "@aureooms/js-dll": "^6.0.10",
-    "@babel/core": "7.19.6",
-    "@babel/preset-env": "7.19.4",
-    "@babel/register": "7.18.9",
-    "@commitlint/cli": "16.3.0",
+    "@aureooms/js-dll": "^7.0.0",
+    "@babel/core": "7.20.2",
+    "@babel/preset-env": "7.20.2",
+    "@commitlint/cli": "17.2.0",
     "@js-library/commitlint-config": "0.0.4",
+    "@node-loader/babel": "^2.0.1",
     "@node-loader/core": "2.0.0",
     "@node-loader/import-maps": "1.1.0",
-    "ava": "3.15.0",
+    "ava": "5.0.1",
     "babel-plugin-transform-remove-console": "6.9.4",
     "babel-plugin-unassert": "3.2.0",
     "babel-preset-power-assert": "3.0.0",
@@ -92,11 +93,11 @@
     "esdoc-inject-style-plugin": "1.0.0",
     "esdoc-standard-plugin": "1.0.0",
     "fixpack": "4.0.0",
-    "husky": "7.0.4",
-    "lint-staged": "12.5.0",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
     "microbundle": "0.15.1",
     "np": "7.6.2",
-    "pinst": "2.1.6",
+    "pinst": "3.0.0",
     "power-assert": "1.6.1",
     "xo": "0.52.4"
   },
@@ -108,21 +109,12 @@
       "--experimental-loader=@node-loader/core"
     ],
     "require": [
-      "regenerator-runtime/runtime",
-      "@babel/register"
+      "regenerator-runtime/runtime"
     ],
     "timeout": "1m"
   },
   "babel": {
     "sourceMaps": true,
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": "current node"
-        }
-      ]
-    ],
     "plugins": [
       [
         "transform-remove-console",
