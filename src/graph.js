@@ -1,20 +1,18 @@
-import {
-	exhaust as ex,
-	chain,
-	all,
-	map,
-	range,
-	list,
-} from '@aureooms/js-itertools';
-import {len, empty} from '@aureooms/js-cardinality';
-import {set} from '@aureooms/js-collections';
+import {list} from '@iterable-iterator/list';
+import {range} from '@iterable-iterator/range';
+import {map} from '@iterable-iterator/map';
+import {chain} from '@iterable-iterator/chain';
+import {exhaust} from '@iterable-iterator/consume';
+import {all} from '@iterable-iterator/reduce';
+import {len, isEmpty} from '@iterable-iterator/cardinality';
+import {set} from '@collection-abstraction/set';
 
 import methods from './methods.js';
 
 export default function graph(test, title, Constructor) {
 	methods(test, title, Constructor);
 
-	test('graph-spec : Graph simple test > ' + title, function (t) {
+	test('graph-spec : Graph simple test > ' + title, (t) => {
 		const G = new Constructor();
 
 		const u = G.vadd('A');
@@ -36,18 +34,18 @@ export default function graph(test, title, Constructor) {
 		t.true(set([a, b]).isequal([u, v]));
 
 		const vu = G.eadd(v, u);
-		t.deepEqual(len(G.eitr()), 1);
+		t.is(len(G.eitr()), 1);
 		t.is(uv, vu);
 
 		G.edel(uv);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.eitr()));
 
 		G.vdel(u);
 		G.vdel(v);
-		t.deepEqual(len(G.vitr()), 0);
+		t.true(isEmpty(G.vitr()));
 	});
 
-	test('graph-spec : Graph #1 > ' + title, function (t) {
+	test('graph-spec : Graph #1 > ' + title, (t) => {
 		const g = new Constructor();
 
 		const v = [];
@@ -77,8 +75,8 @@ export default function graph(test, title, Constructor) {
 		let k = 0;
 		let notseen = set(v);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'vitr ' + k);
 				notseen.remove(j);
 				++k;
@@ -89,23 +87,23 @@ export default function graph(test, title, Constructor) {
 		let alledges = e[0].concat([e[1][0]]).concat(e[4]);
 		notseen = set(alledges);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'eitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.eitr()),
 		);
 
-		t.deepEqual(k, alledges.length, 'check edges count before del');
+		t.is(k, alledges.length, 'check edges count before del');
 
 		for (const m of r) {
 			k = e[m].length;
 
 			notseen = set(e[m]);
 
-			ex(
-				map(function (x) {
+			exhaust(
+				map((x) => {
 					--k;
 					t.true(notseen.has(x), 'iitr ' + m + ' ' + k);
 					notseen.remove(x);
@@ -124,36 +122,36 @@ export default function graph(test, title, Constructor) {
 		alledges = e[0].concat(e[4]);
 		notseen = set(alledges);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'eitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.eitr()),
 		);
 
-		t.deepEqual(k, alledges.length, 'check edges count after del');
+		t.is(k, alledges.length, 'check edges count after del');
 
 		k = 0;
 		notseen = set(map((e) => g.endpoints(e)[1], e[0]));
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'nitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.nitr(v[0])),
 		);
 
-		t.deepEqual(k, e[0].length, 'check neighbour count after del');
+		t.is(k, e[0].length, 'check neighbour count after del');
 
 		for (const m of r) {
 			k = e[m].length;
 
 			notseen = set(e[m]);
 
-			ex(
-				map(function (x) {
+			exhaust(
+				map((x) => {
 					--k;
 					t.true(notseen.has(x), 'iitr ' + m + ' ' + k);
 					notseen.remove(x);
@@ -168,15 +166,15 @@ export default function graph(test, title, Constructor) {
 		k = 0;
 		notseen = set(v);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'vitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.vitr()),
 		);
 
-		t.deepEqual(k, v.length, 'check vertex count after del');
+		t.is(k, v.length, 'check vertex count after del');
 
 		e[0].splice(2, 1);
 
@@ -185,20 +183,20 @@ export default function graph(test, title, Constructor) {
 			while (e[m].length > 0) g.edel(e[m].splice(0, 1)[0]);
 		}
 
-		t.true(empty(g.eitr()), 'no more edges');
+		t.true(isEmpty(g.eitr()), 'no more edges');
 
 		t.true(
-			all(map((i) => empty(g.iitr(i)), g.vitr())),
+			all(map((i) => isEmpty(g.iitr(i)), g.vitr())),
 			'no more incident edges',
 		);
 
 		// Delete remaining vertices
 		while (v.length > 0) g.vdel(v.splice(0, 1)[0]);
 
-		t.true(empty(g.vitr()), 'no more vertices');
+		t.true(isEmpty(g.vitr()), 'no more vertices');
 	});
 
-	test('graph-spec : Graph #2 > ' + title, function (t) {
+	test('graph-spec : Graph #2 > ' + title, (t) => {
 		const g = new Constructor();
 
 		const v = [];
@@ -231,8 +229,8 @@ export default function graph(test, title, Constructor) {
 		k = 0;
 		notseen = set(v);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'vitr ' + k);
 				notseen.remove(j);
 				++k;
@@ -243,23 +241,23 @@ export default function graph(test, title, Constructor) {
 		alledges = e[0].concat([e[1][0]]).concat(e[4]);
 		notseen = set(alledges);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'eitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.eitr()),
 		);
 
-		t.deepEqual(k, alledges.length, 'check edges count before del');
+		t.is(k, alledges.length, 'check edges count before del');
 
 		for (const m of r) {
 			k = e[m].length;
 
 			notseen = set(e[m]);
 
-			ex(
-				map(function (x) {
+			exhaust(
+				map((x) => {
 					--k;
 					t.true(notseen.has(x), 'iitr ' + m + ' ' + k);
 					notseen.remove(x);
@@ -278,36 +276,36 @@ export default function graph(test, title, Constructor) {
 		alledges = e[0].concat(e[4]);
 		notseen = set(alledges);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'eitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.eitr()),
 		);
 
-		t.deepEqual(k, alledges.length, 'check edges count after del');
+		t.is(k, alledges.length, 'check edges count after del');
 
 		k = 0;
 		notseen = set(map((e) => g.endpoints(e)[1], e[0]));
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'nitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.nitr(v[0])),
 		);
 
-		t.deepEqual(k, e[0].length, 'check neighbour count after del');
+		t.is(k, e[0].length, 'check neighbour count after del');
 
 		for (const m of r) {
 			k = e[m].length;
 
 			notseen = set(e[m]);
 
-			ex(
-				map(function (x) {
+			exhaust(
+				map((x) => {
 					--k;
 					t.true(notseen.has(x), 'iitr ' + m + ' ' + k);
 					notseen.remove(x);
@@ -323,15 +321,15 @@ export default function graph(test, title, Constructor) {
 		k = 0;
 		notseen = set(v);
 
-		ex(
-			map(function (j) {
+		exhaust(
+			map((j) => {
 				t.true(notseen.has(j), 'vitr ' + k);
 				notseen.remove(j);
 				++k;
 			}, g.vitr()),
 		);
 
-		t.deepEqual(k, v.length, 'check vertex count after del');
+		t.is(k, v.length, 'check vertex count after del');
 
 		e[0].splice(1, 1);
 
@@ -340,20 +338,20 @@ export default function graph(test, title, Constructor) {
 			while (e[m].length > 0) g.edel(e[m].splice(0, 1)[0]);
 		}
 
-		t.true(empty(g.eitr()), 'no more edges');
+		t.true(isEmpty(g.eitr()), 'no more edges');
 
 		t.true(
-			all(map((i) => empty(g.iitr(i)), g.vitr())),
+			all(map((i) => isEmpty(g.iitr(i)), g.vitr())),
 			'no more incident edges',
 		);
 
 		// Delete remaining vertices
 		while (v.length > 0) g.vdel(v.splice(0, 1)[0]);
 
-		t.true(empty(g.vitr()), 'no more vertices');
+		t.true(isEmpty(g.vitr()), 'no more vertices');
 	});
 
-	test('graph-spec : Graph extensive test > ' + title, function (t) {
+	test('graph-spec : Graph extensive test > ' + title, (t) => {
 		const G = new Constructor();
 
 		const n = 10;
@@ -361,7 +359,7 @@ export default function graph(test, title, Constructor) {
 		let V;
 		let E;
 
-		const init = function () {
+		const init = () => {
 			const V = list(map((i) => G.vadd(i), range(n)));
 			t.true(set(G.vitr()).isequal(G.vertices()));
 
@@ -390,103 +388,103 @@ export default function graph(test, title, Constructor) {
 			return [V, E];
 		};
 
-		const delete_all_edges = () => ex(map(G.edel.bind(G), E));
-		const delete_all_vertices = () => ex(map(G.vdel.bind(G), V));
+		const delete_all_edges = () => exhaust(map(G.edel.bind(G), E));
+		const delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));
 
 		[V, E] = init();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 12);
+		t.is(len(G.vitr()), 10);
+		t.is(len(G.eitr()), 12);
 
 		delete_all_edges();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 0);
+		t.is(len(G.vitr()), 10);
+		t.true(isEmpty(G.eitr()));
 
 		delete_all_vertices();
 
-		t.deepEqual(len(G.vitr()), 0);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.vitr()));
+		t.true(isEmpty(G.eitr()));
 
 		[V, E] = init();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 12);
+		t.is(len(G.vitr()), 10);
+		t.is(len(G.eitr()), 12);
 
 		delete_all_vertices();
 
-		t.deepEqual(len(G.vitr()), 0);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.vitr()));
+		t.true(isEmpty(G.eitr()));
 
 		[V, E] = init();
 
-		t.deepEqual(len(G.iitr(V[0])), 3);
-		t.deepEqual(len(G.iitr(V[1])), 2);
-		t.deepEqual(len(G.iitr(V[2])), 2);
-		t.deepEqual(len(G.iitr(V[3])), 2);
-		t.deepEqual(len(G.iitr(V[4])), 3);
-		t.deepEqual(len(G.iitr(V[5])), 3);
-		t.deepEqual(len(G.iitr(V[6])), 2);
-		t.deepEqual(len(G.iitr(V[7])), 2);
-		t.deepEqual(len(G.iitr(V[8])), 2);
-		t.deepEqual(len(G.iitr(V[9])), 3);
+		t.is(len(G.iitr(V[0])), 3);
+		t.is(len(G.iitr(V[1])), 2);
+		t.is(len(G.iitr(V[2])), 2);
+		t.is(len(G.iitr(V[3])), 2);
+		t.is(len(G.iitr(V[4])), 3);
+		t.is(len(G.iitr(V[5])), 3);
+		t.is(len(G.iitr(V[6])), 2);
+		t.is(len(G.iitr(V[7])), 2);
+		t.is(len(G.iitr(V[8])), 2);
+		t.is(len(G.iitr(V[9])), 3);
 
-		t.deepEqual(len(G.initr(V[0])), 3);
-		t.deepEqual(len(G.initr(V[1])), 2);
-		t.deepEqual(len(G.initr(V[2])), 2);
-		t.deepEqual(len(G.initr(V[3])), 2);
-		t.deepEqual(len(G.initr(V[4])), 3);
-		t.deepEqual(len(G.initr(V[5])), 3);
-		t.deepEqual(len(G.initr(V[6])), 2);
-		t.deepEqual(len(G.initr(V[7])), 2);
-		t.deepEqual(len(G.initr(V[8])), 2);
-		t.deepEqual(len(G.initr(V[9])), 3);
+		t.is(len(G.initr(V[0])), 3);
+		t.is(len(G.initr(V[1])), 2);
+		t.is(len(G.initr(V[2])), 2);
+		t.is(len(G.initr(V[3])), 2);
+		t.is(len(G.initr(V[4])), 3);
+		t.is(len(G.initr(V[5])), 3);
+		t.is(len(G.initr(V[6])), 2);
+		t.is(len(G.initr(V[7])), 2);
+		t.is(len(G.initr(V[8])), 2);
+		t.is(len(G.initr(V[9])), 3);
 
-		t.deepEqual(len(G.outitr(V[0])), 3);
-		t.deepEqual(len(G.outitr(V[1])), 2);
-		t.deepEqual(len(G.outitr(V[2])), 2);
-		t.deepEqual(len(G.outitr(V[3])), 2);
-		t.deepEqual(len(G.outitr(V[4])), 3);
-		t.deepEqual(len(G.outitr(V[5])), 3);
-		t.deepEqual(len(G.outitr(V[6])), 2);
-		t.deepEqual(len(G.outitr(V[7])), 2);
-		t.deepEqual(len(G.outitr(V[8])), 2);
-		t.deepEqual(len(G.outitr(V[9])), 3);
+		t.is(len(G.outitr(V[0])), 3);
+		t.is(len(G.outitr(V[1])), 2);
+		t.is(len(G.outitr(V[2])), 2);
+		t.is(len(G.outitr(V[3])), 2);
+		t.is(len(G.outitr(V[4])), 3);
+		t.is(len(G.outitr(V[5])), 3);
+		t.is(len(G.outitr(V[6])), 2);
+		t.is(len(G.outitr(V[7])), 2);
+		t.is(len(G.outitr(V[8])), 2);
+		t.is(len(G.outitr(V[9])), 3);
 
 		G.reverse();
 
-		t.deepEqual(len(G.iitr(V[0])), 3);
-		t.deepEqual(len(G.iitr(V[1])), 2);
-		t.deepEqual(len(G.iitr(V[2])), 2);
-		t.deepEqual(len(G.iitr(V[3])), 2);
-		t.deepEqual(len(G.iitr(V[4])), 3);
-		t.deepEqual(len(G.iitr(V[5])), 3);
-		t.deepEqual(len(G.iitr(V[6])), 2);
-		t.deepEqual(len(G.iitr(V[7])), 2);
-		t.deepEqual(len(G.iitr(V[8])), 2);
-		t.deepEqual(len(G.iitr(V[9])), 3);
+		t.is(len(G.iitr(V[0])), 3);
+		t.is(len(G.iitr(V[1])), 2);
+		t.is(len(G.iitr(V[2])), 2);
+		t.is(len(G.iitr(V[3])), 2);
+		t.is(len(G.iitr(V[4])), 3);
+		t.is(len(G.iitr(V[5])), 3);
+		t.is(len(G.iitr(V[6])), 2);
+		t.is(len(G.iitr(V[7])), 2);
+		t.is(len(G.iitr(V[8])), 2);
+		t.is(len(G.iitr(V[9])), 3);
 
-		t.deepEqual(len(G.outitr(V[0])), 3);
-		t.deepEqual(len(G.outitr(V[1])), 2);
-		t.deepEqual(len(G.outitr(V[2])), 2);
-		t.deepEqual(len(G.outitr(V[3])), 2);
-		t.deepEqual(len(G.outitr(V[4])), 3);
-		t.deepEqual(len(G.outitr(V[5])), 3);
-		t.deepEqual(len(G.outitr(V[6])), 2);
-		t.deepEqual(len(G.outitr(V[7])), 2);
-		t.deepEqual(len(G.outitr(V[8])), 2);
-		t.deepEqual(len(G.outitr(V[9])), 3);
+		t.is(len(G.outitr(V[0])), 3);
+		t.is(len(G.outitr(V[1])), 2);
+		t.is(len(G.outitr(V[2])), 2);
+		t.is(len(G.outitr(V[3])), 2);
+		t.is(len(G.outitr(V[4])), 3);
+		t.is(len(G.outitr(V[5])), 3);
+		t.is(len(G.outitr(V[6])), 2);
+		t.is(len(G.outitr(V[7])), 2);
+		t.is(len(G.outitr(V[8])), 2);
+		t.is(len(G.outitr(V[9])), 3);
 
-		t.deepEqual(len(G.initr(V[0])), 3);
-		t.deepEqual(len(G.initr(V[1])), 2);
-		t.deepEqual(len(G.initr(V[2])), 2);
-		t.deepEqual(len(G.initr(V[3])), 2);
-		t.deepEqual(len(G.initr(V[4])), 3);
-		t.deepEqual(len(G.initr(V[5])), 3);
-		t.deepEqual(len(G.initr(V[6])), 2);
-		t.deepEqual(len(G.initr(V[7])), 2);
-		t.deepEqual(len(G.initr(V[8])), 2);
-		t.deepEqual(len(G.initr(V[9])), 3);
+		t.is(len(G.initr(V[0])), 3);
+		t.is(len(G.initr(V[1])), 2);
+		t.is(len(G.initr(V[2])), 2);
+		t.is(len(G.initr(V[3])), 2);
+		t.is(len(G.initr(V[4])), 3);
+		t.is(len(G.initr(V[5])), 3);
+		t.is(len(G.initr(V[6])), 2);
+		t.is(len(G.initr(V[7])), 2);
+		t.is(len(G.initr(V[8])), 2);
+		t.is(len(G.initr(V[9])), 3);
 
 		t.true(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));
 		t.true(set(G.nitr(V[1])).isequal([V[0], V[4]]));
@@ -521,7 +519,7 @@ export default function graph(test, title, Constructor) {
 		t.true(set(G.dpitr(V[8])).isequal([V[5], V[9]]));
 		t.true(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));
 
-		t.deepEqual(len(G.edges()), 12, 'G.edges( ) length');
+		t.is(len(G.edges()), 12, 'G.edges( ) length');
 
 		const edges = set(E);
 
@@ -538,25 +536,25 @@ export default function graph(test, title, Constructor) {
 
 			t.true(
 				set(map(([_u, _v, e]) => e, G.incident(V[i]))).isequal(
-					chain([
+					chain(
 						map(([_u, _v, e]) => e, G.ingoing(V[i])),
 						map(([_u, _v, e]) => e, G.outgoing(V[i])),
-					]),
+					),
 				),
 			);
 
 			t.true(
 				set(
-					chain([
+					chain(
 						map(([, v]) => v, G.incident(V[i])),
 						map(([u]) => u, G.incident(V[i])),
-					]),
+					),
 				).isequal(
-					chain([
+					chain(
 						[V[i]],
 						map(([u]) => u, G.ingoing(V[i])),
 						map(([, v]) => v, G.outgoing(V[i])),
-					]),
+					),
 				),
 			);
 
@@ -571,12 +569,12 @@ export default function graph(test, title, Constructor) {
 
 		delete_all_edges();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 0);
+		t.is(len(G.vitr()), 10);
+		t.true(isEmpty(G.eitr()));
 
 		delete_all_vertices();
 
-		t.deepEqual(len(G.vitr()), 0);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.vitr()));
+		t.true(isEmpty(G.eitr()));
 	});
 }

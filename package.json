@@ -67,10 +67,15 @@
     "test:src": "IMPORT_MAP_PATH=test/import-maps/src/index.json npm run test-cmd"
   },
   "dependencies": {
-    "@aureooms/js-cardinality": "^2.0.0",
-    "@aureooms/js-collections": "^4.0.0",
-    "@aureooms/js-itertools": "^3.0.0",
-    "@aureooms/js-type": "^1.0.4"
+    "@collection-abstraction/set": "^5.0.0",
+    "@functional-abstraction/type": "^2.0.1",
+    "@iterable-iterator/cardinality": "^4.0.0",
+    "@iterable-iterator/chain": "^2.0.1",
+    "@iterable-iterator/consume": "^1.0.1",
+    "@iterable-iterator/list": "^1.0.1",
+    "@iterable-iterator/map": "^1.0.1",
+    "@iterable-iterator/range": "^2.1.0",
+    "@iterable-iterator/reduce": "^1.0.1"
   },
   "devDependencies": {
     "@aureooms/js-adjacency-list": "^4.0.7",

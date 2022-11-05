@@ -1,15 +1,15 @@
-import {isfunction} from '@aureooms/js-type';
+import {isFunction} from '@functional-abstraction/type';
 
 export default function methods(test, title, Constructor) {
-	test('graph-spec : check existence of methods > ' + title, function (t) {
-		t.true(isfunction(Constructor), 'constructor');
+	test('graph-spec : check existence of methods > ' + title, (t) => {
+		t.true(isFunction(Constructor), 'constructor');
 
 		const G = new Constructor();
 
-		t.true(isfunction(G.vadd), 'vadd');
-		t.true(isfunction(G.vdel), 'vdel');
-		t.true(isfunction(G.eadd), 'eadd');
-		t.true(isfunction(G.edel), 'edel');
+		t.true(isFunction(G.vadd), 'vadd');
+		t.true(isFunction(G.vdel), 'vdel');
+		t.true(isFunction(G.eadd), 'eadd');
+		t.true(isFunction(G.edel), 'edel');
 		t.true(G.vitr !== null, 'vitr');
 		t.true(G.eitr !== null, 'eitr');
 		t.true(G.iitr !== null, 'iitr');

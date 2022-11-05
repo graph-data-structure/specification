@@ -1,20 +1,18 @@
-import {
-	exhaust as ex,
-	chain,
-	all,
-	map,
-	range,
-	list,
-} from '@aureooms/js-itertools';
-import {len} from '@aureooms/js-cardinality';
-import {set} from '@aureooms/js-collections';
+import {list} from '@iterable-iterator/list';
+import {range} from '@iterable-iterator/range';
+import {map} from '@iterable-iterator/map';
+import {chain} from '@iterable-iterator/chain';
+import {exhaust} from '@iterable-iterator/consume';
+import {all} from '@iterable-iterator/reduce';
+import {len, isEmpty} from '@iterable-iterator/cardinality';
+import {set} from '@collection-abstraction/set';
 
 import methods from './methods.js';
 
 export default function digraph(test, title, Constructor) {
 	methods(test, title, Constructor);
 
-	test('graph-spec : DiGraph simple test > ' + title, function (t) {
+	test('graph-spec : DiGraph simple test > ' + title, (t) => {
 		const G = new Constructor();
 
 		const u = G.vadd('A');
@@ -35,14 +33,14 @@ export default function digraph(test, title, Constructor) {
 		t.deepEqual([a, b], [v, u]);
 
 		G.edel(uv);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.eitr()));
 
 		G.vdel(u);
 		G.vdel(v);
-		t.deepEqual(len(G.vitr()), 0);
+		t.true(isEmpty(G.vitr()));
 	});
 
-	test('graph-spec : DiGraph extensive test > ' + title, function (t) {
+	test('graph-spec : DiGraph extensive test > ' + title, (t) => {
 		const G = new Constructor();
 
 		const n = 10;
@@ -50,7 +48,7 @@ export default function digraph(test, title, Constructor) {
 		let V;
 		let E;
 
-		const init = function () {
+		const init = () => {
 			const V = list(map((i) => G.vadd(i), range(n)));
 			t.true(set(G.vitr()).isequal(G.vertices()));
 
@@ -79,103 +77,103 @@ export default function digraph(test, title, Constructor) {
 			return [V, E];
 		};
 
-		const delete_all_edges = () => ex(map(G.edel.bind(G), E));
-		const delete_all_vertices = () => ex(map(G.vdel.bind(G), V));
+		const delete_all_edges = () => exhaust(map(G.edel.bind(G), E));
+		const delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));
 
 		[V, E] = init();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 12);
+		t.is(len(G.vitr()), 10);
+		t.is(len(G.eitr()), 12);
 
 		delete_all_edges();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 0);
+		t.is(len(G.vitr()), 10);
+		t.true(isEmpty(G.eitr()));
 
 		delete_all_vertices();
 
-		t.deepEqual(len(G.vitr()), 0);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.vitr()));
+		t.true(isEmpty(G.eitr()));
 
 		[V, E] = init();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 12);
+		t.is(len(G.vitr()), 10);
+		t.is(len(G.eitr()), 12);
 
 		delete_all_vertices();
 
-		t.deepEqual(len(G.vitr()), 0);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.vitr()));
+		t.true(isEmpty(G.eitr()));
 
 		[V, E] = init();
 
-		t.deepEqual(len(G.iitr(V[0])), 3);
-		t.deepEqual(len(G.iitr(V[1])), 2);
-		t.deepEqual(len(G.iitr(V[2])), 2);
-		t.deepEqual(len(G.iitr(V[3])), 2);
-		t.deepEqual(len(G.iitr(V[4])), 3);
-		t.deepEqual(len(G.iitr(V[5])), 3);
-		t.deepEqual(len(G.iitr(V[6])), 2);
-		t.deepEqual(len(G.iitr(V[7])), 2);
-		t.deepEqual(len(G.iitr(V[8])), 2);
-		t.deepEqual(len(G.iitr(V[9])), 3);
+		t.is(len(G.iitr(V[0])), 3);
+		t.is(len(G.iitr(V[1])), 2);
+		t.is(len(G.iitr(V[2])), 2);
+		t.is(len(G.iitr(V[3])), 2);
+		t.is(len(G.iitr(V[4])), 3);
+		t.is(len(G.iitr(V[5])), 3);
+		t.is(len(G.iitr(V[6])), 2);
+		t.is(len(G.iitr(V[7])), 2);
+		t.is(len(G.iitr(V[8])), 2);
+		t.is(len(G.iitr(V[9])), 3);
 
-		t.deepEqual(len(G.initr(V[0])), 0);
-		t.deepEqual(len(G.initr(V[1])), 2);
-		t.deepEqual(len(G.initr(V[2])), 2);
-		t.deepEqual(len(G.initr(V[3])), 2);
-		t.deepEqual(len(G.initr(V[4])), 0);
-		t.deepEqual(len(G.initr(V[5])), 0);
-		t.deepEqual(len(G.initr(V[6])), 2);
-		t.deepEqual(len(G.initr(V[7])), 2);
-		t.deepEqual(len(G.initr(V[8])), 2);
-		t.deepEqual(len(G.initr(V[9])), 0);
+		t.true(isEmpty(G.initr(V[0])));
+		t.is(len(G.initr(V[1])), 2);
+		t.is(len(G.initr(V[2])), 2);
+		t.is(len(G.initr(V[3])), 2);
+		t.true(isEmpty(G.initr(V[4])));
+		t.true(isEmpty(G.initr(V[5])));
+		t.is(len(G.initr(V[6])), 2);
+		t.is(len(G.initr(V[7])), 2);
+		t.is(len(G.initr(V[8])), 2);
+		t.true(isEmpty(G.initr(V[9])));
 
-		t.deepEqual(len(G.outitr(V[0])), 3);
-		t.deepEqual(len(G.outitr(V[1])), 0);
-		t.deepEqual(len(G.outitr(V[2])), 0);
-		t.deepEqual(len(G.outitr(V[3])), 0);
-		t.deepEqual(len(G.outitr(V[4])), 3);
-		t.deepEqual(len(G.outitr(V[5])), 3);
-		t.deepEqual(len(G.outitr(V[6])), 0);
-		t.deepEqual(len(G.outitr(V[7])), 0);
-		t.deepEqual(len(G.outitr(V[8])), 0);
-		t.deepEqual(len(G.outitr(V[9])), 3);
+		t.is(len(G.outitr(V[0])), 3);
+		t.true(isEmpty(G.outitr(V[1])));
+		t.true(isEmpty(G.outitr(V[2])));
+		t.true(isEmpty(G.outitr(V[3])));
+		t.is(len(G.outitr(V[4])), 3);
+		t.is(len(G.outitr(V[5])), 3);
+		t.true(isEmpty(G.outitr(V[6])));
+		t.true(isEmpty(G.outitr(V[7])));
+		t.true(isEmpty(G.outitr(V[8])));
+		t.is(len(G.outitr(V[9])), 3);
 
 		G.reverse();
 
-		t.deepEqual(len(G.iitr(V[0])), 3);
-		t.deepEqual(len(G.iitr(V[1])), 2);
-		t.deepEqual(len(G.iitr(V[2])), 2);
-		t.deepEqual(len(G.iitr(V[3])), 2);
-		t.deepEqual(len(G.iitr(V[4])), 3);
-		t.deepEqual(len(G.iitr(V[5])), 3);
-		t.deepEqual(len(G.iitr(V[6])), 2);
-		t.deepEqual(len(G.iitr(V[7])), 2);
-		t.deepEqual(len(G.iitr(V[8])), 2);
-		t.deepEqual(len(G.iitr(V[9])), 3);
+		t.is(len(G.iitr(V[0])), 3);
+		t.is(len(G.iitr(V[1])), 2);
+		t.is(len(G.iitr(V[2])), 2);
+		t.is(len(G.iitr(V[3])), 2);
+		t.is(len(G.iitr(V[4])), 3);
+		t.is(len(G.iitr(V[5])), 3);
+		t.is(len(G.iitr(V[6])), 2);
+		t.is(len(G.iitr(V[7])), 2);
+		t.is(len(G.iitr(V[8])), 2);
+		t.is(len(G.iitr(V[9])), 3);
 
-		t.deepEqual(len(G.outitr(V[0])), 0);
-		t.deepEqual(len(G.outitr(V[1])), 2);
-		t.deepEqual(len(G.outitr(V[2])), 2);
-		t.deepEqual(len(G.outitr(V[3])), 2);
-		t.deepEqual(len(G.outitr(V[4])), 0);
-		t.deepEqual(len(G.outitr(V[5])), 0);
-		t.deepEqual(len(G.outitr(V[6])), 2);
-		t.deepEqual(len(G.outitr(V[7])), 2);
-		t.deepEqual(len(G.outitr(V[8])), 2);
-		t.deepEqual(len(G.outitr(V[9])), 0);
+		t.true(isEmpty(G.outitr(V[0])));
+		t.is(len(G.outitr(V[1])), 2);
+		t.is(len(G.outitr(V[2])), 2);
+		t.is(len(G.outitr(V[3])), 2);
+		t.true(isEmpty(G.outitr(V[4])));
+		t.true(isEmpty(G.outitr(V[5])));
+		t.is(len(G.outitr(V[6])), 2);
+		t.is(len(G.outitr(V[7])), 2);
+		t.is(len(G.outitr(V[8])), 2);
+		t.true(isEmpty(G.outitr(V[9])));
 
-		t.deepEqual(len(G.initr(V[0])), 3);
-		t.deepEqual(len(G.initr(V[1])), 0);
-		t.deepEqual(len(G.initr(V[2])), 0);
-		t.deepEqual(len(G.initr(V[3])), 0);
-		t.deepEqual(len(G.initr(V[4])), 3);
-		t.deepEqual(len(G.initr(V[5])), 3);
-		t.deepEqual(len(G.initr(V[6])), 0);
-		t.deepEqual(len(G.initr(V[7])), 0);
-		t.deepEqual(len(G.initr(V[8])), 0);
-		t.deepEqual(len(G.initr(V[9])), 3);
+		t.is(len(G.initr(V[0])), 3);
+		t.true(isEmpty(G.initr(V[1])));
+		t.true(isEmpty(G.initr(V[2])));
+		t.true(isEmpty(G.initr(V[3])));
+		t.is(len(G.initr(V[4])), 3);
+		t.is(len(G.initr(V[5])), 3);
+		t.true(isEmpty(G.initr(V[6])));
+		t.true(isEmpty(G.initr(V[7])));
+		t.true(isEmpty(G.initr(V[8])));
+		t.is(len(G.initr(V[9])), 3);
 
 		t.true(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));
 		t.true(set(G.nitr(V[1])).isequal([V[0], V[4]]));
@@ -210,7 +208,7 @@ export default function digraph(test, title, Constructor) {
 		t.true(set(G.dpitr(V[8])).isequal([]));
 		t.true(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));
 
-		t.deepEqual(len(G.edges()), 12, 'G.edges( ) length');
+		t.is(len(G.edges()), 12, 'G.edges( ) length');
 
 		const edges = set(E);
 
@@ -227,28 +225,28 @@ export default function digraph(test, title, Constructor) {
 
 			t.true(
 				set(map(([_u, _v, e]) => e, G.incident(V[i]))).isequal(
-					chain([
+					chain(
 						map(([_u, _v, e]) => e, G.ingoing(V[i])),
 						map(([_u, _v, e]) => e, G.outgoing(V[i])),
-					]),
+					),
 				),
 			);
 
 			t.true(
 				set(map(([, v]) => v, G.incident(V[i]))).isequal(
-					chain([
+					chain(
 						map(([, v]) => v, G.ingoing(V[i])),
 						map(([, v]) => v, G.outgoing(V[i])),
-					]),
+					),
 				),
 			);
 
 			t.true(
 				set(map(([u]) => u, G.incident(V[i]))).isequal(
-					chain([
+					chain(
 						map(([u]) => u, G.ingoing(V[i])),
 						map(([u]) => u, G.outgoing(V[i])),
-					]),
+					),
 				),
 			);
 
@@ -263,12 +261,12 @@ export default function digraph(test, title, Constructor) {
 
 		delete_all_edges();
 
-		t.deepEqual(len(G.vitr()), 10);
-		t.deepEqual(len(G.eitr()), 0);
+		t.is(len(G.vitr()), 10);
+		t.true(isEmpty(G.eitr()));
 
 		delete_all_vertices();
 
-		t.deepEqual(len(G.vitr()), 0);
-		t.deepEqual(len(G.eitr()), 0);
+		t.true(isEmpty(G.vitr()));
+		t.true(isEmpty(G.eitr()));
 	});
 }
