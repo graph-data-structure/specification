@@ -1,0 +1,142 @@
+{
+  "coverage": "0%",
+  "expectCount": 57,
+  "actualCount": 0,
+  "files": {
+    "src/implementation/AbstractDirectedGraph.js": {
+      "expectCount": 8,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        14,
+        19,
+        26,
+        27,
+        31,
+        35,
+        36
+      ]
+    },
+    "src/implementation/AbstractGraph.js": {
+      "expectCount": 21,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        7,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        39,
+        43,
+        47,
+        51,
+        55,
+        59,
+        63,
+        67,
+        71,
+        75,
+        79,
+        83
+      ]
+    },
+    "src/implementation/AbstractUndirectedGraph.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        4,
+        8,
+        12
+      ]
+    },
+    "src/implementation/DirectedGraph.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        8,
+        9
+      ]
+    },
+    "src/implementation/DirectedMultiGraph.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/implementation/Graph.js": {
+      "expectCount": 11,
+      "actualCount": 0,
+      "undocumentLines": [
+        7,
+        8,
+        10,
+        11,
+        14,
+        20,
+        25,
+        31,
+        35,
+        39,
+        43
+      ]
+    },
+    "src/implementation/UndirectedGraph.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        9,
+        10
+      ]
+    },
+    "src/implementation/UndirectedMultiGraph.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/spec/digraph.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        12
+      ]
+    },
+    "src/spec/graph.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        12
+      ]
+    },
+    "src/spec/methods.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/spec/multiDigraph.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        12
+      ]
+    },
+    "src/spec/multiGraph.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        12
+      ]
+    }
+  }
+}

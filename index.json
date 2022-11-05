@@ -1,0 +1,2209 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/implementation/AbstractDirectedGraph.js",
+    "content": "import {filter} from '@iterable-iterator/filter';\nimport {list} from '@iterable-iterator/list';\nimport {map} from '@iterable-iterator/map';\n\nimport Graph from './Graph.js';\n\nconst isIngoing =\n\t(v) =>\n\t([, u]) => {\n\t\treturn u === v;\n\t};\n\nconst isOutgoing =\n\t(v) =>\n\t([t]) => {\n\t\treturn t === v;\n\t};\n\nconst reverse = (e) => {\n\tconst v = e.pop();\n\tconst u = e.pop();\n\te.push(v, u);\n\treturn e;\n};\n\nexport default class AbstractDirectedGraph extends Graph {\n\tinitr(u) {\n\t\treturn filter(isIngoing(u), this.E);\n\t}\n\n\toutitr(u) {\n\t\treturn filter(isOutgoing(u), this.E);\n\t}\n\n\treverse() {\n\t\tthis.E = list(map(reverse, this.E));\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/AbstractDirectedGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "isIngoing",
+    "memberof": "src/implementation/AbstractDirectedGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/implementation/AbstractDirectedGraph.js~isIngoing",
+    "access": "public",
+    "export": false,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractDirectedGraph.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "isOutgoing",
+    "memberof": "src/implementation/AbstractDirectedGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/implementation/AbstractDirectedGraph.js~isOutgoing",
+    "access": "public",
+    "export": false,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractDirectedGraph.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "reverse",
+    "memberof": "src/implementation/AbstractDirectedGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/implementation/AbstractDirectedGraph.js~reverse",
+    "access": "public",
+    "export": false,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractDirectedGraph.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "class",
+    "name": "AbstractDirectedGraph",
+    "memberof": "src/implementation/AbstractDirectedGraph.js",
+    "static": true,
+    "longname": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractDirectedGraph.js",
+    "importStyle": "AbstractDirectedGraph",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/Graph.js~Graph"
+    ]
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "initr",
+    "memberof": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph#initr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "outitr",
+    "memberof": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph#outitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "name": "reverse",
+    "memberof": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph#reverse",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "E",
+    "memberof": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph",
+    "static": false,
+    "longname": "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph#E",
+    "access": "public",
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "file",
+    "name": "src/implementation/AbstractGraph.js",
+    "content": "import {filter} from '@iterable-iterator/filter';\nimport {map} from '@iterable-iterator/map';\nimport {NotImplementedError} from '@failure-abstraction/error';\n\nconst other = ([t, u], v) => (t === v ? u : t);\n\nexport default class AbstractGraph {\n\tvadd(_) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\tvdel(_) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\teadd(_u, _v) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\tedel(_) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\tvitr() {\n\t\tthrow new NotImplementedError();\n\t}\n\n\teitr() {\n\t\tthrow new NotImplementedError();\n\t}\n\n\tiitr(v) {\n\t\treturn filter((e) => {\n\t\t\tconst [t, u] = this.endpoints(e);\n\t\t\treturn t === v || u === v;\n\t\t}, this.eitr());\n\t}\n\n\tnitr(v) {\n\t\treturn map((e) => other(this.endpoints(e), v), this.iitr(v));\n\t}\n\n\tvertices() {\n\t\treturn this.vitr();\n\t}\n\n\tedges() {\n\t\treturn map((e) => [...this.endpoints(e), e], this.eitr());\n\t}\n\n\tincident(u) {\n\t\treturn map((e) => [...this.endpoints(e), e], this.iitr(u));\n\t}\n\n\tendpoints(_e) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\tinitr(_) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\toutitr(_) {\n\t\tthrow new NotImplementedError();\n\t}\n\n\tdpitr(u) {\n\t\treturn map((e) => other(this.endpoints(e), u), this.initr(u));\n\t}\n\n\tdsitr(u) {\n\t\treturn map((e) => other(this.endpoints(e), u), this.outitr(u));\n\t}\n\n\tingoing(u) {\n\t\treturn map((e) => [other(this.endpoints(e), u), u, e], this.initr(u));\n\t}\n\n\toutgoing(u) {\n\t\treturn map((e) => [u, other(this.endpoints(e), u), e], this.outitr(u));\n\t}\n\n\treverse() {\n\t\tthrow new NotImplementedError();\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/AbstractGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "other",
+    "memberof": "src/implementation/AbstractGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/implementation/AbstractGraph.js~other",
+    "access": "public",
+    "export": false,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractGraph.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "arrayPattern",
+        "types": [
+          "*[]"
+        ],
+        "defaultRaw": [
+          "null",
+          "null"
+        ],
+        "defaultValue": "[null, null]"
+      },
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "class",
+    "name": "AbstractGraph",
+    "memberof": "src/implementation/AbstractGraph.js",
+    "static": true,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractGraph.js",
+    "importStyle": "AbstractGraph",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "name": "vadd",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#vadd",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "vdel",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#vdel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "eadd",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#eadd",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_u",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "_v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "edel",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#edel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "vitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#vitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "eitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#eitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "iitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#iitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "nitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#nitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "vertices",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#vertices",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "edges",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#edges",
+    "access": "public",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "incident",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#incident",
+    "access": "public",
+    "description": null,
+    "lineNumber": 51,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "endpoints",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#endpoints",
+    "access": "public",
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "initr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#initr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 59,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "outitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#outitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "params": [
+      {
+        "name": "_",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "dpitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#dpitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "dsitr",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#dsitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 71,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "ingoing",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#ingoing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 75,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "outgoing",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#outgoing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 79,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "reverse",
+    "memberof": "src/implementation/AbstractGraph.js~AbstractGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractGraph.js~AbstractGraph#reverse",
+    "access": "public",
+    "description": null,
+    "lineNumber": 83,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/implementation/AbstractUndirectedGraph.js",
+    "content": "import Graph from './Graph.js';\n\nexport default class AbstractUndirectedGraph extends Graph {\n\tinitr(u) {\n\t\treturn this.iitr(u);\n\t}\n\n\toutitr(u) {\n\t\treturn this.iitr(u);\n\t}\n\n\treverse() {}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/AbstractUndirectedGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "class",
+    "name": "AbstractUndirectedGraph",
+    "memberof": "src/implementation/AbstractUndirectedGraph.js",
+    "static": true,
+    "longname": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/AbstractUndirectedGraph.js",
+    "importStyle": "AbstractUndirectedGraph",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/Graph.js~Graph"
+    ]
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "name": "initr",
+    "memberof": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph#initr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "outitr",
+    "memberof": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph#outitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "reverse",
+    "memberof": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph#reverse",
+    "access": "public",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/implementation/DirectedGraph.js",
+    "content": "import AbstractDirectedGraph from './AbstractDirectedGraph.js';\n\nconst isEdge =\n\t(u, v) =>\n\t([x, y]) =>\n\t\tu === x && v === y;\n\nexport default class DirectedGraph extends AbstractDirectedGraph {\n\teadd(u, v) {\n\t\tconst existingEdge = this.E.find(isEdge(u, v));\n\t\tif (existingEdge !== undefined) return existingEdge;\n\t\treturn super.eadd(u, v);\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/DirectedGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "function",
+    "name": "isEdge",
+    "memberof": "src/implementation/DirectedGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/implementation/DirectedGraph.js~isEdge",
+    "access": "public",
+    "export": false,
+    "importPath": "@graph-data-structure/specification/src/implementation/DirectedGraph.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "class",
+    "name": "DirectedGraph",
+    "memberof": "src/implementation/DirectedGraph.js",
+    "static": true,
+    "longname": "src/implementation/DirectedGraph.js~DirectedGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/DirectedGraph.js",
+    "importStyle": "DirectedGraph",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph"
+    ]
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "eadd",
+    "memberof": "src/implementation/DirectedGraph.js~DirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/DirectedGraph.js~DirectedGraph#eadd",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "file",
+    "name": "src/implementation/DirectedMultiGraph.js",
+    "content": "import AbstractDirectedGraph from './AbstractDirectedGraph.js';\n\nexport default class DirectedMultiGraph extends AbstractDirectedGraph {}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/DirectedMultiGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 89,
+    "kind": "class",
+    "name": "DirectedMultiGraph",
+    "memberof": "src/implementation/DirectedMultiGraph.js",
+    "static": true,
+    "longname": "src/implementation/DirectedMultiGraph.js~DirectedMultiGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/DirectedMultiGraph.js",
+    "importStyle": "DirectedMultiGraph",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph"
+    ]
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "name": "src/implementation/Graph.js",
+    "content": "import {filter} from '@iterable-iterator/filter';\nimport {iter} from '@iterable-iterator/iter';\nimport {list} from '@iterable-iterator/list';\n\nimport AbstractGraph from './AbstractGraph.js';\n\nexport default class Graph extends AbstractGraph {\n\tconstructor() {\n\t\tsuper();\n\t\tthis.V = [];\n\t\tthis.E = [];\n\t}\n\n\tvadd(value) {\n\t\tconst v = {value};\n\t\tthis.V.push(v);\n\t\treturn v;\n\t}\n\n\tvdel(v) {\n\t\tthis.V = list(filter((u) => u !== v, this.V));\n\t\tthis.E = list(filter(([t, u]) => t !== v && u !== v, this.E));\n\t}\n\n\teadd(u, v) {\n\t\tconst insertedEdge = [u, v];\n\t\tthis.E.push(insertedEdge);\n\t\treturn insertedEdge;\n\t}\n\n\tedel(e) {\n\t\tthis.E = list(filter((x) => x !== e, this.E));\n\t}\n\n\tvitr() {\n\t\treturn iter(this.V);\n\t}\n\n\teitr() {\n\t\treturn iter(this.E);\n\t}\n\n\tendpoints([u, v]) {\n\t\treturn [u, v];\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/Graph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 91,
+    "kind": "class",
+    "name": "Graph",
+    "memberof": "src/implementation/Graph.js",
+    "static": true,
+    "longname": "src/implementation/Graph.js~Graph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/Graph.js",
+    "importStyle": "Graph",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/AbstractGraph.js~AbstractGraph"
+    ]
+  },
+  {
+    "__docId__": 92,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "member",
+    "name": "V",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#V",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "member",
+    "name": "E",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#E",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 95,
+    "kind": "method",
+    "name": "vadd",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#vadd",
+    "access": "public",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "params": [
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "vdel",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#vdel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "eadd",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#eadd",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "edel",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#edel",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "params": [
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "vitr",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#vitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "method",
+    "name": "eitr",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#eitr",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "method",
+    "name": "endpoints",
+    "memberof": "src/implementation/Graph.js~Graph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/Graph.js~Graph#endpoints",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "params": [
+      {
+        "name": "arrayPattern",
+        "types": [
+          "*[]"
+        ],
+        "defaultRaw": [
+          "null",
+          "null"
+        ],
+        "defaultValue": "[null, null]"
+      }
+    ],
+    "return": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "name": "src/implementation/UndirectedGraph.js",
+    "content": "import AbstractUndirectedGraph from './AbstractUndirectedGraph.js';\n\nconst isEdge =\n\t(u, v) =>\n\t([x, y]) => {\n\t\treturn (u === x && v === y) || (u === y && v === x);\n\t};\n\nexport default class UndirectedGraph extends AbstractUndirectedGraph {\n\teadd(u, v) {\n\t\tconst existingEdge = this.E.find(isEdge(u, v));\n\t\tif (existingEdge !== undefined) return existingEdge;\n\t\treturn super.eadd(u, v);\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/UndirectedGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 106,
+    "kind": "function",
+    "name": "isEdge",
+    "memberof": "src/implementation/UndirectedGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/implementation/UndirectedGraph.js~isEdge",
+    "access": "public",
+    "export": false,
+    "importPath": "@graph-data-structure/specification/src/implementation/UndirectedGraph.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "class",
+    "name": "UndirectedGraph",
+    "memberof": "src/implementation/UndirectedGraph.js",
+    "static": true,
+    "longname": "src/implementation/UndirectedGraph.js~UndirectedGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/UndirectedGraph.js",
+    "importStyle": "UndirectedGraph",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph"
+    ]
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "eadd",
+    "memberof": "src/implementation/UndirectedGraph.js~UndirectedGraph",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/implementation/UndirectedGraph.js~UndirectedGraph#eadd",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [
+      {
+        "name": "u",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "file",
+    "name": "src/implementation/UndirectedMultiGraph.js",
+    "content": "import AbstractUndirectedGraph from './AbstractUndirectedGraph.js';\n\nexport default class UndirectedMultiGraph extends AbstractUndirectedGraph {}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/implementation/UndirectedMultiGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 110,
+    "kind": "class",
+    "name": "UndirectedMultiGraph",
+    "memberof": "src/implementation/UndirectedMultiGraph.js",
+    "static": true,
+    "longname": "src/implementation/UndirectedMultiGraph.js~UndirectedMultiGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/implementation/UndirectedMultiGraph.js",
+    "importStyle": "UndirectedMultiGraph",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph"
+    ]
+  },
+  {
+    "__docId__": 111,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "export {default as AbstractDirectedGraph} from './implementation/AbstractDirectedGraph.js';\nexport {default as AbstractGraph} from './implementation/AbstractGraph.js';\nexport {default as AbstractUndirectedGraph} from './implementation/AbstractUndirectedGraph.js';\nexport {default as DirectedGraph} from './implementation/DirectedGraph.js';\nexport {default as DirectedMultiGraph} from './implementation/DirectedMultiGraph.js';\nexport {default as Graph} from './implementation/Graph.js';\nexport {default as UndirectedGraph} from './implementation/UndirectedGraph.js';\nexport {default as UndirectedMultiGraph} from './implementation/UndirectedMultiGraph.js';\nexport {default as digraph} from './spec/digraph.js';\nexport {default as graph} from './spec/graph.js';\nexport {default as methods} from './spec/methods.js';\nexport {default as multiDigraph} from './spec/multiDigraph.js';\nexport {default as multiGraph} from './spec/multiGraph.js';\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "name": "src/spec/digraph.js",
+    "content": "import {list} from '@iterable-iterator/list';\nimport {range} from '@iterable-iterator/range';\nimport {map} from '@iterable-iterator/map';\nimport {chain} from '@iterable-iterator/chain';\nimport {exhaust} from '@iterable-iterator/consume';\nimport {all} from '@iterable-iterator/reduce';\nimport {len, isEmpty} from '@iterable-iterator/cardinality';\nimport {set} from '@collection-abstraction/set';\n\nimport methods from './methods.js';\n\nexport default function digraph(test, title, Constructor) {\n\tmethods(test, title, Constructor);\n\n\ttest('graph-spec : DiGraph simple test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst u = G.vadd('A');\n\t\tconst v = G.vadd('B');\n\n\t\tconst uv = G.eadd(u, v);\n\n\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\tlet [a, b] = G.edges().next().value;\n\t\tt.deepEqual([a, b], [u, v]);\n\n\t\tG.reverse();\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\t[a, b] = G.edges().next().value;\n\t\tt.deepEqual([a, b], [v, u]);\n\n\t\tG.edel(uv);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tG.vdel(u);\n\t\tG.vdel(v);\n\t\tt.true(isEmpty(G.vitr()));\n\t});\n\n\ttest('graph-spec : DiGraph extensive test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst n = 10;\n\n\t\tlet V;\n\t\tlet E;\n\n\t\tconst init = () => {\n\t\t\tconst V = list(map((i) => G.vadd(i), range(n)));\n\t\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\t\tconst E = [\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\n\t\t\t\tG.eadd(V[4], V[1]),\n\t\t\t\tG.eadd(V[4], V[2]),\n\t\t\t\tG.eadd(V[4], V[3]),\n\n\t\t\t\tG.eadd(V[5], V[6]),\n\t\t\t\tG.eadd(V[5], V[7]),\n\t\t\t\tG.eadd(V[5], V[8]),\n\n\t\t\t\tG.eadd(V[9], V[6]),\n\t\t\t\tG.eadd(V[9], V[7]),\n\t\t\t\tG.eadd(V[9], V[8]),\n\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\t\t\t];\n\n\t\t\treturn [V, E];\n\t\t};\n\n\t\tconst delete_all_edges = () => exhaust(map(G.edel.bind(G), E));\n\t\tconst delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 12);\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 12);\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.iitr(V[0])), 3);\n\t\tt.is(len(G.iitr(V[1])), 2);\n\t\tt.is(len(G.iitr(V[2])), 2);\n\t\tt.is(len(G.iitr(V[3])), 2);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.true(isEmpty(G.initr(V[0])));\n\t\tt.is(len(G.initr(V[1])), 2);\n\t\tt.is(len(G.initr(V[2])), 2);\n\t\tt.is(len(G.initr(V[3])), 2);\n\t\tt.true(isEmpty(G.initr(V[4])));\n\t\tt.true(isEmpty(G.initr(V[5])));\n\t\tt.is(len(G.initr(V[6])), 2);\n\t\tt.is(len(G.initr(V[7])), 2);\n\t\tt.is(len(G.initr(V[8])), 2);\n\t\tt.true(isEmpty(G.initr(V[9])));\n\n\t\tt.is(len(G.outitr(V[0])), 3);\n\t\tt.true(isEmpty(G.outitr(V[1])));\n\t\tt.true(isEmpty(G.outitr(V[2])));\n\t\tt.true(isEmpty(G.outitr(V[3])));\n\t\tt.is(len(G.outitr(V[4])), 3);\n\t\tt.is(len(G.outitr(V[5])), 3);\n\t\tt.true(isEmpty(G.outitr(V[6])));\n\t\tt.true(isEmpty(G.outitr(V[7])));\n\t\tt.true(isEmpty(G.outitr(V[8])));\n\t\tt.is(len(G.outitr(V[9])), 3);\n\n\t\tG.reverse();\n\n\t\tt.is(len(G.iitr(V[0])), 3);\n\t\tt.is(len(G.iitr(V[1])), 2);\n\t\tt.is(len(G.iitr(V[2])), 2);\n\t\tt.is(len(G.iitr(V[3])), 2);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.true(isEmpty(G.outitr(V[0])));\n\t\tt.is(len(G.outitr(V[1])), 2);\n\t\tt.is(len(G.outitr(V[2])), 2);\n\t\tt.is(len(G.outitr(V[3])), 2);\n\t\tt.true(isEmpty(G.outitr(V[4])));\n\t\tt.true(isEmpty(G.outitr(V[5])));\n\t\tt.is(len(G.outitr(V[6])), 2);\n\t\tt.is(len(G.outitr(V[7])), 2);\n\t\tt.is(len(G.outitr(V[8])), 2);\n\t\tt.true(isEmpty(G.outitr(V[9])));\n\n\t\tt.is(len(G.initr(V[0])), 3);\n\t\tt.true(isEmpty(G.initr(V[1])));\n\t\tt.true(isEmpty(G.initr(V[2])));\n\t\tt.true(isEmpty(G.initr(V[3])));\n\t\tt.is(len(G.initr(V[4])), 3);\n\t\tt.is(len(G.initr(V[5])), 3);\n\t\tt.true(isEmpty(G.initr(V[6])));\n\t\tt.true(isEmpty(G.initr(V[7])));\n\t\tt.true(isEmpty(G.initr(V[8])));\n\t\tt.is(len(G.initr(V[9])), 3);\n\n\t\tt.true(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.nitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.true(set(G.dsitr(V[0])).isequal([]));\n\t\tt.true(set(G.dsitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[4])).isequal([]));\n\t\tt.true(set(G.dsitr(V[5])).isequal([]));\n\t\tt.true(set(G.dsitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[9])).isequal([]));\n\n\t\tt.true(set(G.dpitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[1])).isequal([]));\n\t\tt.true(set(G.dpitr(V[2])).isequal([]));\n\t\tt.true(set(G.dpitr(V[3])).isequal([]));\n\t\tt.true(set(G.dpitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.dpitr(V[6])).isequal([]));\n\t\tt.true(set(G.dpitr(V[7])).isequal([]));\n\t\tt.true(set(G.dpitr(V[8])).isequal([]));\n\t\tt.true(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.is(len(G.edges()), 12, 'G.edges( ) length');\n\n\t\tconst edges = set(E);\n\n\t\tfor (const [u, v, e] of G.edges()) {\n\t\t\tt.true(edges.has(e));\n\n\t\t\tt.deepEqual([u, v], G.endpoints(e));\n\n\t\t\tedges.remove(e);\n\t\t}\n\n\t\tfor (const i of range(n)) {\n\t\t\tt.true(all(map(([u, v]) => u === V[i] || v === V[i], G.incident(V[i]))));\n\n\t\t\tt.true(\n\t\t\t\tset(map(([_u, _v, e]) => e, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(map(([, v]) => v, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([, v]) => v, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([, v]) => v, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(map(([u]) => u, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([u]) => u, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([u]) => u, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(G.nitr(V[i])).isequal(\n\t\t\t\t\tmap(([u, v]) => (u === V[i] ? v : u), G.incident(V[i])),\n\t\t\t\t),\n\t\t\t);\n\t\t\tt.true(set(G.dpitr(V[i])).isequal(map(([u]) => u, G.ingoing(V[i]))));\n\t\t\tt.true(set(G.dsitr(V[i])).isequal(map(([, v]) => v, G.outgoing(V[i]))));\n\t\t}\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/spec/digraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 113,
+    "kind": "function",
+    "name": "digraph",
+    "memberof": "src/spec/digraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/spec/digraph.js~digraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/spec/digraph.js",
+    "importStyle": "digraph",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "test",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "title",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "Constructor",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "name": "src/spec/graph.js",
+    "content": "import {list} from '@iterable-iterator/list';\nimport {range} from '@iterable-iterator/range';\nimport {map} from '@iterable-iterator/map';\nimport {chain} from '@iterable-iterator/chain';\nimport {exhaust} from '@iterable-iterator/consume';\nimport {all} from '@iterable-iterator/reduce';\nimport {len, isEmpty} from '@iterable-iterator/cardinality';\nimport {set} from '@collection-abstraction/set';\n\nimport methods from './methods.js';\n\nexport default function graph(test, title, Constructor) {\n\tmethods(test, title, Constructor);\n\n\ttest('graph-spec : Graph simple test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst u = G.vadd('A');\n\t\tconst v = G.vadd('B');\n\n\t\tconst uv = G.eadd(u, v);\n\n\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\tlet [a, b] = G.edges().next().value;\n\t\tt.true(set([a, b]).isequal([u, v]));\n\n\t\tG.reverse();\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\tt.is(G.eitr().next().value, uv);\n\t\t[a, b] = G.edges().next().value;\n\t\tt.true(set([a, b]).isequal([u, v]));\n\n\t\tconst vu = G.eadd(v, u);\n\t\tt.is(len(G.eitr()), 1);\n\t\tt.is(uv, vu);\n\n\t\tG.edel(uv);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tG.vdel(u);\n\t\tG.vdel(v);\n\t\tt.true(isEmpty(G.vitr()));\n\t});\n\n\ttest('graph-spec : Graph #1 > ' + title, (t) => {\n\t\tconst g = new Constructor();\n\n\t\tconst v = [];\n\t\tconst e = [];\n\n\t\tconst n = 11;\n\n\t\tfor (let i = 0; i < n; ++i) v[i] = g.vadd(i);\n\t\tt.true(set(g.vitr()).isequal(g.vertices()));\n\n\t\te[1] = [];\n\t\te[1][0] = g.eadd(v[1], v[9]);\n\t\te[0] = [];\n\t\te[0][0] = g.eadd(v[0], v[10]);\n\t\te[0][1] = g.eadd(v[0], v[5]);\n\t\te[0][2] = g.eadd(v[0], v[3]);\n\t\te[0][3] = g.eadd(v[0], v[1]);\n\t\te[0][4] = g.eadd(v[0], v[0]);\n\t\te[1][1] = e[0][3];\n\t\te[4] = [];\n\t\te[4][0] = g.eadd(v[4], v[7]);\n\n\t\tconst r = [0, 1, 4];\n\n\t\t// Tests\n\n\t\tlet k = 0;\n\t\tlet notseen = set(v);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'vitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.vitr()),\n\t\t);\n\n\t\tk = 0;\n\t\tlet alledges = e[0].concat([e[1][0]]).concat(e[4]);\n\t\tnotseen = set(alledges);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'eitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.eitr()),\n\t\t);\n\n\t\tt.is(k, alledges.length, 'check edges count before del');\n\n\t\tfor (const m of r) {\n\t\t\tk = e[m].length;\n\n\t\t\tnotseen = set(e[m]);\n\n\t\t\texhaust(\n\t\t\t\tmap((x) => {\n\t\t\t\t\t--k;\n\t\t\t\t\tt.true(notseen.has(x), 'iitr ' + m + ' ' + k);\n\t\t\t\t\tnotseen.remove(x);\n\t\t\t\t}, g.iitr(v[m])),\n\t\t\t);\n\t\t}\n\n\t\t// Delete edges 1 0 , 0 2 , 4 0\n\t\tg.edel(e[1].splice(0, 1)[0]);\n\n\t\tg.edel(e[0].splice(2, 1)[0]);\n\n\t\tg.edel(e[4].splice(0, 1)[0]);\n\n\t\tk = 0;\n\t\talledges = e[0].concat(e[4]);\n\t\tnotseen = set(alledges);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'eitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.eitr()),\n\t\t);\n\n\t\tt.is(k, alledges.length, 'check edges count after del');\n\n\t\tk = 0;\n\t\tnotseen = set(map((e) => g.endpoints(e)[1], e[0]));\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'nitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.nitr(v[0])),\n\t\t);\n\n\t\tt.is(k, e[0].length, 'check neighbour count after del');\n\n\t\tfor (const m of r) {\n\t\t\tk = e[m].length;\n\n\t\t\tnotseen = set(e[m]);\n\n\t\t\texhaust(\n\t\t\t\tmap((x) => {\n\t\t\t\t\t--k;\n\t\t\t\t\tt.true(notseen.has(x), 'iitr ' + m + ' ' + k);\n\t\t\t\t\tnotseen.remove(x);\n\t\t\t\t}, g.iitr(v[m])),\n\t\t\t);\n\t\t}\n\n\t\t// Delete vertex 3\n\n\t\tg.vdel(v.splice(3, 1)[0]);\n\n\t\tk = 0;\n\t\tnotseen = set(v);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'vitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.vitr()),\n\t\t);\n\n\t\tt.is(k, v.length, 'check vertex count after del');\n\n\t\te[0].splice(2, 1);\n\n\t\t// Delete remaining edges\n\t\tfor (const m of r) {\n\t\t\twhile (e[m].length > 0) g.edel(e[m].splice(0, 1)[0]);\n\t\t}\n\n\t\tt.true(isEmpty(g.eitr()), 'no more edges');\n\n\t\tt.true(\n\t\t\tall(map((i) => isEmpty(g.iitr(i)), g.vitr())),\n\t\t\t'no more incident edges',\n\t\t);\n\n\t\t// Delete remaining vertices\n\t\twhile (v.length > 0) g.vdel(v.splice(0, 1)[0]);\n\n\t\tt.true(isEmpty(g.vitr()), 'no more vertices');\n\t});\n\n\ttest('graph-spec : Graph #2 > ' + title, (t) => {\n\t\tconst g = new Constructor();\n\n\t\tconst v = [];\n\t\tconst e = [];\n\n\t\tconst n = 11;\n\n\t\tfor (let i = 0; i < n; ++i) v[i] = g.vadd(i);\n\n\t\te[1] = [];\n\t\te[1][0] = g.eadd(v[1], v[9]);\n\t\te[0] = [];\n\t\te[0][0] = g.eadd(v[0], v[10]);\n\t\te[0][1] = g.eadd(v[0], v[5]);\n\t\te[0][2] = g.eadd(v[0], v[3]);\n\t\te[0][3] = g.eadd(v[0], v[1]);\n\t\te[0][4] = g.eadd(v[0], v[0]);\n\t\te[1][1] = e[0][3];\n\t\te[4] = [];\n\t\te[4][0] = g.eadd(v[4], v[7]);\n\n\t\tconst r = [0, 1, 4];\n\n\t\t// Tests\n\n\t\tlet k;\n\t\tlet notseen;\n\t\tlet alledges;\n\n\t\tk = 0;\n\t\tnotseen = set(v);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'vitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.vitr()),\n\t\t);\n\n\t\tk = 0;\n\t\talledges = e[0].concat([e[1][0]]).concat(e[4]);\n\t\tnotseen = set(alledges);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'eitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.eitr()),\n\t\t);\n\n\t\tt.is(k, alledges.length, 'check edges count before del');\n\n\t\tfor (const m of r) {\n\t\t\tk = e[m].length;\n\n\t\t\tnotseen = set(e[m]);\n\n\t\t\texhaust(\n\t\t\t\tmap((x) => {\n\t\t\t\t\t--k;\n\t\t\t\t\tt.true(notseen.has(x), 'iitr ' + m + ' ' + k);\n\t\t\t\t\tnotseen.remove(x);\n\t\t\t\t}, g.iitr(v[m])),\n\t\t\t);\n\t\t}\n\n\t\t// Delete edges 1 0 , 0 2 , 4 0\n\t\tg.edel(e[1].splice(0, 1)[0]);\n\n\t\tg.edel(e[0].splice(2, 1)[0]);\n\n\t\tg.edel(e[4].splice(0, 1)[0]);\n\n\t\tk = 0;\n\t\talledges = e[0].concat(e[4]);\n\t\tnotseen = set(alledges);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'eitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.eitr()),\n\t\t);\n\n\t\tt.is(k, alledges.length, 'check edges count after del');\n\n\t\tk = 0;\n\t\tnotseen = set(map((e) => g.endpoints(e)[1], e[0]));\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'nitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.nitr(v[0])),\n\t\t);\n\n\t\tt.is(k, e[0].length, 'check neighbour count after del');\n\n\t\tfor (const m of r) {\n\t\t\tk = e[m].length;\n\n\t\t\tnotseen = set(e[m]);\n\n\t\t\texhaust(\n\t\t\t\tmap((x) => {\n\t\t\t\t\t--k;\n\t\t\t\t\tt.true(notseen.has(x), 'iitr ' + m + ' ' + k);\n\t\t\t\t\tnotseen.remove(x);\n\t\t\t\t}, g.iitr(v[m])),\n\t\t\t);\n\t\t}\n\n\t\t// Delete vertex 10\n\n\t\tg.vdel(v.splice(10, 1)[0]);\n\t\te[0].splice(0, 1);\n\n\t\tk = 0;\n\t\tnotseen = set(v);\n\n\t\texhaust(\n\t\t\tmap((j) => {\n\t\t\t\tt.true(notseen.has(j), 'vitr ' + k);\n\t\t\t\tnotseen.remove(j);\n\t\t\t\t++k;\n\t\t\t}, g.vitr()),\n\t\t);\n\n\t\tt.is(k, v.length, 'check vertex count after del');\n\n\t\te[0].splice(1, 1);\n\n\t\t// Delete remaining edges\n\t\tfor (const m of r) {\n\t\t\twhile (e[m].length > 0) g.edel(e[m].splice(0, 1)[0]);\n\t\t}\n\n\t\tt.true(isEmpty(g.eitr()), 'no more edges');\n\n\t\tt.true(\n\t\t\tall(map((i) => isEmpty(g.iitr(i)), g.vitr())),\n\t\t\t'no more incident edges',\n\t\t);\n\n\t\t// Delete remaining vertices\n\t\twhile (v.length > 0) g.vdel(v.splice(0, 1)[0]);\n\n\t\tt.true(isEmpty(g.vitr()), 'no more vertices');\n\t});\n\n\ttest('graph-spec : Graph extensive test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst n = 10;\n\n\t\tconst init = () => {\n\t\t\tconst V = list(map((i) => G.vadd(i), range(n)));\n\t\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\t\tconst E = [\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\n\t\t\t\tG.eadd(V[4], V[1]),\n\t\t\t\tG.eadd(V[4], V[2]),\n\t\t\t\tG.eadd(V[4], V[3]),\n\n\t\t\t\tG.eadd(V[5], V[6]),\n\t\t\t\tG.eadd(V[5], V[7]),\n\t\t\t\tG.eadd(V[5], V[8]),\n\n\t\t\t\tG.eadd(V[9], V[6]),\n\t\t\t\tG.eadd(V[9], V[7]),\n\t\t\t\tG.eadd(V[9], V[8]),\n\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\t\t\t];\n\n\t\t\treturn [V, E];\n\t\t};\n\n\t\tconst delete_all_edges = () => exhaust(map(G.edel.bind(G), E));\n\t\tconst delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));\n\n\t\tlet [V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 12);\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 12);\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.iitr(V[0])), 3);\n\t\tt.is(len(G.iitr(V[1])), 2);\n\t\tt.is(len(G.iitr(V[2])), 2);\n\t\tt.is(len(G.iitr(V[3])), 2);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.is(len(G.initr(V[0])), 3);\n\t\tt.is(len(G.initr(V[1])), 2);\n\t\tt.is(len(G.initr(V[2])), 2);\n\t\tt.is(len(G.initr(V[3])), 2);\n\t\tt.is(len(G.initr(V[4])), 3);\n\t\tt.is(len(G.initr(V[5])), 3);\n\t\tt.is(len(G.initr(V[6])), 2);\n\t\tt.is(len(G.initr(V[7])), 2);\n\t\tt.is(len(G.initr(V[8])), 2);\n\t\tt.is(len(G.initr(V[9])), 3);\n\n\t\tt.is(len(G.outitr(V[0])), 3);\n\t\tt.is(len(G.outitr(V[1])), 2);\n\t\tt.is(len(G.outitr(V[2])), 2);\n\t\tt.is(len(G.outitr(V[3])), 2);\n\t\tt.is(len(G.outitr(V[4])), 3);\n\t\tt.is(len(G.outitr(V[5])), 3);\n\t\tt.is(len(G.outitr(V[6])), 2);\n\t\tt.is(len(G.outitr(V[7])), 2);\n\t\tt.is(len(G.outitr(V[8])), 2);\n\t\tt.is(len(G.outitr(V[9])), 3);\n\n\t\tG.reverse();\n\n\t\tt.is(len(G.iitr(V[0])), 3);\n\t\tt.is(len(G.iitr(V[1])), 2);\n\t\tt.is(len(G.iitr(V[2])), 2);\n\t\tt.is(len(G.iitr(V[3])), 2);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.is(len(G.outitr(V[0])), 3);\n\t\tt.is(len(G.outitr(V[1])), 2);\n\t\tt.is(len(G.outitr(V[2])), 2);\n\t\tt.is(len(G.outitr(V[3])), 2);\n\t\tt.is(len(G.outitr(V[4])), 3);\n\t\tt.is(len(G.outitr(V[5])), 3);\n\t\tt.is(len(G.outitr(V[6])), 2);\n\t\tt.is(len(G.outitr(V[7])), 2);\n\t\tt.is(len(G.outitr(V[8])), 2);\n\t\tt.is(len(G.outitr(V[9])), 3);\n\n\t\tt.is(len(G.initr(V[0])), 3);\n\t\tt.is(len(G.initr(V[1])), 2);\n\t\tt.is(len(G.initr(V[2])), 2);\n\t\tt.is(len(G.initr(V[3])), 2);\n\t\tt.is(len(G.initr(V[4])), 3);\n\t\tt.is(len(G.initr(V[5])), 3);\n\t\tt.is(len(G.initr(V[6])), 2);\n\t\tt.is(len(G.initr(V[7])), 2);\n\t\tt.is(len(G.initr(V[8])), 2);\n\t\tt.is(len(G.initr(V[9])), 3);\n\n\t\tt.true(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.nitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.true(set(G.dsitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dsitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dsitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.dsitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.true(set(G.dpitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dpitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dpitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dpitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.dpitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dpitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dpitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.is(len(G.edges()), 12, 'G.edges( ) length');\n\n\t\tconst edges = set(E);\n\n\t\tfor (const [u, v, e] of G.edges()) {\n\t\t\tt.true(edges.has(e));\n\n\t\t\tt.true(set([u, v]).isequal(G.endpoints(e)));\n\n\t\t\tedges.remove(e);\n\t\t}\n\n\t\tfor (const i of range(n)) {\n\t\t\tt.true(all(map(([u, v]) => u === V[i] || v === V[i], G.incident(V[i]))));\n\n\t\t\tt.true(\n\t\t\t\tset(map(([_u, _v, e]) => e, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([, v]) => v, G.incident(V[i])),\n\t\t\t\t\t\tmap(([u]) => u, G.incident(V[i])),\n\t\t\t\t\t),\n\t\t\t\t).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\t[V[i]],\n\t\t\t\t\t\tmap(([u]) => u, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([, v]) => v, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(G.nitr(V[i])).isequal(\n\t\t\t\t\tmap(([u, v]) => (u === V[i] ? v : u), G.incident(V[i])),\n\t\t\t\t),\n\t\t\t);\n\t\t\tt.true(set(G.dpitr(V[i])).isequal(map(([u]) => u, G.ingoing(V[i]))));\n\t\t\tt.true(set(G.dsitr(V[i])).isequal(map(([, v]) => v, G.outgoing(V[i]))));\n\t\t}\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/spec/graph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 115,
+    "kind": "function",
+    "name": "graph",
+    "memberof": "src/spec/graph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/spec/graph.js~graph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/spec/graph.js",
+    "importStyle": "graph",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "test",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "title",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "Constructor",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 116,
+    "kind": "file",
+    "name": "src/spec/methods.js",
+    "content": "import {isFunction} from '@functional-abstraction/type';\n\nexport default function methods(test, title, Constructor) {\n\ttest('graph-spec : check existence of methods > ' + title, (t) => {\n\t\tt.true(isFunction(Constructor), 'constructor');\n\n\t\tconst G = new Constructor();\n\n\t\tt.true(isFunction(G.vadd), 'vadd');\n\t\tt.true(isFunction(G.vdel), 'vdel');\n\t\tt.true(isFunction(G.eadd), 'eadd');\n\t\tt.true(isFunction(G.edel), 'edel');\n\t\tt.true(G.vitr !== null, 'vitr');\n\t\tt.true(G.eitr !== null, 'eitr');\n\t\tt.true(G.iitr !== null, 'iitr');\n\t\tt.true(G.initr !== null, 'initr');\n\t\tt.true(G.outitr !== null, 'outitr');\n\t\tt.true(G.nitr !== null, 'nitr');\n\t\tt.true(G.dsitr !== null, 'dsitr');\n\t\tt.true(G.dpitr !== null, 'dpitr');\n\t\tt.true(G.vertices !== null, 'vertices');\n\t\tt.true(G.edges !== null, 'edges');\n\t\tt.true(G.incident !== null, 'incident');\n\t\tt.true(G.ingoing !== null, 'ingoing');\n\t\tt.true(G.outgoing !== null, 'outgoing');\n\t\tt.true(G.endpoints !== null, 'endpoints');\n\t\tt.true(G.reverse !== null, 'reverse');\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/spec/methods.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 117,
+    "kind": "function",
+    "name": "methods",
+    "memberof": "src/spec/methods.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/spec/methods.js~methods",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/spec/methods.js",
+    "importStyle": "methods",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "test",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "title",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "Constructor",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 118,
+    "kind": "file",
+    "name": "src/spec/multiDigraph.js",
+    "content": "import {list} from '@iterable-iterator/list';\nimport {range} from '@iterable-iterator/range';\nimport {map} from '@iterable-iterator/map';\nimport {chain} from '@iterable-iterator/chain';\nimport {exhaust} from '@iterable-iterator/consume';\nimport {all} from '@iterable-iterator/reduce';\nimport {len, isEmpty} from '@iterable-iterator/cardinality';\nimport {set} from '@collection-abstraction/set';\n\nimport methods from './methods.js';\n\nexport default function multiDigraph(test, title, Constructor) {\n\tmethods(test, title, Constructor);\n\n\ttest('graph-spec : MultiDiGraph simple test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst u = G.vadd('A');\n\t\tconst v = G.vadd('B');\n\n\t\tconst uv = G.eadd(u, v);\n\n\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\tlet [a, b] = G.edges().next().value;\n\t\tt.deepEqual([a, b], [u, v]);\n\n\t\tG.reverse();\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\t[a, b] = G.edges().next().value;\n\t\tt.deepEqual([a, b], [v, u]);\n\n\t\tG.edel(uv);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tG.vdel(u);\n\t\tG.vdel(v);\n\t\tt.true(isEmpty(G.vitr()));\n\t});\n\n\ttest('graph-spec : MultiDiGraph extensive test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst n = 10;\n\n\t\tlet V;\n\t\tlet E;\n\n\t\tconst init = () => {\n\t\t\tconst V = list(map((i) => G.vadd(i), range(n)));\n\t\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\t\tconst E = [\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\n\t\t\t\tG.eadd(V[4], V[1]),\n\t\t\t\tG.eadd(V[4], V[2]),\n\t\t\t\tG.eadd(V[4], V[3]),\n\n\t\t\t\tG.eadd(V[5], V[6]),\n\t\t\t\tG.eadd(V[5], V[7]),\n\t\t\t\tG.eadd(V[5], V[8]),\n\n\t\t\t\tG.eadd(V[9], V[6]),\n\t\t\t\tG.eadd(V[9], V[7]),\n\t\t\t\tG.eadd(V[9], V[8]),\n\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\t\t\t];\n\n\t\t\treturn [V, E];\n\t\t};\n\n\t\tconst delete_all_edges = () => exhaust(map(G.edel.bind(G), E));\n\t\tconst delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 15);\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 15);\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.iitr(V[0])), 6);\n\t\tt.is(len(G.iitr(V[1])), 3);\n\t\tt.is(len(G.iitr(V[2])), 3);\n\t\tt.is(len(G.iitr(V[3])), 3);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.true(isEmpty(G.initr(V[0])));\n\t\tt.is(len(G.initr(V[1])), 3);\n\t\tt.is(len(G.initr(V[2])), 3);\n\t\tt.is(len(G.initr(V[3])), 3);\n\t\tt.true(isEmpty(G.initr(V[4])));\n\t\tt.true(isEmpty(G.initr(V[5])));\n\t\tt.is(len(G.initr(V[6])), 2);\n\t\tt.is(len(G.initr(V[7])), 2);\n\t\tt.is(len(G.initr(V[8])), 2);\n\t\tt.true(isEmpty(G.initr(V[9])));\n\n\t\tt.is(len(G.outitr(V[0])), 6);\n\t\tt.true(isEmpty(G.outitr(V[1])));\n\t\tt.true(isEmpty(G.outitr(V[2])));\n\t\tt.true(isEmpty(G.outitr(V[3])));\n\t\tt.is(len(G.outitr(V[4])), 3);\n\t\tt.is(len(G.outitr(V[5])), 3);\n\t\tt.true(isEmpty(G.outitr(V[6])));\n\t\tt.true(isEmpty(G.outitr(V[7])));\n\t\tt.true(isEmpty(G.outitr(V[8])));\n\t\tt.is(len(G.outitr(V[9])), 3);\n\n\t\tG.reverse();\n\n\t\tt.is(len(G.iitr(V[0])), 6);\n\t\tt.is(len(G.iitr(V[1])), 3);\n\t\tt.is(len(G.iitr(V[2])), 3);\n\t\tt.is(len(G.iitr(V[3])), 3);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.true(isEmpty(G.outitr(V[0])));\n\t\tt.is(len(G.outitr(V[1])), 3);\n\t\tt.is(len(G.outitr(V[2])), 3);\n\t\tt.is(len(G.outitr(V[3])), 3);\n\t\tt.true(isEmpty(G.outitr(V[4])));\n\t\tt.true(isEmpty(G.outitr(V[5])));\n\t\tt.is(len(G.outitr(V[6])), 2);\n\t\tt.is(len(G.outitr(V[7])), 2);\n\t\tt.is(len(G.outitr(V[8])), 2);\n\t\tt.true(isEmpty(G.outitr(V[9])));\n\n\t\tt.is(len(G.initr(V[0])), 6);\n\t\tt.true(isEmpty(G.initr(V[1])));\n\t\tt.true(isEmpty(G.initr(V[2])));\n\t\tt.true(isEmpty(G.initr(V[3])));\n\t\tt.is(len(G.initr(V[4])), 3);\n\t\tt.is(len(G.initr(V[5])), 3);\n\t\tt.true(isEmpty(G.initr(V[6])));\n\t\tt.true(isEmpty(G.initr(V[7])));\n\t\tt.true(isEmpty(G.initr(V[8])));\n\t\tt.is(len(G.initr(V[9])), 3);\n\n\t\tt.true(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.nitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.true(set(G.dsitr(V[0])).isequal([]));\n\t\tt.true(set(G.dsitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[4])).isequal([]));\n\t\tt.true(set(G.dsitr(V[5])).isequal([]));\n\t\tt.true(set(G.dsitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[9])).isequal([]));\n\n\t\tt.true(set(G.dpitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[1])).isequal([]));\n\t\tt.true(set(G.dpitr(V[2])).isequal([]));\n\t\tt.true(set(G.dpitr(V[3])).isequal([]));\n\t\tt.true(set(G.dpitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.dpitr(V[6])).isequal([]));\n\t\tt.true(set(G.dpitr(V[7])).isequal([]));\n\t\tt.true(set(G.dpitr(V[8])).isequal([]));\n\t\tt.true(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.is(len(G.edges()), 15, 'G.edges( ) length');\n\n\t\tconst edges = set(E);\n\n\t\tfor (const [u, v, e] of G.edges()) {\n\t\t\tt.true(edges.has(e));\n\n\t\t\tt.deepEqual([u, v], G.endpoints(e));\n\n\t\t\tedges.remove(e);\n\t\t}\n\n\t\tfor (const i of range(n)) {\n\t\t\tt.true(all(map(([u, v]) => u === V[i] || v === V[i], G.incident(V[i]))));\n\n\t\t\tt.true(\n\t\t\t\tset(map(([_u, _v, e]) => e, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(map(([, v]) => v, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([, v]) => v, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([, v]) => v, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(map(([u]) => u, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([u]) => u, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([u]) => u, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(G.nitr(V[i])).isequal(\n\t\t\t\t\tmap(([u, v]) => (u === V[i] ? v : u), G.incident(V[i])),\n\t\t\t\t),\n\t\t\t);\n\t\t\tt.true(set(G.dpitr(V[i])).isequal(map(([u]) => u, G.ingoing(V[i]))));\n\t\t\tt.true(set(G.dsitr(V[i])).isequal(map(([, v]) => v, G.outgoing(V[i]))));\n\t\t}\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/spec/multiDigraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 119,
+    "kind": "function",
+    "name": "multiDigraph",
+    "memberof": "src/spec/multiDigraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/spec/multiDigraph.js~multiDigraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/spec/multiDigraph.js",
+    "importStyle": "multiDigraph",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "test",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "title",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "Constructor",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 120,
+    "kind": "file",
+    "name": "src/spec/multiGraph.js",
+    "content": "import {list} from '@iterable-iterator/list';\nimport {range} from '@iterable-iterator/range';\nimport {map} from '@iterable-iterator/map';\nimport {chain} from '@iterable-iterator/chain';\nimport {exhaust} from '@iterable-iterator/consume';\nimport {all} from '@iterable-iterator/reduce';\nimport {len, isEmpty} from '@iterable-iterator/cardinality';\nimport {set} from '@collection-abstraction/set';\n\nimport methods from './methods.js';\n\nexport default function multiGraph(test, title, Constructor) {\n\tmethods(test, title, Constructor);\n\n\ttest('graph-spec : MultiGraph simple test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst u = G.vadd('A');\n\t\tconst v = G.vadd('B');\n\n\t\tconst uv = G.eadd(u, v);\n\n\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\tlet [a, b] = G.edges().next().value;\n\t\tt.true(set([a, b]).isequal([u, v]));\n\n\t\tG.reverse();\n\n\t\tt.true(set([u, v]).isequal(G.vitr()));\n\t\tt.is(G.eitr().next().value, uv);\n\t\t[a, b] = G.edges().next().value;\n\t\tt.true(set([a, b]).isequal([u, v]));\n\n\t\tconst vu = G.eadd(v, u);\n\t\tt.is(len(G.eitr()), 2);\n\n\t\tG.edel(uv);\n\t\tt.is(len(G.eitr()), 1);\n\n\t\tt.is(G.eitr().next().value, vu);\n\n\t\tG.edel(vu);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tG.vdel(u);\n\t\tG.vdel(v);\n\t\tt.true(isEmpty(G.vitr()));\n\t});\n\n\ttest('graph-spec : MultiGraph extensive test > ' + title, (t) => {\n\t\tconst G = new Constructor();\n\n\t\tconst n = 10;\n\n\t\tlet V;\n\t\tlet E;\n\n\t\tconst init = () => {\n\t\t\tconst V = list(map((i) => G.vadd(i), range(n)));\n\t\t\tt.true(set(G.vitr()).isequal(G.vertices()));\n\n\t\t\tconst E = [\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\n\t\t\t\tG.eadd(V[4], V[1]),\n\t\t\t\tG.eadd(V[4], V[2]),\n\t\t\t\tG.eadd(V[4], V[3]),\n\n\t\t\t\tG.eadd(V[5], V[6]),\n\t\t\t\tG.eadd(V[5], V[7]),\n\t\t\t\tG.eadd(V[5], V[8]),\n\n\t\t\t\tG.eadd(V[9], V[6]),\n\t\t\t\tG.eadd(V[9], V[7]),\n\t\t\t\tG.eadd(V[9], V[8]),\n\n\t\t\t\tG.eadd(V[0], V[1]),\n\t\t\t\tG.eadd(V[0], V[2]),\n\t\t\t\tG.eadd(V[0], V[3]),\n\t\t\t];\n\n\t\t\treturn [V, E];\n\t\t};\n\n\t\tconst delete_all_edges = () => exhaust(map(G.edel.bind(G), E));\n\t\tconst delete_all_vertices = () => exhaust(map(G.vdel.bind(G), V));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 15);\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.is(len(G.eitr()), 15);\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\t[V, E] = init();\n\n\t\tt.is(len(G.iitr(V[0])), 6);\n\t\tt.is(len(G.iitr(V[1])), 3);\n\t\tt.is(len(G.iitr(V[2])), 3);\n\t\tt.is(len(G.iitr(V[3])), 3);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.is(len(G.initr(V[0])), 6);\n\t\tt.is(len(G.initr(V[1])), 3);\n\t\tt.is(len(G.initr(V[2])), 3);\n\t\tt.is(len(G.initr(V[3])), 3);\n\t\tt.is(len(G.initr(V[4])), 3);\n\t\tt.is(len(G.initr(V[5])), 3);\n\t\tt.is(len(G.initr(V[6])), 2);\n\t\tt.is(len(G.initr(V[7])), 2);\n\t\tt.is(len(G.initr(V[8])), 2);\n\t\tt.is(len(G.initr(V[9])), 3);\n\n\t\tt.is(len(G.outitr(V[0])), 6);\n\t\tt.is(len(G.outitr(V[1])), 3);\n\t\tt.is(len(G.outitr(V[2])), 3);\n\t\tt.is(len(G.outitr(V[3])), 3);\n\t\tt.is(len(G.outitr(V[4])), 3);\n\t\tt.is(len(G.outitr(V[5])), 3);\n\t\tt.is(len(G.outitr(V[6])), 2);\n\t\tt.is(len(G.outitr(V[7])), 2);\n\t\tt.is(len(G.outitr(V[8])), 2);\n\t\tt.is(len(G.outitr(V[9])), 3);\n\n\t\tG.reverse();\n\n\t\tt.is(len(G.iitr(V[0])), 6);\n\t\tt.is(len(G.iitr(V[1])), 3);\n\t\tt.is(len(G.iitr(V[2])), 3);\n\t\tt.is(len(G.iitr(V[3])), 3);\n\t\tt.is(len(G.iitr(V[4])), 3);\n\t\tt.is(len(G.iitr(V[5])), 3);\n\t\tt.is(len(G.iitr(V[6])), 2);\n\t\tt.is(len(G.iitr(V[7])), 2);\n\t\tt.is(len(G.iitr(V[8])), 2);\n\t\tt.is(len(G.iitr(V[9])), 3);\n\n\t\tt.is(len(G.outitr(V[0])), 6);\n\t\tt.is(len(G.outitr(V[1])), 3);\n\t\tt.is(len(G.outitr(V[2])), 3);\n\t\tt.is(len(G.outitr(V[3])), 3);\n\t\tt.is(len(G.outitr(V[4])), 3);\n\t\tt.is(len(G.outitr(V[5])), 3);\n\t\tt.is(len(G.outitr(V[6])), 2);\n\t\tt.is(len(G.outitr(V[7])), 2);\n\t\tt.is(len(G.outitr(V[8])), 2);\n\t\tt.is(len(G.outitr(V[9])), 3);\n\n\t\tt.is(len(G.initr(V[0])), 6);\n\t\tt.is(len(G.initr(V[1])), 3);\n\t\tt.is(len(G.initr(V[2])), 3);\n\t\tt.is(len(G.initr(V[3])), 3);\n\t\tt.is(len(G.initr(V[4])), 3);\n\t\tt.is(len(G.initr(V[5])), 3);\n\t\tt.is(len(G.initr(V[6])), 2);\n\t\tt.is(len(G.initr(V[7])), 2);\n\t\tt.is(len(G.initr(V[8])), 2);\n\t\tt.is(len(G.initr(V[9])), 3);\n\n\t\tt.true(set(G.nitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.nitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.nitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.nitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.nitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.true(set(G.dsitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dsitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dsitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dsitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.dsitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dsitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.true(set(G.dpitr(V[0])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[1])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dpitr(V[2])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dpitr(V[3])).isequal([V[0], V[4]]));\n\t\tt.true(set(G.dpitr(V[4])).isequal([V[1], V[2], V[3]]));\n\t\tt.true(set(G.dpitr(V[5])).isequal([V[6], V[7], V[8]]));\n\t\tt.true(set(G.dpitr(V[6])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dpitr(V[7])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dpitr(V[8])).isequal([V[5], V[9]]));\n\t\tt.true(set(G.dpitr(V[9])).isequal([V[6], V[7], V[8]]));\n\n\t\tt.is(len(G.edges()), 15, 'G.edges( ) length');\n\n\t\tconst edges = set(E);\n\n\t\tfor (const [u, v, e] of G.edges()) {\n\t\t\tt.true(edges.has(e));\n\n\t\t\tt.true(set([u, v]).isequal(G.endpoints(e)));\n\n\t\t\tedges.remove(e);\n\t\t}\n\n\t\tfor (const i of range(n)) {\n\t\t\tt.true(all(map(([u, v]) => u === V[i] || v === V[i], G.incident(V[i]))));\n\n\t\t\tt.true(\n\t\t\t\tset(map(([_u, _v, e]) => e, G.incident(V[i]))).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([_u, _v, e]) => e, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(\n\t\t\t\t\tchain(\n\t\t\t\t\t\tmap(([, v]) => v, G.incident(V[i])),\n\t\t\t\t\t\tmap(([u]) => u, G.incident(V[i])),\n\t\t\t\t\t),\n\t\t\t\t).isequal(\n\t\t\t\t\tchain(\n\t\t\t\t\t\t[V[i]],\n\t\t\t\t\t\tmap(([u]) => u, G.ingoing(V[i])),\n\t\t\t\t\t\tmap(([, v]) => v, G.outgoing(V[i])),\n\t\t\t\t\t),\n\t\t\t\t),\n\t\t\t);\n\n\t\t\tt.true(\n\t\t\t\tset(G.nitr(V[i])).isequal(\n\t\t\t\t\tmap(([u, v]) => (u === V[i] ? v : u), G.incident(V[i])),\n\t\t\t\t),\n\t\t\t);\n\t\t\tt.true(set(G.dpitr(V[i])).isequal(map(([u]) => u, G.ingoing(V[i]))));\n\t\t\tt.true(set(G.dsitr(V[i])).isequal(map(([, v]) => v, G.outgoing(V[i]))));\n\t\t}\n\n\t\tdelete_all_edges();\n\n\t\tt.is(len(G.vitr()), 10);\n\t\tt.true(isEmpty(G.eitr()));\n\n\t\tdelete_all_vertices();\n\n\t\tt.true(isEmpty(G.vitr()));\n\t\tt.true(isEmpty(G.eitr()));\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/runner/work/specification/specification/src/spec/multiGraph.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 121,
+    "kind": "function",
+    "name": "multiGraph",
+    "memberof": "src/spec/multiGraph.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/spec/multiGraph.js~multiGraph",
+    "access": "public",
+    "export": true,
+    "importPath": "@graph-data-structure/specification/src/spec/multiGraph.js",
+    "importStyle": "multiGraph",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "params": [
+      {
+        "name": "test",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "title",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "Constructor",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "kind": "index",
+    "content": ":notebook_with_decorative_cover:\n[@graph-data-structure/specification](https://graph-data-structure.github.io/specification)\n==\n\nGraph data structure specification for JavaScript.\n\n> :warning: Depending on your environment, the code may require\n> `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\n```js\n// eslint-disable-next-line ava/use-test\nimport ava from 'ava';\nimport * as spec from '@graph-data-structure/specification';\nspec.graph(ava, \"My graph implementation\", MyGraphConstructor);\n```\n\n[![License](https://img.shields.io/github/license/graph-data-structure/specification.svg)](https://raw.githubusercontent.com/graph-data-structure/specification/main/LICENSE)\n[![Version](https://img.shields.io/npm/v/@graph-data-structure/specification.svg)](https://www.npmjs.org/package/@graph-data-structure/specification)\n[![Tests](https://img.shields.io/github/workflow/status/graph-data-structure/specification/ci?event=push&label=tests)](https://github.com/graph-data-structure/specification/actions/workflows/ci.yml?query=branch:main)\n[![Dependencies](https://img.shields.io/librariesio/github/graph-data-structure/specification.svg)](https://github.com/graph-data-structure/specification/network/dependencies)\n[![GitHub issues](https://img.shields.io/github/issues/graph-data-structure/specification.svg)](https://github.com/graph-data-structure/specification/issues)\n[![Downloads](https://img.shields.io/npm/dm/@graph-data-structure/specification.svg)](https://www.npmjs.org/package/@graph-data-structure/specification)\n\n[![Code issues](https://img.shields.io/codeclimate/issues/graph-data-structure/specification.svg)](https://codeclimate.com/github/graph-data-structure/specification/issues)\n[![Code maintainability](https://img.shields.io/codeclimate/maintainability/graph-data-structure/specification.svg)](https://codeclimate.com/github/graph-data-structure/specification/trends/churn)\n[![Code coverage (cov)](https://img.shields.io/codecov/c/gh/graph-data-structure/specification/main.svg)](https://codecov.io/gh/graph-data-structure/specification)\n[![Code technical debt](https://img.shields.io/codeclimate/tech-debt/graph-data-structure/specification.svg)](https://codeclimate.com/github/graph-data-structure/specification/trends/technical_debt)\n[![Documentation](https://graph-data-structure.github.io/specification/badge.svg)](https://graph-data-structure.github.io/specification/source.html)\n[![Package size](https://img.shields.io/bundlephobia/minzip/@graph-data-structure/specification)](https://bundlephobia.com/result?p=@graph-data-structure/specification)\n\n\n## Signatures\n\n### Graphs, DiGraphs, MultiGraphs, and MultiDiGraphs\n\n#### `Graph`, `DiGraph`, `MultiGraph`, or `MultiDiGraph`\n\nCreate a new graph.\n\n```js\nlet G = new Graph( ) ;\n// ...\nlet G = new DiGraph( ) ;\n// ...\nlet G = new MultiGraph( ) ;\n// ...\nlet G = new MultiDiGraph( ) ;\n// ...\n```\n\n#### `vadd`\n\nAdd a vertex to graph `G`.\n\n```js\nlet u = G.vadd( ) ;\n```\n\n#### `vdel`\n\nDelete vertex `u` from graph `G`.\n\n```js\nG.vdel( u ) ;\n```\n\n#### `eadd`\n\nAdd edge `(u,v)` to graph `G`.\n\n```js\nlet e = G.eadd( u , v ) ;\n```\n\n#### `edel`\n\nDelete edge `e` from graph `G`.\n\n```js\nG.edel( e ) ;\n```\n\n#### `vitr`\n\nGet an iterator over vertex references in graph `G`.\n\n```js\nfor ( let u of G.vitr( ) ) ... ;\n```\n\n#### `eitr`\n\nGet an iterator over edge references in graph `G`.\n\n```js\nfor ( let e of g.eitr( ) ) ... ;\n```\n\n#### `iitr`\n\nGet an iterator over edge references of edges incident to `u` in graph `G`.\n\n```js\nfor ( let e of G.iitr( u ) ) ... ;\n```\n\n\n#### `nitr`\n\nGet an iterator over vertex references of neighbors of `u` in graph `G`.\n\n```js\nfor ( let v of G.nitr( u ) ) ... ;\n```\n\n#### `vertices`\n\nGet an iterator over vertices in graph `G`.\n\n```js\nfor ( let u of G.vertices( ) ) ... ;\n```\n\n#### `edges`\n\nGet an iterator over edges in graph `G`.\n\n```js\nfor ( let [ u , v , e ] of G.edges( ) ) ... ;\n```\n\n#### `incident`\n\nGet an iterator over edges incident to `w` in graph `G`.\n\n```js\nfor ( let [ u , v , e ] of G.incident( w ) ) ... ;\n```\n\n#### `endpoints`\n\nGet endpoints `u` and `v` of an edge reference `e` in graph `G`.\n\n```js\nlet [ u , v ] = G.endpoints( e ) ;\n```\n\n### DiGraphs and MultiDiGraphs\n\nThese methods must also be implemented (with the same invariants)\nin Graphs and MultiGraphs for convenience.\n\n#### `initr`\n\nGet an iterator over edge references of ingoing edges of `u` in graph `G`.\n\n```js\nfor ( let e of G.initr( u ) ) ... ;\n```\n\n#### `outitr`\n\nGet an iterator over edge references of outgoing edges of `u` in graph `G`.\n\n```js\nfor ( let e of G.outitr( u ) ) ... ;\n```\n\n#### `dpitr`\n\nGet an iterator over direct predecessors of `u` in graph `G`.\n\n```js\nfor ( let v of G.dpitr( u ) ) ... ;\n```\n\n#### `dsitr`\n\nGet an iterator over direct successors of `u` in graph `G`.\n\n```js\nfor ( let v of G.dsitr( u ) ) ... ;\n```\n\n#### `ingoing`\n\nGet an iterator over ingoing edges of `w` in graph `G`.\nThe invariant `v === w` must hold.\n\n```js\nfor ( let [ u , v , e ] of G.ingoing( w ) ) ... ;\n```\n\n#### `outgoing`\n\nGet an iterator over outgoing edges of `w` in graph `G`.\nThe invariant `u === w` must hold.\n\n```js\nfor ( let [ u , v , e ] of G.outgoing( w ) ) ... ;\n```\n\n#### `reverse`\n\nReverse the directions of edges in  `G`.\n\n```js\nG.reverse( ) ;\n```\n",
+    "longname": "/home/runner/work/specification/specification/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@graph-data-structure/specification\",\n  \"description\": \"Graph specification code bricks for JavaScript\",\n  \"version\": \"6.0.2\",\n  \"license\": \"AGPL-3.0\",\n  \"author\": \"make-github-pseudonymous-again\",\n  \"homepage\": \"https://graph-data-structure.github.io/specification\",\n  \"repository\": {\n    \"url\": \"https://github.com/graph-data-structure/specification\",\n    \"type\": \"git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/graph-data-structure/specification/issues\"\n  },\n  \"keywords\": [\n    \"bricks\",\n    \"directed\",\n    \"ender\",\n    \"graph\",\n    \"javascript\",\n    \"js\",\n    \"spec\",\n    \"specification\",\n    \"undirected\"\n  ],\n  \"sideEffects\": false,\n  \"type\": \"module\",\n  \"source\": \"src/index.js\",\n  \"main\": \"dist/index.cjs\",\n  \"module\": \"dist/index.module.js\",\n  \"esmodule\": \"dist/index.modern.js\",\n  \"umd:main\": \"dist/index.umd.js\",\n  \"unpkg\": \"dist/index.umd.js\",\n  \"exports\": {\n    \".\": {\n      \"browser\": \"./dist/index.module.js\",\n      \"umd\": \"./dist/index.umd.js\",\n      \"require\": \"./dist/index.cjs\",\n      \"default\": \"./dist/index.modern.js\"\n    }\n  },\n  \"files\": [\n    \"dist\"\n  ],\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"scripts\": {\n    \"build\": \"NODE_ENV=production microbundle\",\n    \"build-docs\": \"esdoc\",\n    \"build-gh-pages\": \"npm run build-docs\",\n    \"commit-msg\": \"commitlint --edit\",\n    \"cover\": \"NODE_ENV=cover c8 --all --src src --reporter lcov --reporter text-summary --reporter text npm test\",\n    \"debug\": \"NODE_ENV=debug npm run test -- -st --fail-fast\",\n    \"dev\": \"npm run lint-config-and-fix && npm run lint-and-fix && npm run cover -- -- -st --fail-fast\",\n    \"install-hooks\": \"husky install\",\n    \"lint\": \"xo\",\n    \"lint-and-fix\": \"npm run lint -- --fix\",\n    \"lint-config\": \"fixpack --dryRun\",\n    \"lint-config-and-fix\": \"fixpack || fixpack\",\n    \"postinstall\": \"npm run install-hooks\",\n    \"postpublish\": \"pinst --enable\",\n    \"precommit\": \"lint-staged\",\n    \"prepare\": \"npm run build\",\n    \"prepublishOnly\": \"pinst --disable\",\n    \"release\": \"np --message ':hatching_chick: release: Bumping to v%s.'\",\n    \"test\": \"npm run test:src\",\n    \"test-cmd\": \"NODE_LOADER_CONFIG=test/loader/config.js ava\",\n    \"test:cjs\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.json npm run test-cmd\",\n    \"test:dist\": \"npm run test:modern && npm run test:module && npm run test:cjs\",\n    \"test:modern\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.modern.json npm run test-cmd\",\n    \"test:module\": \"IMPORT_MAP_PATH=test/import-maps/dist/index.module.json npm run test-cmd\",\n    \"test:src\": \"IMPORT_MAP_PATH=test/import-maps/src/index.json npm run test-cmd\"\n  },\n  \"dependencies\": {\n    \"@collection-abstraction/set\": \"^5.0.0\",\n    \"@failure-abstraction/error\": \"^6.0.1\",\n    \"@functional-abstraction/type\": \"^2.0.1\",\n    \"@iterable-iterator/cardinality\": \"^4.0.0\",\n    \"@iterable-iterator/chain\": \"^2.0.1\",\n    \"@iterable-iterator/consume\": \"^1.0.1\",\n    \"@iterable-iterator/filter\": \"^1.0.1\",\n    \"@iterable-iterator/iter\": \"^1.0.1\",\n    \"@iterable-iterator/list\": \"^1.0.1\",\n    \"@iterable-iterator/map\": \"^1.0.1\",\n    \"@iterable-iterator/range\": \"^2.1.0\",\n    \"@iterable-iterator/reduce\": \"^1.0.1\"\n  },\n  \"devDependencies\": {\n    \"@babel/core\": \"7.20.2\",\n    \"@babel/preset-env\": \"7.20.2\",\n    \"@commitlint/cli\": \"17.2.0\",\n    \"@js-library/commitlint-config\": \"0.0.4\",\n    \"@node-loader/babel\": \"^2.0.1\",\n    \"@node-loader/core\": \"2.0.0\",\n    \"@node-loader/import-maps\": \"1.1.0\",\n    \"ava\": \"5.0.1\",\n    \"babel-plugin-transform-remove-console\": \"6.9.4\",\n    \"babel-plugin-unassert\": \"3.2.0\",\n    \"babel-preset-power-assert\": \"3.0.0\",\n    \"c8\": \"7.12.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-inject-script-plugin\": \"1.0.0\",\n    \"esdoc-inject-style-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"fixpack\": \"4.0.0\",\n    \"husky\": \"8.0.1\",\n    \"lint-staged\": \"13.0.3\",\n    \"microbundle\": \"0.15.1\",\n    \"np\": \"7.6.2\",\n    \"pinst\": \"3.0.0\",\n    \"power-assert\": \"1.6.1\",\n    \"regenerator-runtime\": \"^0.13.10\",\n    \"xo\": \"0.52.4\"\n  },\n  \"ava\": {\n    \"files\": [\n      \"test/src/**/*\"\n    ],\n    \"nodeArguments\": [\n      \"--experimental-loader=@node-loader/core\"\n    ],\n    \"require\": [\n      \"regenerator-runtime/runtime\"\n    ],\n    \"timeout\": \"1m\"\n  },\n  \"babel\": {\n    \"sourceMaps\": true,\n    \"plugins\": [\n      [\n        \"transform-remove-console\",\n        {\n          \"exclude\": [\n            \"log\",\n            \"error\",\n            \"warn\"\n          ]\n        }\n      ]\n    ],\n    \"env\": {\n      \"debug\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ],\n        \"plugins\": [\n          [\n            \"transform-remove-console\",\n            {\n              \"exclude\": [\n                \"debug\",\n                \"log\",\n                \"error\",\n                \"warn\"\n              ]\n            }\n          ]\n        ]\n      },\n      \"test\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"cover\": {\n        \"sourceMaps\": \"both\",\n        \"presets\": [\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"development\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ],\n          \"babel-preset-power-assert\"\n        ]\n      },\n      \"production\": {\n        \"presets\": [\n          [\n            \"@babel/preset-env\",\n            {\n              \"targets\": [\n                \"defaults\",\n                \"maintained node versions\"\n              ]\n            }\n          ]\n        ],\n        \"plugins\": [\n          \"babel-plugin-unassert\"\n        ]\n      }\n    }\n  },\n  \"lint-staged\": {\n    \"*.js\": [\n      \"npm run lint-and-fix\"\n    ],\n    \"package.json\": [\n      \"npm run lint-config-and-fix\"\n    ]\n  },\n  \"prettier\": {\n    \"trailingComma\": \"all\"\n  },\n  \"xo\": {\n    \"prettier\": true,\n    \"plugins\": [\n      \"unicorn\"\n    ],\n    \"rules\": {\n      \"unicorn/filename-case\": \"off\",\n      \"camelcase\": \"off\",\n      \"unicorn/prevent-abbreviations\": \"off\",\n      \"no-constant-condition\": \"off\",\n      \"unicorn/prefer-node-protocol\": \"off\",\n      \"unicorn/prefer-math-trunc\": \"off\",\n      \"unicorn/no-new-array\": \"off\",\n      \"no-negated-condition\": \"off\"\n    },\n    \"overrides\": [\n      {\n        \"files\": [\n          \"doc/**\"\n        ],\n        \"env\": \"browser\"\n      }\n    ]\n  }\n}\n",
+    "longname": "/home/runner/work/specification/specification/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manualIndex",
+    "globalIndex": false,
+    "content": null,
+    "longname": "",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/specification/specification/doc/manual/overview.md",
+    "name": "./doc/manual/overview.md",
+    "content": "# Overview\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/specification/specification/doc/manual/installation.md",
+    "name": "./doc/manual/installation.md",
+    "content": "# Installation\n\nCan be managed using\n[yarn](https://yarnpkg.com/en/docs),\n[npm](https://docs.npmjs.com),\nor [jspm](https://jspm.org/docs).\n\n\n### yarn\n```terminal\nyarn add @graph-data-structure/specification\n```\n\n### npm\n```terminal\nnpm install @graph-data-structure/specification --save\n```\n\n### jspm\n```terminal\njspm install npm:@graph-data-structure/specification\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/specification/specification/doc/manual/usage.md",
+    "name": "./doc/manual/usage.md",
+    "content": "# Usage\n\n> :warning: Depending on your environment, the code may require\n> `regeneratorRuntime` to be defined, for instance by importing\n> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).\n\nFirst, require the polyfill at the entry point of your application\n```js\nawait import('regenerator-runtime/runtime.js');\n// or\nimport 'regenerator-runtime/runtime.js';\n```\n\nThen, import the library where needed\n```js\nconst spec = await import('@graph-data-structure/specification');\n// or\nimport * as spec from '@graph-data-structure/specification';\n```\n",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "manual",
+    "longname": "/home/runner/work/specification/specification/doc/manual/example.md",
+    "name": "./doc/manual/example.md",
+    "content": "# Examples\n\n> More examples in [the test files](https://github.com/graph-data-structure/specification/tree/main/test/src).\n",
+    "static": true,
+    "access": "public"
+  }
+]

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/implementation/Graph.js | @graph-data-structure/specification</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Graph specification code bricks for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@graph-data-structure/specification"><meta property="twitter:description" content="Graph specification code bricks for JavaScript"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/graph-data-structure/specification"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#implementation">implementation</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph.html">AbstractDirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/AbstractGraph.js~AbstractGraph.html">AbstractGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph.html">AbstractUndirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/DirectedGraph.js~DirectedGraph.html">DirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/DirectedMultiGraph.js~DirectedMultiGraph.html">DirectedMultiGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/Graph.js~Graph.html">Graph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/UndirectedGraph.js~UndirectedGraph.html">UndirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/UndirectedMultiGraph.js~UndirectedMultiGraph.html">UndirectedMultiGraph</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#spec">spec</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-digraph">digraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-graph">graph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-methods">methods</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-multiDigraph">multiDigraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-multiGraph">multiGraph</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/implementation/Graph.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {filter} from &apos;@iterable-iterator/filter&apos;;
+import {iter} from &apos;@iterable-iterator/iter&apos;;
+import {list} from &apos;@iterable-iterator/list&apos;;
+
+import AbstractGraph from &apos;./AbstractGraph.js&apos;;
+
+export default class Graph extends AbstractGraph {
+	constructor() {
+		super();
+		this.V = [];
+		this.E = [];
+	}
+
+	vadd(value) {
+		const v = {value};
+		this.V.push(v);
+		return v;
+	}
+
+	vdel(v) {
+		this.V = list(filter((u) =&gt; u !== v, this.V));
+		this.E = list(filter(([t, u]) =&gt; t !== v &amp;&amp; u !== v, this.E));
+	}
+
+	eadd(u, v) {
+		const insertedEdge = [u, v];
+		this.E.push(insertedEdge);
+		return insertedEdge;
+	}
+
+	edel(e) {
+		this.E = list(filter((x) =&gt; x !== e, this.E));
+	}
+
+	vitr() {
+		return iter(this.V);
+	}
+
+	eitr() {
+		return iter(this.E);
+	}
+
+	endpoints([u, v]) {
+		return [u, v];
+	}
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

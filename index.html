@@ -1,131 +1,159 @@
-<!DOCTYPE html><html lang="en"><head><title>index</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content=""><meta name="groc-document-path" content="index"><meta name="groc-project-path" content="README.md"><meta name="groc-github-url" content="https://github.com/aureooms/js-graph-spec"><link rel="stylesheet" type="text/css" media="all" href="assets/style.css"><script type="text/javascript" src="assets/behavior.js"></script><body><div id="meta"><div class="file-path"><a href="https://github.com/aureooms/js-graph-spec/blob/master/README.md">README.md</a></div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><h1 id="-js-graph-spec-http-aureooms-github-io-js-graph-spec-"><a href="http://aureooms.github.io/js-graph-spec">js-graph-spec</a></h1>
-<p>Graph specification code bricks for JavaScript. Parent is
-<a href="https://github.com/aureooms/js-gn">js-gn</a>.</p>
-<pre><code class="lang-js">graphspec.Graph( <span class="hljs-string">"My graph implementation"</span> , MyGraphConstructor ) ;</code></pre>
-<p><a href="https://raw.githubusercontent.com/aureooms/js-graph-spec/master/LICENSE"><img src="http://img.shields.io/npm/l/aureooms-js-graph-spec.svg?style=flat" alt="NPM license"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-graph-spec"><img src="http://img.shields.io/npm/v/aureooms-js-graph-spec.svg?style=flat" alt="NPM version"></a>
-<a href="http://bower.io/search/?q=aureooms-js-graph-spec"><img src="http://img.shields.io/bower/v/aureooms-js-graph-spec.svg?style=flat" alt="Bower version"></a>
-<a href="https://travis-ci.org/aureooms/js-graph-spec"><img src="http://img.shields.io/travis/aureooms/js-graph-spec.svg?style=flat" alt="Build Status"></a>
-<a href="https://coveralls.io/r/aureooms/js-graph-spec"><img src="http://img.shields.io/coveralls/aureooms/js-graph-spec.svg?style=flat" alt="Coverage Status"></a>
-<a href="https://david-dm.org/aureooms/js-graph-spec#info=dependencies"><img src="http://img.shields.io/david/aureooms/js-graph-spec.svg?style=flat" alt="Dependencies Status"></a>
-<a href="https://david-dm.org/aureooms/js-graph-spec#info=devDependencies"><img src="http://img.shields.io/david/dev/aureooms/js-graph-spec.svg?style=flat" alt="devDependencies Status"></a>
-<a href="https://codeclimate.com/github/aureooms/js-graph-spec"><img src="http://img.shields.io/codeclimate/github/aureooms/js-graph-spec.svg?style=flat" alt="Code Climate"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-graph-spec"><img src="http://img.shields.io/npm/dm/aureooms-js-graph-spec.svg?style=flat" alt="NPM downloads per month"></a>
-<a href="https://github.com/aureooms/js-graph-spec/issues"><img src="http://img.shields.io/github/issues/aureooms/js-graph-spec.svg?style=flat" alt="GitHub issues"></a>
-<a href="http://inch-ci.org/github/aureooms/js-graph-spec"><img src="http://inch-ci.org/github/aureooms/js-graph-spec.svg?branch=master&amp;style=shields" alt="Inline docs"></a></p>
-<p>Can be managed through <a href="https://github.com/jspm/jspm-cli">jspm</a>,
-<a href="https://github.com/duojs/duo">duo</a>,
-<a href="https://github.com/componentjs/component">component</a>,
-<a href="https://github.com/bower/bower">bower</a>,
-<a href="https://github.com/ender-js/Ender">ender</a>,
-<a href="https://github.com/caolan/jam">jam</a>,
-<a href="https://github.com/spmjs/spm">spm</a>,
-and <a href="https://github.com/npm/npm">npm</a>.</p>
-<h2 id="install">Install</h2>
-<h3 id="jspm">jspm</h3>
-<pre><code class="lang-terminal">jspm install github:aureooms/js-graph-spec
-# or
-jspm install npm:aureooms-js-graph-spec</code></pre>
-<h3 id="duo">duo</h3>
-<p>No install step needed for duo!</p>
-<h3 id="component">component</h3>
-<pre><code class="lang-terminal">component install aureooms/js-graph-spec</code></pre>
-<h3 id="bower">bower</h3>
-<pre><code class="lang-terminal">bower install aureooms-js-graph-spec</code></pre>
-<h3 id="ender">ender</h3>
-<pre><code class="lang-terminal">ender add aureooms-js-graph-spec</code></pre>
-<h3 id="jam">jam</h3>
-<pre><code class="lang-terminal">jam install aureooms-js-graph-spec</code></pre>
-<h3 id="spm">spm</h3>
-<pre><code class="lang-terminal">spm install aureooms-js-graph-spec --save</code></pre>
-<h3 id="npm">npm</h3>
-<pre><code class="lang-terminal">npm install aureooms-js-graph-spec --save</code></pre>
-<h2 id="require">Require</h2>
-<h3 id="jspm">jspm</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> graphspec = <span class="hljs-built_in">require</span>( <span class="hljs-string">"github:aureooms/js-graph-spec"</span> ) ;
-<span class="hljs-comment">// or</span>
-<span class="hljs-keyword">import</span> graphspec <span class="hljs-keyword">from</span> <span class="hljs-string">'aureooms-js-graph-spec'</span> ;</code></pre>
-<h3 id="duo">duo</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> graphspec = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms/js-graph-spec"</span> ) ;</code></pre>
-<h3 id="component-ender-spm-npm">component, ender, spm, npm</h3>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> graphspec = <span class="hljs-built_in">require</span>( <span class="hljs-string">"aureooms-js-graph-spec"</span> ) ;</code></pre>
-<h3 id="bower">bower</h3>
-<p>The script tag exposes the global variable <code>graphspec</code>.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/aureooms-js-graph-spec/js/dist/graph-spec.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
-<p>Alternatively, you can use any tool mentioned <a href="http://bower.io/docs/tools/">here</a>.</p>
-<h3 id="jam">jam</h3>
-<pre><code class="lang-js"><span class="hljs-built_in">require</span>( [ <span class="hljs-string">"aureooms-js-graph-spec"</span> ] , <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"> graphspec </span>) </span>{ ... } ) ;</code></pre>
-<h2 id="signatures">Signatures</h2>
-<h3 id="graphs-digraphs-multigraphs-and-multidigraphs">Graphs, DiGraphs, MultiGraphs, and MultiDiGraphs</h3>
-<h4 id="-graph-digraph-multigraph-or-multidigraph-"><code>Graph</code>, <code>DiGraph</code>, <code>MultiGraph</code>, or <code>MultiDiGraph</code></h4>
-<p>Create a new graph.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> Graph( ) ;
-<span class="hljs-comment">// ...</span>
-<span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> DiGraph( ) ;
-<span class="hljs-comment">// ...</span>
-<span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> MultiGraph( ) ;
-<span class="hljs-comment">// ...</span>
-<span class="hljs-keyword">let</span> G = <span class="hljs-keyword">new</span> MultiDiGraph( ) ;
-<span class="hljs-comment">// ...</span></code></pre>
-<h4 id="-vadd-"><code>vadd</code></h4>
-<p>Add a vertex to graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> u = G.vadd( ) ;</code></pre>
-<h4 id="-vdel-"><code>vdel</code></h4>
-<p>Delete vertex <code>u</code> from graph <code>G</code>.</p>
-<pre><code class="lang-js">G.vdel( u ) ;</code></pre>
-<h4 id="-eadd-"><code>eadd</code></h4>
-<p>Add edge <code>(u,v)</code> to graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> e = G.eadd( u , v ) ;</code></pre>
-<h4 id="-edel-"><code>edel</code></h4>
-<p>Delete edge <code>e</code> from graph <code>G</code>.</p>
-<pre><code class="lang-js">G.edel( e ) ;</code></pre>
-<h4 id="-vitr-"><code>vitr</code></h4>
-<p>Get an iterator over vertex references in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> u <span class="hljs-keyword">of</span> G.vitr( ) ) ... ;</code></pre>
-<h4 id="-eitr-"><code>eitr</code></h4>
-<p>Get an iterator over edge references in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> g.eitr( ) ) ... ;</code></pre>
-<h4 id="-iitr-"><code>iitr</code></h4>
-<p>Get an iterator over edge references of edges incident to <code>u</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> G.iitr( u ) ) ... ;</code></pre>
-<h4 id="-nitr-"><code>nitr</code></h4>
-<p>Get an iterator over vertex references of neighbors of <code>u</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.nitr( u ) ) ... ;</code></pre>
-<h4 id="-vertices-"><code>vertices</code></h4>
-<p>Get an iterator over vertices in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> u <span class="hljs-keyword">of</span> G.vertices( ) ) ... ;</code></pre>
-<h4 id="-edges-"><code>edges</code></h4>
-<p>Get an iterator over edges in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.edges( ) ) ... ;</code></pre>
-<h4 id="-incident-"><code>incident</code></h4>
-<p>Get an iterator over edges incident to <code>w</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.incident( w ) ) ... ;</code></pre>
-<h4 id="-endpoints-"><code>endpoints</code></h4>
-<p>Get endpoints <code>u</code> and <code>v</code> of an edge reference <code>e</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> [ u , v ] = G.endpoints( e ) ;</code></pre>
-<h3 id="digraphs-and-multidigraphs">DiGraphs and MultiDiGraphs</h3>
-<p>These methods must also be implemented (with the same invariants)
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | @graph-data-structure/specification</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-style.css"><script src="./inject/script/0-header.js"></script><meta name="description" content="Graph specification code bricks for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@graph-data-structure/specification"><meta property="twitter:description" content="Graph specification code bricks for JavaScript"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/graph-data-structure/specification"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#implementation">implementation</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/AbstractDirectedGraph.js~AbstractDirectedGraph.html">AbstractDirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/AbstractGraph.js~AbstractGraph.html">AbstractGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/AbstractUndirectedGraph.js~AbstractUndirectedGraph.html">AbstractUndirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/DirectedGraph.js~DirectedGraph.html">DirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/DirectedMultiGraph.js~DirectedMultiGraph.html">DirectedMultiGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/Graph.js~Graph.html">Graph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/UndirectedGraph.js~UndirectedGraph.html">UndirectedGraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/implementation/UndirectedMultiGraph.js~UndirectedMultiGraph.html">UndirectedMultiGraph</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#spec">spec</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-digraph">digraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-graph">graph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-methods">methods</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-multiDigraph">multiDigraph</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-multiGraph">multiGraph</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><p>:notebook_with_decorative_cover:</p>
+<h1 id="-a-href--https---graph-data-structure-github-io-specification---graph-data-structure-specification--a-"><a href="https://graph-data-structure.github.io/specification">@graph-data-structure/specification</a></h1><p>Graph data structure specification for JavaScript.</p>
+<blockquote>
+<p>:warning: Depending on your environment, the code may require
+<code>regeneratorRuntime</code> to be defined, for instance by importing
+<a href="https://www.npmjs.com/package/regenerator-runtime">regenerator-runtime/runtime</a>.</p>
+</blockquote>
+<pre><code class="lang-js"><code class="source-code prettyprint">// eslint-disable-next-line ava/use-test
+import ava from &apos;ava&apos;;
+import * as spec from &apos;@graph-data-structure/specification&apos;;
+spec.graph(ava, &quot;My graph implementation&quot;, MyGraphConstructor);</code>
+</code></pre>
+<p><a href="https://raw.githubusercontent.com/graph-data-structure/specification/main/LICENSE"><img src="https://img.shields.io/github/license/graph-data-structure/specification.svg" alt="License"></a>
+<a href="https://www.npmjs.org/package/@graph-data-structure/specification"><img src="https://img.shields.io/npm/v/@graph-data-structure/specification.svg" alt="Version"></a>
+<a href="https://github.com/graph-data-structure/specification/actions/workflows/ci.yml?query=branch:main"><img src="https://img.shields.io/github/workflow/status/graph-data-structure/specification/ci?event=push&amp;label=tests" alt="Tests"></a>
+<a href="https://github.com/graph-data-structure/specification/network/dependencies"><img src="https://img.shields.io/librariesio/github/graph-data-structure/specification.svg" alt="Dependencies"></a>
+<a href="https://github.com/graph-data-structure/specification/issues"><img src="https://img.shields.io/github/issues/graph-data-structure/specification.svg" alt="GitHub issues"></a>
+<a href="https://www.npmjs.org/package/@graph-data-structure/specification"><img src="https://img.shields.io/npm/dm/@graph-data-structure/specification.svg" alt="Downloads"></a></p>
+<p><a href="https://codeclimate.com/github/graph-data-structure/specification/issues"><img src="https://img.shields.io/codeclimate/issues/graph-data-structure/specification.svg" alt="Code issues"></a>
+<a href="https://codeclimate.com/github/graph-data-structure/specification/trends/churn"><img src="https://img.shields.io/codeclimate/maintainability/graph-data-structure/specification.svg" alt="Code maintainability"></a>
+<a href="https://codecov.io/gh/graph-data-structure/specification"><img src="https://img.shields.io/codecov/c/gh/graph-data-structure/specification/main.svg" alt="Code coverage (cov)"></a>
+<a href="https://codeclimate.com/github/graph-data-structure/specification/trends/technical_debt"><img src="https://img.shields.io/codeclimate/tech-debt/graph-data-structure/specification.svg" alt="Code technical debt"></a>
+<a href="https://graph-data-structure.github.io/specification/source.html"><img src="https://graph-data-structure.github.io/specification/badge.svg" alt="Documentation"></a>
+<a href="https://bundlephobia.com/result?p=@graph-data-structure/specification"><img src="https://img.shields.io/bundlephobia/minzip/@graph-data-structure/specification" alt="Package size"></a></p>
+<h2 id="signatures">Signatures</h2><h3 id="graphs--digraphs--multigraphs--and-multidigraphs">Graphs, DiGraphs, MultiGraphs, and MultiDiGraphs</h3><h4 id="-code-graph--code----code-digraph--code----code-multigraph--code---or--code-multidigraph--code-"><code>Graph</code>, <code>DiGraph</code>, <code>MultiGraph</code>, or <code>MultiDiGraph</code></h4><p>Create a new graph.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">let G = new Graph( ) ;
+// ...
+let G = new DiGraph( ) ;
+// ...
+let G = new MultiGraph( ) ;
+// ...
+let G = new MultiDiGraph( ) ;
+// ...</code>
+</code></pre>
+<h4 id="-code-vadd--code-"><code>vadd</code></h4><p>Add a vertex to graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">let u = G.vadd( ) ;</code>
+</code></pre>
+<h4 id="-code-vdel--code-"><code>vdel</code></h4><p>Delete vertex <code>u</code> from graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">G.vdel( u ) ;</code>
+</code></pre>
+<h4 id="-code-eadd--code-"><code>eadd</code></h4><p>Add edge <code>(u,v)</code> to graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">let e = G.eadd( u , v ) ;</code>
+</code></pre>
+<h4 id="-code-edel--code-"><code>edel</code></h4><p>Delete edge <code>e</code> from graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">G.edel( e ) ;</code>
+</code></pre>
+<h4 id="-code-vitr--code-"><code>vitr</code></h4><p>Get an iterator over vertex references in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let u of G.vitr( ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-eitr--code-"><code>eitr</code></h4><p>Get an iterator over edge references in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let e of g.eitr( ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-iitr--code-"><code>iitr</code></h4><p>Get an iterator over edge references of edges incident to <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let e of G.iitr( u ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-nitr--code-"><code>nitr</code></h4><p>Get an iterator over vertex references of neighbors of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let v of G.nitr( u ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-vertices--code-"><code>vertices</code></h4><p>Get an iterator over vertices in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let u of G.vertices( ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-edges--code-"><code>edges</code></h4><p>Get an iterator over edges in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let [ u , v , e ] of G.edges( ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-incident--code-"><code>incident</code></h4><p>Get an iterator over edges incident to <code>w</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let [ u , v , e ] of G.incident( w ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-endpoints--code-"><code>endpoints</code></h4><p>Get endpoints <code>u</code> and <code>v</code> of an edge reference <code>e</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">let [ u , v ] = G.endpoints( e ) ;</code>
+</code></pre>
+<h3 id="digraphs-and-multidigraphs">DiGraphs and MultiDiGraphs</h3><p>These methods must also be implemented (with the same invariants)
 in Graphs and MultiGraphs for convenience.</p>
-<h4 id="-initr-"><code>initr</code></h4>
-<p>Get an iterator over edge references of ingoing edges of <code>u</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> G.initr( u ) ) ... ;</code></pre>
-<h4 id="-outitr-"><code>outitr</code></h4>
-<p>Get an iterator over edge references of outgoing edges of <code>u</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> G.outitr( u ) ) ... ;</code></pre>
-<h4 id="-dpitr-"><code>dpitr</code></h4>
-<p>Get an iterator over direct predecessors of <code>u</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.dpitr( u ) ) ... ;</code></pre>
-<h4 id="-dsitr-"><code>dsitr</code></h4>
-<p>Get an iterator over direct successors of <code>u</code> in graph <code>G</code>.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> v <span class="hljs-keyword">of</span> G.dsitr( u ) ) ... ;</code></pre>
-<h4 id="-ingoing-"><code>ingoing</code></h4>
-<p>Get an iterator over ingoing edges of <code>w</code> in graph <code>G</code>.
+<h4 id="-code-initr--code-"><code>initr</code></h4><p>Get an iterator over edge references of ingoing edges of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let e of G.initr( u ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-outitr--code-"><code>outitr</code></h4><p>Get an iterator over edge references of outgoing edges of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let e of G.outitr( u ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-dpitr--code-"><code>dpitr</code></h4><p>Get an iterator over direct predecessors of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let v of G.dpitr( u ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-dsitr--code-"><code>dsitr</code></h4><p>Get an iterator over direct successors of <code>u</code> in graph <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let v of G.dsitr( u ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-ingoing--code-"><code>ingoing</code></h4><p>Get an iterator over ingoing edges of <code>w</code> in graph <code>G</code>.
 The invariant <code>v === w</code> must hold.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.ingoing( w ) ) ... ;</code></pre>
-<h4 id="-outgoing-"><code>outgoing</code></h4>
-<p>Get an iterator over outgoing edges of <code>w</code> in graph <code>G</code>.
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let [ u , v , e ] of G.ingoing( w ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-outgoing--code-"><code>outgoing</code></h4><p>Get an iterator over outgoing edges of <code>w</code> in graph <code>G</code>.
 The invariant <code>u === w</code> must hold.</p>
-<pre><code class="lang-js"><span class="hljs-keyword">for</span> ( <span class="hljs-keyword">let</span> [ u , v , e ] <span class="hljs-keyword">of</span> G.outgoing( w ) ) ... ;</code></pre>
-<h4 id="-reverse-"><code>reverse</code></h4>
-<p>Reverse the directions of edges in  <code>G</code>.</p>
-<pre><code class="lang-js">G.reverse( ) ;</code></pre></div></div></div></div></body></html>
+<pre><code class="lang-js"><code class="source-code prettyprint">for ( let [ u , v , e ] of G.outgoing( w ) ) ... ;</code>
+</code></pre>
+<h4 id="-code-reverse--code-"><code>reverse</code></h4><p>Reverse the directions of edges in  <code>G</code>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">G.reverse( ) ;</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
