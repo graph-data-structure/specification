@@ -13,7 +13,7 @@ import 'regenerator-runtime/runtime.js';
 
 Then, import the library where needed
 ```js
-const graph_spec = await import('@graph-data-structure/specification');
+const spec = await import('@graph-data-structure/specification');
 // or
-import * as graph_spec from '@graph-data-structure/specification';
+import * as spec from '@graph-data-structure/specification';
 ```
