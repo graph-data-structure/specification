@@ -12,7 +12,7 @@ Graph data structure specification for JavaScript.
 // eslint-disable-next-line ava/use-test
 import ava from 'ava';
 import * as spec from '@graph-data-structure/specification';
-spec.Graph(ava, "My graph implementation", MyGraphConstructor);
+spec.graph(ava, "My graph implementation", MyGraphConstructor);
 ```
 
 [![License](https://img.shields.io/github/license/graph-data-structure/specification.svg)](https://raw.githubusercontent.com/graph-data-structure/specification/main/LICENSE)
