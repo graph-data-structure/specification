@@ -4,6 +4,10 @@
 
 Graph data structure specification for JavaScript.
 
+> :warning: Depending on your environment, the code may require
+> `regeneratorRuntime` to be defined, for instance by importing
+> [regenerator-runtime/runtime](https://www.npmjs.com/package/regenerator-runtime).
+
 ```js
 // eslint-disable-next-line ava/use-test
 import ava from 'ava';
