@@ -1,7 +1,7 @@
 {
   "name": "@graph-data-structure/specification",
   "description": "Graph specification code bricks for JavaScript",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "license": "AGPL-3.0",
   "author": "make-github-pseudonymous-again",
   "homepage": "https://graph-data-structure.github.io/specification",
