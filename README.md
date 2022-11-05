@@ -1,3 +1,4 @@
+:notebook_with_decorative_cover:
 [@graph-data-structure/specification](https://graph-data-structure.github.io/specification)
 ==
 
