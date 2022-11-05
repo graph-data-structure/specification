@@ -5,9 +5,10 @@
 Graph data structure specification for JavaScript.
 
 ```js
-import test from 'ava';
-import {Graph} from '@graph-data-structure/specification';
-Graph( test , "My graph implementation" , MyGraphConstructor ) ;
+// eslint-disable-next-line ava/use-test
+import ava from 'ava';
+import * as spec from '@graph-data-structure/specification';
+spec.Graph(ava, "My graph implementation", MyGraphConstructor);
 ```
 
 [![License](https://img.shields.io/github/license/graph-data-structure/specification.svg)](https://raw.githubusercontent.com/graph-data-structure/specification/main/LICENSE)
