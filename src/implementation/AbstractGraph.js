@@ -52,6 +52,10 @@ export default class AbstractGraph {
 		return map((e) => [...this.endpoints(e), e], this.iitr(u));
 	}
 
+	/**
+	 * @param {any} _e Input edge.
+	 * @return {[any,any]} The input edge's endpoints.
+	 */
 	endpoints(_e) {
 		throw new NotImplementedError();
 	}
